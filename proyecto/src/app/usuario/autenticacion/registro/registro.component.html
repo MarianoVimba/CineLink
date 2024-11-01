@@ -1,0 +1,87 @@
+<section class="registro-section">   
+  <fieldset class="registro">
+    <legend>Registro de Nuevo Usuario</legend>
+    
+    <form [formGroup]="formUsuario" (ngSubmit)="addUsuario()">
+      <div class="nombre">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" formControlName="nombre" placeholder="Ingresa tu nombre">
+        <div *ngIf="formUsuario.controls['nombre'].touched && formUsuario.controls['nombre'].hasError('required')" class="error">
+          Este campo es requerido
+        </div>
+        <div *ngIf="formUsuario.controls['nombre'].touched && formUsuario.controls['nombre'].hasError('minlength')" class="error">
+          Requiere un mínimo de 3 letras
+        </div>
+      </div>
+      
+      <div class="apellido">
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" formControlName="apellido" placeholder="Ingresa tu apellido">
+        <div *ngIf="formUsuario.controls['apellido'].touched && formUsuario.controls['apellido'].hasError('required')" class="error">
+          Este campo es requerido
+        </div>
+        <div *ngIf="formUsuario.controls['apellido'].touched && formUsuario.controls['apellido'].hasError('minlength')" class="error">
+          Requiere un mínimo de 3 letras
+        </div>
+      </div>
+      
+      <div class="nombreUsuario">
+        <label for="nombreUsuario">Nombre de usuario:</label>
+        <input type="text" id="nombreUsuario" formControlName="nombreUsuario" placeholder="Elige un nombre de usuario">
+        <div *ngIf="formUsuario.controls['nombreUsuario'].touched && formUsuario.controls['nombreUsuario'].hasError('required')" class="error">
+          Este campo es requerido
+        </div>
+        <div *ngIf="formUsuario.controls['nombreUsuario'].touched && formUsuario.controls['nombreUsuario'].hasError('minlength')" class="error">
+          Requiere un mínimo de 3 letras
+        </div>
+      </div>
+      
+      <div class="contraseña">
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" formControlName="password" placeholder="Crea una contraseña">
+        <div *ngIf="formUsuario.controls['password'].touched && formUsuario.controls['password'].hasError('required')" class="error">
+          Este campo es requerido
+        </div>
+        <div *ngIf="formUsuario.controls['password'].touched && formUsuario.controls['password'].hasError('minlength')" class="error">
+          Contraseña corta, mínimo 8 caracteres
+        </div>
+      </div>
+      
+      <div class="confirmarContraseña">
+        <label for="confirmarContrasena">Confirmación de contraseña:</label>
+        <input type="password" id="confirmarContrasena" formControlName="confirmacionPassword" placeholder="Repite la contraseña">
+        <div *ngIf="formUsuario.controls['confirmacionPassword'].touched && formUsuario.controls['confirmacionPassword'].hasError('required')" class="error">
+          Este campo es requerido
+        </div>
+        <div *ngIf="formUsuario.controls['confirmacionPassword'].touched && formUsuario.controls['confirmacionPassword'].hasError('minlength')" class="error">
+          Contraseña corta, mínimo 8 caracteres
+          </div>
+      </div>
+      
+      <div class="pais">
+        <label for="pais">País:</label>
+        <input type="text" id="pais" formControlName="pais" placeholder="Ingresa tu país">
+        <div *ngIf="formUsuario.controls['pais'].touched && formUsuario.controls['pais'].hasError('required')" class="error">
+          Este campo es requerido
+        </div>
+      </div>
+      
+      <div class="ciudad">
+        <label for="ciudad">Ciudad:</label>
+        <input type="text" id="ciudad" formControlName="ciudad" placeholder="Ingresa tu ciudad">
+        <div *ngIf="formUsuario.controls['ciudad'].touched && formUsuario.controls['ciudad'].hasError('required')" class="error">
+          Este campo es requerido
+        </div>
+      </div>
+      
+      <div class="descripcion">
+        <label for="descripcion">Descripción (opcional):</label>
+        <textarea id="descripcion" formControlName="descripcion" placeholder="Cuéntanos sobre vos"></textarea>
+      </div>
+      
+      <div class="boton">
+        <button type="submit" [disabled]="formUsuario.invalid">Confirmar</button>
+      </div>
+    </form>
+  </fieldset>
+</section>
