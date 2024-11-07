@@ -15,7 +15,8 @@
   }
   
   .navbar-left .navbar-logo {
-    height: 2.5rem; /* Mantener el tamaño de la imagen */
+    height: 6.5rem; /* Mantener el tamaño de la imagen */
+    width: 10rem;
   }
   
   .navbar-center .user-info {
@@ -25,7 +26,17 @@
   }
   
   .user-name {
-    margin-right: 0.75rem; /* Ajustar el margen */
+    margin-right: 0.75rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+  }
+  
+  .user-name:hover {
+    color: #ff6666;
+    text-shadow: 0 0 0.5rem rgba(255, 102, 102, 0.5);
   }
   
   .edit-profile-btn {

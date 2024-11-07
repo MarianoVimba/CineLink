@@ -7,7 +7,7 @@ body {
     font-size: 62.5%; /* 1rem = 10px */
   }
   
-  .ingreso-section {
+  .modicacion-section {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,7 +18,7 @@ body {
     box-sizing: border-box;
   }
   
-  .ingreso {
+  .modicacion {
     max-width: 40rem; /* Hacer el fieldset más pequeño */
     width: 100%;
     padding: 2rem;
@@ -26,7 +26,7 @@ body {
     border-radius: 1rem;
     background-color: #333;
     box-sizing: border-box;
-    font-size: x-large;
+    font-size: x-large
   }
   
   legend {
@@ -38,7 +38,7 @@ body {
   div {
     margin-bottom: 1.5rem;
     color: aliceblue;
-  }
+}
   
   label {
     display: block;
@@ -47,7 +47,8 @@ body {
   }
   
   input[type="text"],
-  input[type="password"] {
+  input[type="password"],
+  textarea {
     width: 100%;
     padding: 1rem;
     border: 0.5rem solid #e21c1c;
@@ -55,27 +56,17 @@ body {
     background-color: #444;
     color: #fce43a;
     box-sizing: border-box;
-    font-size: x-large; /* Ajusta el tamaño de la fuente aquí */
+    font-size:x-large; /* Ajusta el tamaño de la fuente aquí */
   }
   
   input[type="text"]::placeholder,
-  input[type="password"]::placeholder {
+  input[type="password"]::placeholder,
+  textarea::placeholder {
     color: #fce43a;
   }
   
-  .error {
-    color: #e21c1c;
-    font-size: 1.2rem;
-    display: none;
-  }
-  
-  .botones {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  button {
-    width: 48%;
+  button[type="submit"] {
+    width: 100%;
     padding: 1rem;
     background-color: #e21c1c;
     border: none;
@@ -86,12 +77,12 @@ body {
     transition: background-color 0.3s ease;
   }
   
-  button:hover {
+  button[type="submit"]:hover {
     background-color: #b51717;
   }
   
   @media (max-width: 60rem) {
-    .ingreso {
+    .registro {
         padding: 1rem;
     }
   
@@ -100,14 +91,19 @@ body {
     }
   
     input[type="text"],
-    input[type="password"] {
+    input[type="password"],
+    textarea {
         padding: 0.8rem;
         border-width: 0.3rem;
     }
   
-    button {
+    button[type="submit"] {
         padding: 0.8rem;
         font-size: 1rem;
     }
+  }
+  
+  .inicio{
+    margin-top: 1rem;
   }
   

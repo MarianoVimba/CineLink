@@ -1,10 +1,10 @@
 export interface Usuario{
-    id?:number,
-    nombre: string,
-    apellido: string,
+    id?:string,
+    nombre?: string,
+    apellido?: string,
     nombreUsuario: string,
-    password: string,
-    confirmacionPasword: string,
+    password?: string,
+    confirmacionPasword?: string,
     pais: string,
     ciudad: string,
     descripcion: string
