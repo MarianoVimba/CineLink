@@ -1,0 +1,46 @@
+<section class="modicacion-section">   
+    <fieldset class="modicacion">
+    <legend>Modificar Usuario</legend>
+    
+    <form [formGroup]="formulario" (ngSubmit)="actualizar()">
+
+        <div class="nombreUsuario">
+        <label for="nombreUsuario">Nombre de usuario:</label>
+        <input type="text" id="nombreUsuario" formControlName="nombreUsuario" placeholder="Elige un nombre de usuario">
+          <div *ngIf="formulario.controls['nombreUsuario'].touched && formulario.controls['nombreUsuario'].hasError('required')" class="error">
+            Este campo es requerido
+        </div>
+          <div *ngIf="formulario.controls['nombreUsuario'].touched && formulario.controls['nombreUsuario'].hasError('minlength')" class="error">
+            Requiere un mínimo de 3 letras
+        </div>
+        </div>
+        
+        <div class="pais">
+        <label for="pais">País:</label>
+        <input type="text" id="pais" formControlName="pais" placeholder="Ingresa tu país">
+          <div *ngIf="formulario.controls['pais'].touched && formulario.controls['pais'].hasError('required')" class="error">
+            Este campo es requerido
+        </div>
+        </div>
+        
+        <div class="ciudad">
+        <label for="ciudad">Ciudad:</label>
+        <input type="text" id="ciudad" formControlName="ciudad" placeholder="Ingresa tu ciudad">
+        <div *ngIf="formulario.controls['ciudad'].touched && formulario.controls['ciudad'].hasError('required')" class="error">
+            Este campo es requerido
+        </div>
+        </div>
+        
+        <div class="descripcion">
+        <label for="descripcion">Descripción (opcional):</label>
+        <textarea id="descripcion" formControlName="descripcion" placeholder="Cuéntanos sobre vos"></textarea>
+        </div>
+        
+        <div class="boton">
+        <button type="submit" [disabled]="formulario.invalid">Actulizar</button>
+        <button type="submit" class="inicio" (click)="volverAlinicio()">Volver</button>
+        </div>
+    </form>
+    </fieldset>
+</section>
+

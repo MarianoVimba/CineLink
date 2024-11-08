@@ -1,0 +1,90 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem; /* Aumentar el padding */
+    background-color: #5e5e5e;
+    color: #dcdcdc;
+    text-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.5); /* Sombra */
+    position: sticky; /* Fija el navbar en la parte superior */
+                        /* con fixed tambien funciona */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que el navbar esté por encima de otros elementos */
+    box-sizing: border-box; /* Asegura que el padding no aumente el ancho total */
+  }
+  
+  .navbar-left .navbar-logo {
+    height: 6.5rem; /* Mantener el tamaño de la imagen */
+    width: 10rem;
+  }
+  
+  .navbar-center .user-info {
+    display: flex;
+    align-items: center;
+    margin-left: -20rem;
+  }
+  
+  .user-name {
+    margin-right: 0.75rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+  }
+  
+  .user-name:hover {
+    color: #ff6666;
+    text-shadow: 0 0 0.5rem rgba(255, 102, 102, 0.5);
+  }
+  
+  .edit-profile-btn {
+    padding: 0.8rem 1.5rem; /* Aumentar el padding para un botón más ancho */
+    background-color: #555;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 1.5rem; /* Bordes más redondeados para un efecto ovalado */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+  }
+  
+  .edit-profile-btn:hover {
+    background-color: #666; /* Color de fondo más sutil al pasar el ratón */
+ }
+  
+  .edit-profile-btn:active {
+    background-color: #444; /* Color de fondo al hacer clic */
+  }
+  
+  
+  
+  .navbar-right .nav-link {
+    margin-left: 1rem; /* Ajustar el margen entre enlaces */
+    color: #dcdcdc;
+    text-decoration: none;
+    margin-left: -12rem;
+  }
+  
+  .navbar-right .nav-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Ajustes para pantallas pequeñas */
+  @media (max-width: 600px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .navbar-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .navbar-right .nav-link {
+      margin-left: 0;
+      margin-top: 0.5rem;
+    }
+  }

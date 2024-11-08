@@ -1,0 +1,109 @@
+body {
+    background-color: #5e5e5e;
+    font-family: Arial, sans-serif;
+    color: #fce43a;
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%; /* 1rem = 10px */
+  }
+  
+  .modicacion-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #2e2e2e; /* Gris más oscuro */
+    overflow: auto; /* Permitir desplazamiento si el contenido es demasiado grande */
+    padding: 2rem; /* Añadir padding para evitar que el contenido se corte */
+    box-sizing: border-box;
+  }
+  
+  .modicacion {
+    max-width: 40rem; /* Hacer el fieldset más pequeño */
+    width: 100%;
+    padding: 2rem;
+    border: 0.5rem solid #e21c1c;
+    border-radius: 1rem;
+    background-color: #333;
+    box-sizing: border-box;
+    font-size: x-large
+  }
+  
+  legend {
+    font-size: 2rem;
+    color: #fce43a;
+    padding: 0 1rem;
+  }
+  
+  div {
+    margin-bottom: 1.5rem;
+    color: aliceblue;
+}
+  
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #fce43a;
+  }
+  
+  input[type="text"],
+  input[type="password"],
+  textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 0.5rem solid #e21c1c;
+    border-radius: 0.5rem;
+    background-color: #444;
+    color: #fce43a;
+    box-sizing: border-box;
+    font-size:x-large; /* Ajusta el tamaño de la fuente aquí */
+  }
+  
+  input[type="text"]::placeholder,
+  input[type="password"]::placeholder,
+  textarea::placeholder {
+    color: #fce43a;
+  }
+  
+  button[type="submit"] {
+    width: 100%;
+    padding: 1rem;
+    background-color: #e21c1c;
+    border: none;
+    border-radius: 0.5rem;
+    color: #fce43a;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #b51717;
+  }
+  
+  @media (max-width: 60rem) {
+    .registro {
+        padding: 1rem;
+    }
+  
+    legend {
+        font-size: x-large;
+    }
+  
+    input[type="text"],
+    input[type="password"],
+    textarea {
+        padding: 0.8rem;
+        border-width: 0.3rem;
+    }
+  
+    button[type="submit"] {
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+  }
+  
+  .inicio{
+    margin-top: 1rem;
+  }
+  

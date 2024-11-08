@@ -1,0 +1,33 @@
+{
+  "usuarios": [
+    {
+      "nombreUsuario": "olga 3000",
+      "pais": "as",
+      "ciudad": "as",
+      "descripcion": "zzzz",
+      "id": "8657"
+    },
+    {
+      "id": "ea5b",
+      "nombre": "lucre",
+      "apellido": "bazan",
+      "nombreUsuario": "lucre",
+      "password": "aaaaaaaa",
+      "confirmacionPassword": "aaaaaaaa",
+      "pais": "pedro",
+      "ciudad": "pedrito",
+      "descripcion": "jeje"
+    },
+    {
+      "id": "0117",
+      "nombre": "aaa",
+      "apellido": "aaa",
+      "nombreUsuario": "aaa",
+      "password": "12345678",
+      "confirmacionPassword": "12345678",
+      "pais": "aaa",
+      "ciudad": "aaa",
+      "descripcion": "aaa saas"
+    }
+  ]
+}
