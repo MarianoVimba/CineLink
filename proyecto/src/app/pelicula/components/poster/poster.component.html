@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-3 mb-5" *ngFor="let pelicula of peliculas">
+      <img src="https://image.tmdb.org/t/p/w500/{{pelicula.poster_path}}"
+          class="img-thumbnail img-fluid cursor"
+          (click)="irPaginaPelicula(pelicula)">
+      <div>
+        <h3 class="mt-2">{{pelicula.title}}</h3>
+        <div class="row align-items-center">
+          <div class="col-10 text-white">
+            <div *ngIf="pelicula.vote_average">
+              <div class="estrellas-container">
+                <i *ngFor="let estrella of getEstrellas(pelicula.vote_average)"
+                  class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-2 text-white">
+            {{pelicula.vote_average | number:'1.1-2'}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

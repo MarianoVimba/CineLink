@@ -3,6 +3,8 @@ import { LoginComponent } from './usuario/autenticacion/login/login.component';
 import { RegistroComponent } from './usuario/autenticacion/registro/registro.component';
 import { InicioPageComponent } from './pages/inicio-page/inicio-page.component';
 import { UpdateComponent } from './usuario/update/update.component';
+import { InicioComponent } from './pages/inicio/inicio.component';
+import { BuscarComponent } from './pages/buscar/buscar.component';
 export const routes: Routes = [
     {
         path:"",
@@ -14,10 +16,18 @@ export const routes: Routes = [
     },
     {
         path:"inicio",
-        component:InicioPageComponent
+        component: InicioComponent
     },
     {
-        path: 'update/:id', 
+      path: 'pelicula/:id',
+      component: BuscarComponent
+    },
+    {
+      path: 'buscar/:texto',
+      component: BuscarComponent
+    },
+    {
+        path: 'update/:id',
         component: UpdateComponent
     },
     {

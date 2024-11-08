@@ -1,0 +1,22 @@
+
+
+<app-navbar></app-navbar>
+<div class="cartelera d-flex flex-column justify-content-center align-items-center">
+  <h1 class="mb-5">Cartelera</h1>
+  <div class="row w-100" *ngIf="listaPeliculas.length > 0">
+    <div class="col">
+      <app-slideshow [peliculas]="listaPeliculas"></app-slideshow>
+    </div>
+  </div>
+</div>
+
+<div class="estrenos d-flex flex-column justify-content-center align-items-center ">
+  <div class="linea"></div>
+  <h2 >ESTRENOS</h2>
+<app-poster [peliculas]="listaPeliculas" ></app-poster>
+</div>
+
+
+
+
+<!-- ---------------------- <app-footer></app-footer> ---------------------- -->
