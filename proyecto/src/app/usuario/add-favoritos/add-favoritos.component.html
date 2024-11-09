@@ -1,0 +1,5 @@
+<section class="boton-fav">
+    <button *ngIf="!esFavorito" (click)="agregarAFavoritos()" class="fav-button">Agregar a Favoritos</button>
+    <button *ngIf="esFavorito" (click)="eliminarDeFavoritos()" class="fav-button">Eliminar de Favoritos</button>
+  </section>
+  

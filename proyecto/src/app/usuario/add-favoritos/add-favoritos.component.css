@@ -1,0 +1,26 @@
+.boton-fav {
+    display: flex;
+    margin-top: 1rem;
+    gap: 10px; /* Espacio entre los botones */
+  }
+  
+  .fav-button {
+    background-color: #ff4d4d; /* Color rojo */
+    color: white;
+    border: none;
+    border-radius: 25px; /* Bordes redondeados */
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+  }
+  
+  .fav-button:hover {
+    background-color: #ff1a1a; /* Color rojo más oscuro al pasar el mouse */
+    transform: scale(1.05); /* Efecto de agrandamiento */
+  }
+  
+  .fav-button:active {
+    transform: scale(0.95); /* Efecto de reducción al hacer clic */
+  }
+  

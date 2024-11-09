@@ -1,25 +1,7 @@
 {
   "usuarios": [
     {
-      "nombreUsuario": "olga 3000",
-      "pais": "as",
-      "ciudad": "as",
-      "descripcion": "zzzz",
-      "id": "8657"
-    },
-    {
-      "id": "ea5b",
-      "nombre": "lucre",
-      "apellido": "bazan",
-      "nombreUsuario": "lucre",
-      "password": "aaaaaaaa",
-      "confirmacionPassword": "aaaaaaaa",
-      "pais": "pedro",
-      "ciudad": "pedrito",
-      "descripcion": "jeje"
-    },
-    {
-      "id": "0117",
+      "id": "2ec7",
       "nombre": "aaa",
       "apellido": "aaa",
       "nombreUsuario": "aaa",
@@ -27,7 +9,57 @@
       "confirmacionPassword": "12345678",
       "pais": "aaa",
       "ciudad": "aaa",
-      "descripcion": "aaa saas"
+      "descripcion": "",
+      "listaFavoritos": [
+        912649,
+        933260
+      ]
+    },
+    {
+      "id": "4f2f",
+      "nombre": "xxx",
+      "apellido": "xxx",
+      "nombreUsuario": "xxx",
+      "password": "12345678",
+      "confirmacionPassword": "12345678",
+      "pais": "xxx",
+      "ciudad": "xxx",
+      "descripcion": "",
+      "listaFavoritos": []
+    },
+    {
+      "id": "a2d5",
+      "nombre": "ddd",
+      "apellido": "ddd",
+      "nombreUsuario": "ddd",
+      "password": "12345678",
+      "confirmacionPassword": "12345678",
+      "pais": "ddd",
+      "ciudad": "ddd",
+      "descripcion": "",
+      "listaFavoritos": [
+        1118031,
+        1034541,
+        912649,
+        889737,
+        1249532,
+        1184918
+      ]
+    },
+    {
+      "id": "58a6",
+      "nombre": "mariano",
+      "apellido": "vimba",
+      "nombreUsuario": "marianov",
+      "password": "12345678",
+      "confirmacionPassword": "12345678",
+      "pais": "arg",
+      "ciudad": "mdp",
+      "descripcion": "",
+      "listaFavoritos": [
+        933260,
+        1184918
+      ]
     }
   ]
 }

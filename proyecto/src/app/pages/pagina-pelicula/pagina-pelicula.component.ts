@@ -5,11 +5,12 @@ import { CommonModule } from '@angular/common';
 import { MovieDetails } from '../../interfaces/details.interface';
 import { Cast } from '../../interfaces/credits.interface';
 import { combineLatest } from 'rxjs';
+import { AddFavoritosComponent } from '../../usuario/add-favoritos/add-favoritos.component';
 
 @Component({
   selector: 'app-pagina-pelicula',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,AddFavoritosComponent],
   templateUrl: './pagina-pelicula.component.html',
   styleUrl: './pagina-pelicula.component.css'
 })
