@@ -1,4 +1,4 @@
-import { Component, inject, Input, OnInit } from '@angular/core';
+import { Component, inject, Input, OnInit, Output } from '@angular/core';
 import { FavoritosService } from '../../service/favorito.service';
 import { CommonModule } from '@angular/common';
 import { UsuarioService } from '../../service/usuario.service';
@@ -12,14 +12,13 @@ import { UsuarioService } from '../../service/usuario.service';
 })
 export class AddFavoritosComponent implements OnInit {
   @Input() peliculaId!: number;
-
   servicio = inject(UsuarioService);
   
   
   
   esFavorito: boolean = false;
   constructor(private favoritosService: FavoritosService) {}
-  userId:  string | null  = localStorage.getItem('userId'); // ID de usuario fijo para el ejemplo
+  userId:  string | null  = localStorage.getItem('userId'); 
 
   ngOnInit(): void {
     this.verificarFavorito();

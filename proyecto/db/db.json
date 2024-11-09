@@ -11,8 +11,8 @@
       "ciudad": "aaa",
       "descripcion": "",
       "listaFavoritos": [
-        912649,
-        933260
+        933260,
+        912649
       ]
     },
     {
@@ -57,9 +57,23 @@
       "ciudad": "mdp",
       "descripcion": "",
       "listaFavoritos": [
-        933260,
-        1184918
+        1029235,
+        1159311,
+        558449,
+        1063877
       ]
+    },
+    {
+      "id": "7913",
+      "nombre": "fff",
+      "apellido": "fff",
+      "nombreUsuario": "fff",
+      "password": "12345678",
+      "confirmacionPassword": "12345678",
+      "pais": "fff",
+      "ciudad": "fff",
+      "descripcion": "",
+      "listaFavoritos": []
     }
   ]
 }

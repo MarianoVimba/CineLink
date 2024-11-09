@@ -13,7 +13,7 @@ export interface Usuario{
     listaFavoritos?: any[],
     listaDePeliculasPersonalizadas?: any[],
     watchList?: any[],
-    seguidores?: Usuario[],
-    seguidos?: Usuario[],
+    seguidores?: string[],
+    seguidos?: string[],
     reseñas?: number[]
 };

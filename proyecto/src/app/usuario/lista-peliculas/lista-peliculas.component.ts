@@ -1,49 +1,61 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { FavoritosService } from '../../service/favorito.service';
 import { PeliculaService } from '../../service/pelicula.service';
-import { Pelicula } from '../../interfaces/pelicula.interface';
 import { CommonModule } from '@angular/common';
+import { PosterComponent } from '../../pelicula/components/poster/poster.component';
+import { MovieDetails } from '../../interfaces/details.interface';
+import { forkJoin } from 'rxjs';
+import { PosterfavoritoComponent } from '../../pelicula/components/poster-favoritos/poster-favoritos.component';
+import { AddFavoritosComponent } from "../add-favoritos/add-favoritos.component";
 
 @Component({
   selector: 'app-lista-peliculas',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, PosterComponent, PosterfavoritoComponent, AddFavoritosComponent],
   templateUrl: './lista-peliculas.component.html',
   styleUrls: ['./lista-peliculas.component.css']
 })
 export class ListaPeliculasComponent implements OnInit {
-  peliculas: Pelicula[] = [];
+  peliculas: MovieDetails[] | null = [];
   favoritos: number[] = [];
-  userId: string = '1'; // Asumimos un ID de usuario estático por ahora
+  userId: string | null = localStorage.getItem('userId');
+  favoritosIdsString: string[] = [];
 
-  constructor(private peliculaService: PeliculaService, private favoritosService: FavoritosService) {}
+
+  private peliculaService = inject(PeliculaService);
+  private favoritosService = inject(FavoritosService);
 
   ngOnInit(): void {
-    this.cargarPeliculas();
-    this.cargarFavoritos();
+    if (this.userId) {
+      this.favoritosService.obtenerFavoritos(this.userId).subscribe({
+        next: (lista) => {
+          this.favoritos = lista;
+          this.castear();
+          this.cargarPeliculasFavoritas();
+        },
+        error: () => {
+          console.log("Error al cargar la lista de favoritos");
+        }
+      });
+    }
   }
 
-  cargarPeliculas(): void {
-    this.peliculaService.getCartelera().subscribe(peliculas => {
-      this.peliculas = peliculas;
-    });
+  castear(): void {
+    this.favoritosIdsString = this.favoritos.map(id => id.toString());
+    console.log(this.favoritosIdsString);
   }
 
-  cargarFavoritos(): void {
-    this.favoritosService.obtenerFavoritos(this.userId).subscribe((favoritos: number[]) => {
-      this.favoritos = favoritos;
-    });
-  }
-
-  agregarAFavoritos(id: number): void {
-    this.favoritosService.agregarFavorito(this.userId, id).subscribe(() => {
-      this.cargarFavoritos(); // Recargar la lista de favoritos después de agregar
-    });
-  }
-
-  eliminarDeFavoritos(id: number): void {
-    this.favoritosService.eliminarFavorito(this.userId, id).subscribe(() => {
-      this.cargarFavoritos(); // Recargar la lista de favoritos después de eliminar
-    });
-  }
+    cargarPeliculasFavoritas(): void {
+      const requests = this.favoritosIdsString.map(id => this.peliculaService.getPeliculaById(id));
+      forkJoin(requests).subscribe({
+        next: (peliculas) => {
+          this.peliculas = peliculas.filter(pelicula => pelicula !== null) as MovieDetails[];
+        },
+        error: () => {
+          console.log("Error al cargar las películas favoritas");
+        }
+      });
+    }
 }
+
+

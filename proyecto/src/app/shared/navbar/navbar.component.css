@@ -1,90 +1,171 @@
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem; /* Aumentar el padding */
-    background-color: #5e5e5e;
-    color: #dcdcdc;
-    text-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.5); /* Sombra */
-    position: sticky; /* Fija el navbar en la parte superior */
-                        /* con fixed tambien funciona */
-    top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem;
+  background-color: #3a3341; /* #5e5e5e */
+  color: #dcdcdc;
+  text-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.5);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-sizing: border-box;
+  flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
+}
+
+.navbar-left .navbar-logo {
+  height: 6.5rem;
+  width: 10rem;
+}
+
+.navbar-center .user-info {
+  display: flex;
+  align-items: center;
+  margin-left: 10rem; /* Ajustar el margen para evitar superposición */
+}
+
+li {
+  cursor: pointer;
+}
+
+.user-name {
+  margin-right: 0.75rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.user-name:hover {
+  color: #ff6666;
+  text-shadow: 0 0 0.5rem rgba(255, 102, 102, 0.5);
+}
+
+.edit-profile-btn {
+  padding: 0.8rem 1.5rem;
+  background-color: #555;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 1.5rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.edit-profile-btn:hover {
+  background-color: #666;
+}
+
+.edit-profile-btn:active {
+  background-color: #444;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Asegurar que los enlaces estén alineados a la derecha */
+}
+
+.navbar-right .nav-link {
+  margin-left: 1rem;
+  color: #dcdcdc;
+  text-decoration: none;
+}
+
+.navbar-right .nav-link:hover {
+  text-decoration: underline;
+}
+
+.search-bar {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5rem; /* Hacer la barra más redondeada */
+  margin-right: 1rem;
+  flex-grow: 1;
+  background-color: #4a4a4a; /* Fondo similar al navbar */
+  color: #dcdcdc; /* Color del texto */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transiciones suaves */
+}
+
+.search-bar::placeholder {
+  color: #dcdcdc; /* Color del placeholder */
+}
+
+.search-bar:focus {
+  background-color: #5e5e5e; /* Fondo al enfocar */
+  outline: none; /* Quitar el borde de enfoque predeterminado */
+}
+
+/* Resultados de la busqueda */
+
+.search-results {
+  max-height: 8rem; /* Ajusta la altura máxima según tus necesidades */
+  overflow-y: auto;
+  align-items: center; /* Alinea verticalmente los elementos */
+  border: .01rem solid #ccc; /* Opcional: para visualizar mejor el contenedor */
+  padding: 10px; /* Opcional: para un mejor espaciado */
+}
+
+.search-results ul {
+  list-style-type: none;
+  justify-content: space-between; /* Asegura que el nombre y el botón estén separados */
+  padding: 0;
+  margin: 0;
+}
+
+.search-results li {
+  margin-bottom: 10px; /* Opcional: para separar los elementos */
+  display: block; /* Asegura que cada elemento ocupe una línea completa */
+  width: 100%; /* Asegura que el elemento ocupe todo el ancho del contenedor */
+}
+
+/* boton de ver perfil */
+.view-profile-btn {
+  padding: 0.1rem 0.2rem;
+  background-color: #666;
+  color: rgb(205, 214, 214);
+  border: none;
+  cursor: pointer;
+  border-radius: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-left: 1rem; /* Espacio entre el nombre de usuario y el botón */
+}
+
+.view-profile-btn:hover {
+  background-color: #751302;
+}
+
+.view-profile-btn:active {
+  background-color: #5a58e4;
+}
+
+/* ------------------------------------------------------------- */
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-left, .navbar-center, .navbar-right {
     width: 100%;
-    z-index: 1000; /* Asegura que el navbar esté por encima de otros elementos */
-    box-sizing: border-box; /* Asegura que el padding no aumente el ancho total */
+    text-align: center;
+    margin: 0.5rem 0;
   }
-  
-  .navbar-left .navbar-logo {
-    height: 6.5rem; /* Mantener el tamaño de la imagen */
-    width: 10rem;
-  }
-  
-  .navbar-center .user-info {
-    display: flex;
+
+  .navbar-right {
+    flex-direction: column;
     align-items: center;
-    margin-left: -20rem;
   }
-  
-  .user-name {
-    margin-right: 0.75rem;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #ffffff;
-    text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
-    transition: color 0.3s ease, text-shadow 0.3s ease;
-  }
-  
-  .user-name:hover {
-    color: #ff6666;
-    text-shadow: 0 0 0.5rem rgba(255, 102, 102, 0.5);
-  }
-  
-  .edit-profile-btn {
-    padding: 0.8rem 1.5rem; /* Aumentar el padding para un botón más ancho */
-    background-color: #555;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 1.5rem; /* Bordes más redondeados para un efecto ovalado */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
-  }
-  
-  .edit-profile-btn:hover {
-    background-color: #666; /* Color de fondo más sutil al pasar el ratón */
- }
-  
-  .edit-profile-btn:active {
-    background-color: #444; /* Color de fondo al hacer clic */
-  }
-  
-  
-  
+
   .navbar-right .nav-link {
-    margin-left: 1rem; /* Ajustar el margen entre enlaces */
-    color: #dcdcdc;
-    text-decoration: none;
-    margin-left: -12rem;
+    margin-left: 0;
+    margin-top: 0.5rem;
   }
-  
-  .navbar-right .nav-link:hover {
-    text-decoration: underline;
+
+  .navbar-center .user-info {
+    margin-left: 0;
   }
-  
-  /* Ajustes para pantallas pequeñas */
-  @media (max-width: 600px) {
-    .navbar {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .navbar-right {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .navbar-right .nav-link {
-      margin-left: 0;
-      margin-top: 0.5rem;
-    }
-  }
+}
