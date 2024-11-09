@@ -1,0 +1,11 @@
+<app-navbar></app-navbar>
+
+<h1 class="text-capitalize">Buscar Peliculas <small>{{texto}}</small></h1>
+<hr>
+<div class="row">
+    <div class="col">
+        <app-poster [peliculas]="peliculas" *ngIf="peliculas.length > 0"></app-poster>
+
+        <h3 class="text-warning" *ngIf="noEncontro"><strong>{{noEncontro}}</strong></h3>
+    </div>
+</div>

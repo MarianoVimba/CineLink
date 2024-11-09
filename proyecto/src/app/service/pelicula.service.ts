@@ -3,6 +3,8 @@ import { Injectable } from '@angular/core';
 import { Observable, catchError, map, of, tap } from 'rxjs';
 import { Pelicula } from '../interfaces/pelicula.interface';
 import { Cartelera } from '../interfaces/cartelera.interface';
+import { MovieDetails } from '../interfaces/details.interface';
+import { Cast, Credits } from '../interfaces/credits.interface';
 
 
 @Injectable({
@@ -34,13 +36,35 @@ export class PeliculaService {
         this.cargando=false;
       })
     )
-
   }
 
 
+  buscarPeliculas(texto:string):Observable<Pelicula[]>{
+
+    return this.http.get<Cartelera>(`${this.URL}/search/movie?query=${texto}&language=es-ES&page=1`,{headers:this.headers}).pipe(
+
+      map(res=>res.results)
+    )
+  }
 
 
+  getPeliculaById(id:string){
 
+    return this.http.get<MovieDetails>(`${this.URL}/movie/${id}?language=es-ES`,{headers:this.headers}).pipe(
+
+      catchError(err=> of(null))
+    )
+  }
+
+
+  getPeliculaCreditos(id:string):Observable<Cast[] | null>{
+
+    return this.http.get<Credits>(`${this.URL}/movie/${id}/credits?language=es-ES`,{headers:this.headers}).pipe(
+
+      map(res=>res.cast),
+      catchError(err=> of(null))
+      )
+  }
 
 
 

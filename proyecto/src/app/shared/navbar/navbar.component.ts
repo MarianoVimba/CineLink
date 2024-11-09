@@ -1,5 +1,5 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { UsuarioService } from '../../service/usuario.service';
 import { Usuario } from '../../interfaces/usuario.interface';
 
@@ -45,4 +45,16 @@ export class NavbarComponent implements OnInit {
       }
     });
   }
+
+
+
+  inicio(){
+
+    this.ruta.navigate(['inicio'])
+
+  }
+
+
+
 }
+

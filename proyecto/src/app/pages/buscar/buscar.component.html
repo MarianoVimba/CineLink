@@ -1,1 +1,6 @@
-<p>buscar works!</p>
+<app-navbar></app-navbar>
+  <div class="form-inline my-2 my-lg-0">
+    <input #txtBuscar class="form-control mr-sm-2" type="search" (keyup.enter)="buscarPelicula(txtBuscar.value)" placeholder="Buscar pelicula">
+    <button class="btn btn-outline-danger my-2 my-sm-0" type="submit" (click)="buscarPelicula(txtBuscar.value)">Buscar</button>
+  </div>
+
