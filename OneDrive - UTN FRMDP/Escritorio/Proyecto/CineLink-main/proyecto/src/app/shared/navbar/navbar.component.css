@@ -25,6 +25,10 @@
   margin-left: 10rem; /* Ajustar el margen para evitar superposición */
 }
 
+li {
+  cursor: pointer;
+}
+
 .user-name {
   margin-right: 0.75rem;
   font-size: 1.5rem;
@@ -76,7 +80,7 @@
 .search-bar {
   padding: 0.5rem;
   border: 1px solid #ccc;
-  border-radius: 20px; /* Hacer la barra más redondeada */
+  border-radius: 5rem; /* Hacer la barra más redondeada */
   margin-right: 1rem;
   flex-grow: 1;
   background-color: #4a4a4a; /* Fondo similar al navbar */
@@ -92,6 +96,53 @@
   background-color: #5e5e5e; /* Fondo al enfocar */
   outline: none; /* Quitar el borde de enfoque predeterminado */
 }
+
+/* Resultados de la busqueda */
+
+.search-results {
+  max-height: 8rem; /* Ajusta la altura máxima según tus necesidades */
+  overflow-y: auto;
+  align-items: center; /* Alinea verticalmente los elementos */
+  border: .01rem solid #ccc; /* Opcional: para visualizar mejor el contenedor */
+  padding: 10px; /* Opcional: para un mejor espaciado */
+}
+
+.search-results ul {
+  list-style-type: none;
+  justify-content: space-between; /* Asegura que el nombre y el botón estén separados */
+  padding: 0;
+  margin: 0;
+}
+
+.search-results li {
+  margin-bottom: 10px; /* Opcional: para separar los elementos */
+  display: block; /* Asegura que cada elemento ocupe una línea completa */
+  width: 100%; /* Asegura que el elemento ocupe todo el ancho del contenedor */
+}
+
+/* boton de ver perfil */
+.view-profile-btn {
+  padding: 0.1rem 0.2rem;
+  background-color: #666;
+  color: rgb(205, 214, 214);
+  border: none;
+  cursor: pointer;
+  border-radius: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-left: 1rem; /* Espacio entre el nombre de usuario y el botón */
+}
+
+.view-profile-btn:hover {
+  background-color: #751302;
+}
+
+.view-profile-btn:active {
+  background-color: #5a58e4;
+}
+
+
+/* ------------------------------------------------------------- */
+
 
 /* Ajustes para pantallas pequeñas */
 @media (max-width: 600px) {

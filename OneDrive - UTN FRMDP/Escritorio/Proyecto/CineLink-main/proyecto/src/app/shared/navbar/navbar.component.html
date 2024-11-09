@@ -12,7 +12,24 @@
   </div>
 
   <div class="navbar-right">
-      <input type="text" placeholder="Buscar usuarios..."  class="search-bar">
+      <input type="text" 
+      placeholder="Buscar usuarios..." 
+      [(ngModel)]="buscarUsuario" (input)="buscarUsuarios()" 
+      [ngModelOptions] = " {standalone: true} " 
+      class="search-bar">
+
+      <div *ngIf="resultadoBusqueda.length > 0" class="search-results">
+        <ul>
+          <li>
+            @for (unPerfil of resultadoBusqueda; track $index) {
+              {{unPerfil.nombreUsuario}}
+              <button [routerLink]="['/perfil',unPerfil.id!]" class="view-profile-btn">Ver Perfil</button>
+              <hr>
+            }
+          </li>
+        </ul>
+      </div>
+
       <a routerLink="/seguidores" class="nav-link">Seguidores</a>
       <a routerLink="/seguidos" class="nav-link">Seguidos</a>
   </div>

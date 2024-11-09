@@ -7,6 +7,7 @@ import { Usuario } from '../interfaces/usuario.interface';
   providedIn: 'root'
 })
 export class UsuarioService {
+  [x: string]: any;
   private urlBase = 'http://localhost:3000/usuarios'; // URL base del servidor JSON
 
   constructor(private http: HttpClient) { }
@@ -33,19 +34,21 @@ export class UsuarioService {
 
   // solucion de id una vez ingresado para poder obtenerlo para poder trabajar con ese id
 
-login(nombreUsuario: string, password: string): Observable<Usuario | null> {
-  return this.http.get<Usuario[]>(`${this.urlBase}?nombreUsuario=${nombreUsuario}&password=${password}`).pipe(
-    map(usuarios => {
-      if (usuarios.length > 0) {
-        localStorage.setItem('userId', String(usuarios[0].id)); // Convertir el ID a cadena
-        return usuarios[0];
-      } else {
-        return null;
-      }
-    })
-  );
-}
+  login(nombreUsuario: string, password: string): Observable<Usuario | null> {
+    return this.http.get<Usuario[]>(`${this.urlBase}?nombreUsuario=${nombreUsuario}&password=${password}`).pipe(
+      map(usuarios => {
+        if (usuarios.length > 0) {
+          localStorage.setItem('userId', String(usuarios[0].id)); // Convertir el ID a cadena
+          return usuarios[0];
+        } else {
+          return null;
+        }
+      })
+    );
+  }
 
+        //Relacionado con la barra de busqueda de usuarios del navbar
 
+  
 
 }
