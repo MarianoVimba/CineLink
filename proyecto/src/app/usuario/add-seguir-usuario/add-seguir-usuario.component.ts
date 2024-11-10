@@ -43,6 +43,7 @@ export class AddSeguirUsuarioComponent implements OnInit {
         next: () => {
           this.esSeguidor = true;
           this.eventoAgregar.emit();
+          this.verificarSeguidor(); // Verificar el estado después de seguir
         },
         error: () => {
           console.log("Error al seguir al usuario");
@@ -57,6 +58,7 @@ export class AddSeguirUsuarioComponent implements OnInit {
         next: () => {
           this.esSeguidor = false;
           this.eventoAgregar.emit();
+          this.verificarSeguidor(); // Verificar el estado después de dejar de seguir
         },
         error: () => {
           console.log("Error al dejar de seguir al usuario");
