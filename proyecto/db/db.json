@@ -74,6 +74,40 @@
       "ciudad": "fff",
       "descripcion": "",
       "listaFavoritos": []
+    },
+    {
+      "id": "12b6",
+      "nombre": "qqq",
+      "apellido": "qqq",
+      "nombreUsuario": "qqq",
+      "password": "12345678",
+      "confirmacionPassword": "12345678",
+      "pais": "qqq",
+      "ciudad": "qqq",
+      "descripcion": "",
+      "listaFavoritos": []
+    },
+    {
+      "nombreUsuario": "ooookkkk",
+      "pais": "oookkk",
+      "ciudad": "oookkk",
+      "descripcion": "",
+      "id": "34a2",
+      "listaFavoritos": [
+        1142518
+      ]
+    },
+    {
+      "id": "a84f",
+      "nombre": "nnn",
+      "apellido": "nnn",
+      "nombreUsuario": "nnn",
+      "password": "12345678",
+      "confirmacionPassword": "12345678",
+      "pais": "kkk",
+      "ciudad": "kkk",
+      "descripcion": "",
+      "listaFavoritos": []
     }
   ]
 }

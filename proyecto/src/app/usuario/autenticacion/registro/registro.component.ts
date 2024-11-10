@@ -45,7 +45,7 @@ export class RegistroComponent {
         next: () =>
         {
           alert('usuario creado');
-          this.router.navigate(['inicio']);
+          this.router.navigate(['login']);
         },
         error: (err: Error) =>
         {

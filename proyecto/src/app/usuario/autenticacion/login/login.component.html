@@ -21,7 +21,7 @@
       
       <div class="botones">
         <button type="submit" [disabled]="formLogin.invalid">Iniciar Sesión</button>
-        <button type="button" class="registrarse" routerLink="registro">Registrarse</button>
+        <button type="button" class="registrarse" [routerLink]="['/registro']">Registrarse</button>
       </div>
     </form>
   </fieldset>
