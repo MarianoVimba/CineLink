@@ -13,7 +13,7 @@
                 <i *ngFor="let estrella of getEstrellas(pelicula.vote_average)"
                    class="fas fa-star"></i>
               </div>
-              <app-add-favoritos [peliculaId]="pelicula.id"></app-add-favoritos>
+              <app-add-favoritos (eventoAgregar)="modificarFvorito($event)" [peliculaId]="pelicula.id"></app-add-favoritos>
             </div>
           </div>
           <div class="col-2 text-white">

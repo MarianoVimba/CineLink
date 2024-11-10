@@ -1,17 +1,19 @@
 .footer-container {
-    position: fixed;
-    bottom: 0;
+    position: relative; 
     width: 100%;
-    background-color: #5e5e5e; /* Color de fondo */
+    background-color: #3a3341; /* Color de fondo */
     text-align: center; /* Centrar el contenido */
-    padding: 2rem 0; /* Aumentar el espaciado interno */
-    height: 8rem; /* Aumentar la altura del footer */
+    padding: 1rem 0; /* Reducir el espaciado interno */
+    height: auto; /* Ajustar la altura automáticamente */
+    box-sizing: border-box; /* Asegurar que el padding no aumente el ancho total */
 }
+
 .section-linck {
     display: inline-block; /* Ajustar el ancho al contenido */
-    padding: 1rem; /* Espaciado interno */
+    padding: 0.5rem; /* Reducir el espaciado interno */
     position: relative; /* Necesario para los pseudo-elementos */
 }
+
 .linckApi {
     font-size: 1.5rem; /* Tamaño de la fuente en rem */
     color: #dcdcdc; /* Color tiza */
@@ -21,33 +23,41 @@
     cursor: pointer; /* Cambiar el cursor a mano */
     text-align: center; /* Centrar el texto */
 }
+
 .line {
     display: block; /* Asegurar que cada span ocupe una línea completa */
 }
+
 .section-linck::before,
 .section-linck::after {
     content: '';
     position: absolute;
     top: 50%; /* Centrar verticalmente */
-    width:  0.06rem; /* Grosor de las líneas */
+    width: 0.06rem; /* Grosor de las líneas */
     height: 2rem; /* Longitud de las líneas verticales */
     background-color: #dcdcdc; /* Color tiza */
     transform: translateY(-50%); /* Centrar verticalmente */
 }
+
 .section-linck::before {
     left: -2.5rem; /* Posición de la línea izquierda */
 }
+
 .section-linck::after {
     right: -2.5rem; /* Posición de la línea derecha */
 }
+
 .footer-text {
     margin-top: 1rem; /* Añadir margen superior para evitar superposición */
+    background-color: #5e5e5e; /* Asegurar el color de fondo */
 }
+
 .footer-text span {
     display: block; /* Asegurar que cada span ocupe una línea completa */
-    margin-top: 0.05rem; /* Espaciado superior entre los textos */
+    margin-top: 0.5rem; /* Ajustar el margen superior entre los textos */
     color: #dcdcdc; /* Color tiza */
 }
+
 .horizontal-line {
     width: 2rem; /* Ajustar el ancho de la línea */
     height: 0.1rem; /* Grosor de la línea */

@@ -1,0 +1,45 @@
+<!-- Botón para abrir el modal -->
+<button type="button" class="btn btn-primary" (click)="abrirModal()" >
+  Agregar Reseña
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="reseniaModal" tabindex="-1" role="dialog" aria-labelledby="reseniaModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content custom-modal">
+      <div class="modal-header">
+        <h5 class="modal-title" id="reseniaModalLabel">Agregar Reseña</h5>
+        <button type="button" class="close close-custom" (click)="cerrarModal()" aria-label="Close ">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- Formulario de reseña -->
+        <form [formGroup]="formulario" (ngSubmit)="guardarResenia()">
+          <div class="mb-3">
+            <label for="puntuacion" class="form-label">Puntuación</label>
+            <input type="number" id="puntuacion" formControlName="puntuacion" class="form-control" min="1" max="10" required />
+            <div *ngIf="formulario.controls.puntuacion.errors && formulario.controls.puntuacion.touched" class="text-danger">
+              <div *ngIf="formulario.controls.puntuacion.errors['required']">La puntuación es obligatoria.</div>
+              <div *ngIf="formulario.controls.puntuacion.errors['min']">La puntuación debe ser al menos 1</div>
+              <div *ngIf="formulario.controls.puntuacion.errors['max']">La puntuación no puede ser mayor a 10</div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="descripcion" class="form-label">Descripción</label>
+            <textarea id="descripcion" formControlName="descripcion" class="form-control" rows="4" required></textarea>
+            <!-- <div *ngIf="formulario.controls.descripcion.invalid && formulario.controls.descripcion.touched" class="text-danger">
+              La descripción es obligatoria.
+            </div>-->
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" (click)="cerrarModal()">Cerrar</button>
+            <button type="submit" class="btn btn-primary" [disabled]="formulario.invalid">Enviar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

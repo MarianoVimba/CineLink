@@ -108,6 +108,97 @@
       "ciudad": "kkk",
       "descripcion": "",
       "listaFavoritos": []
+    },
+    {
+      "id": "1a29",
+      "nombre": "Alan",
+      "apellido": "Rodriguez",
+      "nombreUsuario": "Alan",
+      "password": "123546789",
+      "confirmacionPassword": "123456789",
+      "pais": "Argentina",
+      "ciudad": "Mar del Plata",
+      "descripcion": "123456789",
+      "listaFavoritos": []
+    },
+    {
+      "id": "60ed",
+      "nombre": "Alan",
+      "apellido": "Rodriguez",
+      "nombreUsuario": "Alan",
+      "password": "123456789",
+      "confirmacionPassword": "123456789",
+      "pais": "Argentina",
+      "ciudad": "Mar del Plata",
+      "descripcion": "lklklklklklk",
+      "listaFavoritos": [
+        1034541,
+        1371727,
+        1063877,
+        663712
+      ]
+    },
+    {
+      "id": "372f",
+      "nombre": "blas",
+      "apellido": "aguilera",
+      "nombreUsuario": "blasA2002",
+      "password": "12345678",
+      "confirmacionPassword": "12345678",
+      "pais": "Argentina",
+      "ciudad": "mar del plata",
+      "descripcion": "edsadsa",
+      "listaFavoritos": [
+        558449,
+        1063877,
+        414906,
+        211755,
+        11
+      ]
+    }
+  ],
+  "resenias": [
+    {
+      "id": "ac71",
+      "idPelicula": 912649,
+      "puntuacion": 1,
+      "descripcion": "me gusto\n",
+      "idUsuario": "372f"
+    },
+    {
+      "id": "1946",
+      "idPelicula": 912649,
+      "puntuacion": 1,
+      "descripcion": "no me gusto",
+      "idUsuario": "372f"
+    },
+    {
+      "id": "8e41",
+      "idPelicula": 912649,
+      "puntuacion": 1,
+      "descripcion": "dsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "idUsuario": "372f"
+    },
+    {
+      "id": "e77f",
+      "idPelicula": 912649,
+      "puntuacion": 1,
+      "descripcion": "  hola reseña larga  hola reseña larga  hola reseña larga  hola reseña larga  hola reseña larga  hola reseña larga  hola reseña larga  hola reseña larga  hola reseña larga  hola reseña larga  hola reseña larga  hola reseña larga  hola reseña larga  hola reseña larga  hola reseña larga  hola reseña larga  hola reseña larga  hola reseña larga  hola reseña larga  hola reseña larga  ",
+      "idUsuario": "372f"
+    },
+    {
+      "id": "b75b",
+      "idPelicula": 912649,
+      "puntuacion": 10,
+      "descripcion": "sdadsada",
+      "idUsuario": "372f"
+    },
+    {
+      "id": "04a6",
+      "idPelicula": 912649,
+      "puntuacion": 5,
+      "descripcion": "n",
+      "idUsuario": "372f"
     }
   ]
 }

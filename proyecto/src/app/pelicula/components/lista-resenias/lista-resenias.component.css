@@ -1,0 +1,35 @@
+
+h3{
+  color: white;
+  margin-bottom: 3rem;
+}
+
+.card-body  {
+  color: white;
+}
+
+/* .card-body h5{
+  border-bottom: 1px solid rgba(255, 255, 255, 0.658);
+}
+.card-body h6{
+  border-bottom: 1px solid rgba(255, 255, 255, 0.658);
+} */
+
+
+
+.card-custom{
+  background-color: #524f79;
+}
+
+p{
+  color:white;
+}
+
+
+.fa-star{
+  margin-right: 2px;
+  color: #edb867;
+  vertical-align: middle;
+}
+
+

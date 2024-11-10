@@ -1,3 +1,12 @@
 p{
   color: aliceblue;
 }
+
+
+.form-inline {
+  max-width: 600px; /* Limita el ancho máximo del formulario */
+}
+
+.form-inline .form-control {
+  flex-grow: 1; /* Permite que el input crezca para ocupar el espacio disponible */
+}

@@ -1,53 +1,58 @@
-<div class="row" *ngIf="pelicula">
-  <div class="col-6">
-      <img src="https://image.tmdb.org/t/p/w500/{{pelicula.poster_path}}"  class="img-thumbnail">
-  </div>
-  <div class="col-4">
 
+<app-navbar></app-navbar>
+
+<div class="container d-flex justify-content-center my-5">
+  <div class="row" *ngIf="pelicula">
+    <div class="col-5 mr-5">
+      <img src="https://image.tmdb.org/t/p/w500/{{pelicula.poster_path}}" class="img-thumbnail">
+    </div>
+    <div class="col-6  ">
       <h3>{{pelicula.title}}</h3>
 
       <div class="row mt-3">
-
-          <div class="col-10 text-white">
-
-              <div *ngIf="pelicula.vote_average">
-                  <div class="stars-container">
-                      <p><i *ngFor="let star of getEstrellas(pelicula.vote_average)" class="fas fa-star" ></i>
-                      {{pelicula.vote_average | number:'1.1-2'}}
-                      </p>
-
-                  </div>
-
-              </div>
-
+        <div class="col-10 text-white">
+          <div *ngIf="pelicula.vote_average">
+            <div class="stars-container">
+              <p><i *ngFor="let star of getEstrellas(pelicula.vote_average)" class="fas fa-star"></i>
+              {{pelicula.vote_average | number:'1.1-2'}}
+              </p>
+            </div>
           </div>
-
+        </div>
       </div>
 
       <div class="row mt-3">
-
-          <div class="container">
-              <h3>Sinopsis:</h3>
-              <div class="col text-white text-justify-content">
-                  <p *ngIf="pelicula.overview">{{pelicula.overview}}</p>
-                  <p *ngIf="!pelicula.overview">No hay sinopsis</p>
-                  <p class="text-warning">Fecha de estreno: {{pelicula.release_date | date:'dd/MM/yyyy'}} </p>
-
-              </div>
+        <div class="container">
+          <h3>Sinopsis:</h3>
+          <div class="col text-white text-justify-content">
+            <p *ngIf="pelicula.overview">{{pelicula.overview}}</p>
+            <p *ngIf="!pelicula.overview">No hay sinopsis</p>
+            <p class="text-warning">Fecha de estreno: {{pelicula.release_date | date:'dd/MM/yyyy'}} </p>
           </div>
-
-
+        </div>
       </div>
 
       <div class="row mt-3">
-
-          <div class="col mb-2" >
-
-              <button class="btn btn-outline-info float-right" (click)="regresar()">Regresar</button>
-              <app-add-favoritos [peliculaId]="pelicula.id"></app-add-favoritos>
-          </div>
-
+        <div class="col mb-2">
+          <button class="btn btn-outline-info float-right" (click)="regresar()">Regresar</button>
+        </div>
       </div>
+    </div>
+    <!-- ---------------------------------- x ---------------------------------- -->
+    <div class="opciones d-flex justify-content-around align-items-center py-5  mt-5  w-100">
+      <app-add-favoritos [peliculaId]="pelicula.id"></app-add-favoritos>
+      <app-add-favoritos [peliculaId]="pelicula.id"></app-add-favoritos>
+      <app-agregar-resenia (eventCrearResenia)="guardarResenia($event)" [peliculaId]="idPelicula" ></app-agregar-resenia>
+    </div>
 
   </div>
 </div>
+
+<app-lista-resenias  [peliculaId]="idPelicula" ></app-lista-resenias>
+
+
+
+
+
+
+<app-footer></app-footer>

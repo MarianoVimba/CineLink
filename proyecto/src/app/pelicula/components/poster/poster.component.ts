@@ -1,4 +1,4 @@
-import { Component, inject, Input } from '@angular/core';
+import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
 import { Pelicula } from '../../../interfaces/pelicula.interface';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
@@ -14,6 +14,7 @@ import { FavoritosService } from '../../../service/favorito.service';
 })
 export class PosterComponent {
   @Input() peliculas?: Pelicula[];
+  @Output() eventoModificar = new EventEmitter()
   router = inject(Router);
   favoritosService = inject(FavoritosService);
 
@@ -25,5 +26,12 @@ export class PosterComponent {
   irPaginaPelicula(pelicula: Pelicula) {
     this.router.navigate(['/pelicula', pelicula.id]);
   }
-  
+
+
+  modificarFvorito(id: number){
+
+    this.eventoModificar.emit(id)
+
+  }
+
 }

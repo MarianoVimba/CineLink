@@ -2,34 +2,62 @@ import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { NavbarComponent } from '../../shared/navbar/navbar.component';
+import { Pelicula } from '../../interfaces/pelicula.interface';
+import { PeliculaService } from '../../service/pelicula.service';
+import { PosterComponent } from '../../pelicula/components/poster/poster.component';
+import { FooterComponent } from '../../shared/footer/footer.component';
 
 @Component({
   selector: 'app-buscar',
   standalone: true,
-  imports: [CommonModule, NavbarComponent],
+  imports: [CommonModule, NavbarComponent,PosterComponent,FooterComponent],
   templateUrl: './buscar.component.html',
   styleUrl: './buscar.component.css'
 })
 export class BuscarComponent {
 
   router = inject(Router);
+  servicioPelicula = inject(PeliculaService);
+
+
+  texto = '';
+  noEncontro = '';
+  peliculas:Pelicula [] = [];
 
 
 
 
+  buscarPelicula(textoBusqueda:string){
 
-
-  buscarPelicula(texto:string){
-
-    texto = texto.trim();
-    if (texto.length === 0) {
+    textoBusqueda = textoBusqueda.trim();
+    if (textoBusqueda.length === 0) {
 
       return;
 
     }
 
-    this.router.navigate(['/buscar', texto]);
+    this.texto = textoBusqueda;
+    this.traerPeliculas()
 
+    //this.router.navigate(['/buscar', texto]);
+
+  }
+
+
+
+  traerPeliculas(){
+
+    this.servicioPelicula.buscarPeliculas(this.texto).subscribe({
+      next: (resPeliculas) =>{
+        this.peliculas=resPeliculas;
+
+        if(this.peliculas.length == 0){
+        this.noEncontro= '😌 No se encontro la pelicula';
+        }
+      },error:(e:Error) =>{
+        console.log(e.message);
+      }
+    })
   }
 
 

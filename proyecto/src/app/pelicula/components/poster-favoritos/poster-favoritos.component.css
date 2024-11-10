@@ -1,0 +1,14 @@
+.estrellas-container{
+  display: flex;
+}
+
+h3{
+  color: white;
+  font-size: 15px;
+}
+
+
+.fa-star{
+  margin-right: 2px;
+  color: #edb867;
+}

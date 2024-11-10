@@ -1,0 +1,31 @@
+@if (listaResenias.length > 0) {
+
+  <div class="container mt-4">
+    <h3>Reseñas De Los Usuarios:</h3>
+
+    <div *ngFor="let resenia of listaResenias" class="card mb-5">
+      <div class="card-body card-custom ">
+        <h5 class="card-title">Usuario: {{ obtenerNombreUsuario(resenia.idUsuario) }}</h5>
+        <hr>
+        <h6 class="card-subtitle mb-2">Calificación: {{ resenia.puntuacion }}/10</h6>
+        <i *ngFor="let estrella of getEstrellas(resenia.puntuacion)" class="fas fa-star"></i>
+        <hr>
+
+        <div *ngIf="resenia.descripcion">
+          <p class="card-text">{{ resenia.descripcion }}</p>
+        </div>
+        <div *ngIf="!resenia.descripcion">
+          <p class="card-text text-muted">Sin descripción</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+}@else {
+  <div class="container">
+    <h3>Reseñas De Los Usuarios:</h3>
+    <p>Nadie ha creado una reseña de esta película aún</p>
+  </div>
+}
+
+

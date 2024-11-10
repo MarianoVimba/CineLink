@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, viewChild, inject } from '@angular/core';
 import { PeliculaService } from '../../service/pelicula.service';
 import { Pelicula } from '../../interfaces/pelicula.interface';
 import { SlideshowComponent } from '../../pelicula/components/slideshow/slideshow.component';
@@ -7,6 +7,7 @@ import { NavbarComponent } from '../../shared/navbar/navbar.component';
 import { PosterComponent } from '../../pelicula/components/poster/poster.component';
 import { FooterComponent } from '../../shared/footer/footer.component';
 import { ListaPeliculasComponent } from "../../usuario/lista-peliculas/lista-peliculas.component";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-inicio',
@@ -21,6 +22,9 @@ export class InicioComponent implements OnInit{
 
   constructor(private servicioPelicula: PeliculaService){}
 
+  @ViewChild (ListaPeliculasComponent) listaFavoritos!: ListaPeliculasComponent;
+  router = inject(Router)
+
   ngOnInit(): void {
     this.cargarListaPeliculas();
   }
@@ -29,6 +33,9 @@ export class InicioComponent implements OnInit{
     this.servicioPelicula.getCartelera().subscribe(res=>{
       this.listaPeliculas = res;
   })}
+
+
+
 
 
 }

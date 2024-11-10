@@ -6,3 +6,23 @@
   margin-right: 2px;
   color: yellow;
 }
+
+
+h3{
+  color: white;
+}
+
+
+
+.opciones {
+  border-top: 1px solid #ddd; /* Línea superior sutil */
+  border-bottom: 1px solid #ddd; /* Línea inferior sutil */
+}
+
+
+.opciones2 {
+  min-height: 80px; /* Ajusta este valor según lo que necesites */
+  padding: 20px 0; /* Espaciado vertical adicional */
+  border-top: 1px solid #ddd; /* Línea superior */
+  border-bottom: 1px solid #ddd; /* Línea inferior */
+}

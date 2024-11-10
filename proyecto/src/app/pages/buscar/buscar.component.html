@@ -1,7 +1,34 @@
 <app-navbar></app-navbar>
-  <div class="form-inline my-2 my-lg-0">
-    <input #txtBuscar class="form-control mr-sm-2" type="search" (keyup.enter)="buscarPelicula(txtBuscar.value)" placeholder="Buscar pelicula">
-    <button class="btn btn-outline-danger my-2 my-sm-0" type="submit" (click)="buscarPelicula(txtBuscar.value)">Buscar</button>
-  
+
+
+<div class="d-flex justify-content-center my-4">
+  <div class="form-inline w-50 m-5">
+    <input
+      #txtBuscar
+      class="form-control mr-sm-2 w-75"
+      type="search"
+      (keyup.enter)="buscarPelicula(txtBuscar.value)"
+      placeholder="Buscar película">
+    <button
+      class="btn btn-danger my-2 my-sm-0"
+      type="submit"
+      (click)="buscarPelicula(txtBuscar.value)">
+      Buscar
+    </button>
   </div>
+</div>
+
+
+<!--  <h1 class="text-capitalize">Resultados: <small>{{texto}}</small></h1> -->
+<hr>
+<div class="row w-100">
+    <div class="col">
+        <app-poster [peliculas]="peliculas" *ngIf="peliculas.length > 0"></app-poster>
+
+        <h3 class="text-warning" *ngIf="noEncontro"><strong>{{noEncontro}}</strong></h3>
+    </div>
+</div>
+
+<!-- ---------------------- <app-footer></app-footer> ---------------------- -->
+
 

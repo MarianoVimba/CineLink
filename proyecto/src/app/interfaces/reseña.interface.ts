@@ -1,7 +1,7 @@
-export interface Reseña{
+export interface reseña{
     idReseña?: number,
     idPelicula?: number,
     puntuacion: number,
     descripcion: string,
-    idUsuario?: number
+    idUsuario?: string | null
 };
