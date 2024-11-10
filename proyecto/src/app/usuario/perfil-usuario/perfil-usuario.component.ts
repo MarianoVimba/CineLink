@@ -1,15 +1,19 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { UsuarioService } from '../../service/usuario.service';
 import { Usuario } from '../../interfaces/usuario.interface';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
+import { AddSeguirUsuarioComponent } from '../add-seguir-usuario/add-seguir-usuario.component';
 @Component({
   selector: 'app-perfil-usuario',
   standalone: true,
-  imports: [],
+  imports: [AddSeguirUsuarioComponent,RouterLink],
   templateUrl: './perfil-usuario.component.html',
   styleUrl: './perfil-usuario.component.css'
 })
 export class PerfilUsuarioComponent implements OnInit{
+actualizarListaSeguidores() {
+throw new Error('Method not implemented.');
+}
   
   ngOnInit(): void {
     this.ar.paramMap.subscribe(
@@ -33,4 +37,6 @@ export class PerfilUsuarioComponent implements OnInit{
   id:string | null = null
   us = inject(UsuarioService)
   ar = inject(ActivatedRoute)
+
+
 }

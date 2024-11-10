@@ -1,5 +1,10 @@
 <fieldset>
     <h1>Perfil de un usuario en Particular</h1><br>
-         Nombre de Usuario{{unUsuario?.nombreUsuario}}
-         Id: {{unUsuario?.id}}
-</fieldset>
+    Nombre de Usuario: {{unUsuario?.nombreUsuario}}<br>
+    Id: {{unUsuario?.id}}<br>
+    <app-add-seguir-usuario [usuarioId]="unUsuario?.id ?? ''" (eventoAgregar)="actualizarListaSeguidores()"></app-add-seguir-usuario>
+  </fieldset>
+  <div class="volver-container">
+    <button class="btn-volver" routerLink="/inicio">Volver</button>
+  </div>
+  

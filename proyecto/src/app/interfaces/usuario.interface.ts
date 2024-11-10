@@ -11,9 +11,9 @@ export interface Usuario{
 
     //listas
     listaFavoritos?: any[],
-    listaDePeliculasPersonalizadas?: any[],
-    watchList?: any[],
     seguidores?: string[],
     seguidos?: string[],
+    listaDePeliculasPersonalizadas?: any[],
+    watchList?: any[],
     reseñas?: number[]
 };

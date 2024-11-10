@@ -1,0 +1,22 @@
+<div *ngIf="seguidores.length > 0; else noSeguidores">
+    <h2 class="titulo-seguidores">Seguidores</h2>
+    <div class="seguidor-lista">
+      <div *ngFor="let usuario of seguidores" class="seguidor-item">
+        <p>Nombre de Usuario: {{ usuario.nombreUsuario }}</p>
+        <p>Nombre: {{ usuario.nombre }}</p>
+        <p>Apellido: {{ usuario.apellido }}</p>
+        <p>País: {{ usuario.pais }}</p>
+        <p>Ciudad: {{ usuario.ciudad }}</p>
+        <p>Descripción: {{ usuario.descripcion }}</p>
+      </div>
+    </div>
+  </div>
+  <ng-template #noSeguidores>
+    <div class="no-seguidores">
+      <p>No tienes seguidores.</p>
+    </div>
+  </ng-template>
+  <div class="volver-container">
+    <button class="btn-volver" routerLink="/inicio">Volver</button>
+  </div>
+  

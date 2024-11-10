@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { NavbarComponent } from '../../shared/navbar/navbar.component';
 import { Pelicula } from '../../interfaces/pelicula.interface';
 import { PeliculaService } from '../../service/pelicula.service';
@@ -10,7 +10,7 @@ import { FooterComponent } from '../../shared/footer/footer.component';
 @Component({
   selector: 'app-buscar',
   standalone: true,
-  imports: [CommonModule, NavbarComponent,PosterComponent,FooterComponent],
+  imports: [CommonModule, NavbarComponent,PosterComponent,FooterComponent,RouterLink],
   templateUrl: './buscar.component.html',
   styleUrl: './buscar.component.css'
 })

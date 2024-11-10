@@ -1,0 +1,96 @@
+.titulo-seguidores {
+    color: white;
+    text-align: center;
+    font-size: 36px; 
+    margin-bottom: 20px;
+    transition: color 0.3s ease; 
+    margin: 3rem;
+  }
+  
+  .titulo-seguidores:hover {
+    color: red; 
+  }
+  
+  .seguidor-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .seguidor-item {
+    border: 2px solid red;
+    background-color: #2c2c2c;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 300px; 
+    box-sizing: border-box;
+    flex: 1 1 calc(33.333% - 40px);
+  }
+  
+  .seguidor-item p {
+    margin: 5px 0;
+  }
+  
+  /* Estilos para el mensaje de "No tienes seguidores" */
+  .no-seguidores {
+    text-align: center;
+    color: white;
+    background-color: #2c2c2c;
+    padding: 20px;
+    border: 2px solid red;
+    border-radius: 5px;
+    margin: 20px;
+    font-size: 24px; 
+    font-weight: bold; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); 
+  }
+
+  .volver-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .volver-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; /* Ajusta la altura según sea necesario */
+    margin-top: 20px;
+  }
+  
+  .btn-volver {
+    background-color: red; /* Rojo */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-volver:hover {
+    background-color: darkred; /* Rojo más oscuro al pasar el cursor */
+  }
+  
+  
+
+  @media (max-width: 900px) {
+    .seguidor-item {
+      flex: 1 1 calc(50% - 40px); 
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .seguidor-item {
+      flex: 1 1 100%; 
+    }
+  }
+  

@@ -35,7 +35,9 @@ export class RegistroComponent {
 
     if (this.formUsuario.invalid) return;
     const nuevoUsuario = {...this.formUsuario.getRawValue(),
-    listaFavoritos: []
+    listaFavoritos: [],
+    seguidores:[],
+    seguidos: []
   };
     this.altaBD(nuevoUsuario);
   }
