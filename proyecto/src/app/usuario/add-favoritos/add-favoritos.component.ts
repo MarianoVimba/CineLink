@@ -46,6 +46,7 @@ export class AddFavoritosComponent implements OnInit {
     if (this.esFavorito) {
       this.favoritosService.eliminarFavorito(this.userId, this.peliculaId).subscribe(() => {
         this.esFavorito = false;
+        window.location.reload();
       });
     }
   }

@@ -3,10 +3,11 @@ import { UsuarioService } from '../../service/usuario.service';
 import { Usuario } from '../../interfaces/usuario.interface';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { AddSeguirUsuarioComponent } from '../add-seguir-usuario/add-seguir-usuario.component';
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-perfil-usuario',
   standalone: true,
-  imports: [AddSeguirUsuarioComponent,RouterLink],
+  imports: [AddSeguirUsuarioComponent,RouterLink,CommonModule],
   templateUrl: './perfil-usuario.component.html',
   styleUrl: './perfil-usuario.component.css'
 })

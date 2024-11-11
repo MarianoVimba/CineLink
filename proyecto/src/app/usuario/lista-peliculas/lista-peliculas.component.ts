@@ -7,11 +7,12 @@ import { MovieDetails } from '../../interfaces/details.interface';
 import { forkJoin } from 'rxjs';
 import { PosterfavoritoComponent } from '../../pelicula/components/poster-favoritos/poster-favoritos.component';
 import { AddFavoritosComponent } from "../add-favoritos/add-favoritos.component";
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-lista-peliculas',
   standalone: true,
-  imports: [CommonModule, PosterComponent, PosterfavoritoComponent, AddFavoritosComponent],
+  imports: [CommonModule, PosterComponent, PosterfavoritoComponent, AddFavoritosComponent,RouterLink],
   templateUrl: './lista-peliculas.component.html',
   styleUrls: ['./lista-peliculas.component.css']
 })
@@ -39,7 +40,6 @@ export class ListaPeliculasComponent implements OnInit {
       });
     }
   }
-
   castear(): void {
     this.favoritosIdsString = this.favoritos.map(id => id.toString());
     console.log(this.favoritosIdsString);

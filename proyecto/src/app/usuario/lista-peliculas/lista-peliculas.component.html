@@ -1,5 +1,9 @@
 
 <div class="estrenos d-flex flex-column justify-content-center align-items-center ">
   <div class="linea"></div>
-<app-poster-favoritos [peliculasPoster]="peliculas"></app-poster-favoritos>
+  <h2 >LISTA DE FAVORITOS</h2>
+  <app-poster-favoritos [peliculasPoster]="peliculas"></app-poster-favoritos>
+</div>
+<div class="volver-container">
+  <button class="btn-volver" routerLink="/inicio">Volver</button>
 </div>

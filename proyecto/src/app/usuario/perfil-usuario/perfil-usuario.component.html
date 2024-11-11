@@ -1,10 +1,22 @@
-<fieldset>
-    <h1>Perfil de un usuario en Particular</h1><br>
-    Nombre de Usuario: {{unUsuario?.nombreUsuario}}<br>
-    Id: {{unUsuario?.id}}<br>
-    <app-add-seguir-usuario [usuarioId]="unUsuario?.id ?? ''" (eventoAgregar)="actualizarListaSeguidores()"></app-add-seguir-usuario>
-  </fieldset>
-  <div class="volver-container">
-    <button class="btn-volver" routerLink="/inicio">Volver</button>
+<div class="perfil-container" *ngIf="unUsuario">
+  <div class="perfil-header">
+    <h1>{{ unUsuario.nombreUsuario }}</h1>
+    <p>{{ unUsuario.nombre }} {{ unUsuario.apellido }}</p>
   </div>
+  <div class="perfil-info">
+    <p><strong>País:</strong> {{ unUsuario.pais }}</p>
+    <p><strong>Ciudad:</strong> {{ unUsuario.ciudad }}</p>
+    <p><strong>Descripción:</strong> {{ unUsuario.descripcion }}</p>
+  </div>
+
+  </div>
+
+
+<div class="seguir-container">
+  <app-add-seguir-usuario class="btn-seguir" [usuarioId]="unUsuario?.id ?? ''" (eventoAgregar)="actualizarListaSeguidores()"></app-add-seguir-usuario>
+</div>
+
+<div class="volver-container">
+  <button class="btn-volver" routerLink="/inicio">Volver</button>
+</div>
   

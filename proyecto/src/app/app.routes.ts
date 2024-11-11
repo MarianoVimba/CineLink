@@ -9,6 +9,7 @@ import { PaginaPeliculaComponent } from './pages/pagina-pelicula/pagina-pelicula
 import { PerfilUsuarioPageComponent } from './pages/perfil-usuario-page/perfil-usuario-page.component';
 import { ListaSeguidosComponent } from './usuario/lista-seguidos/lista-seguidos.component';
 import { ListaSeguidoresComponent } from './usuario/lista-seguidores/lista-seguidores.component';
+import { ListaPeliculasComponent } from './usuario/lista-peliculas/lista-peliculas.component';
 
 export const routes: Routes = [
     { path: "login", component: LoginComponent },
@@ -21,6 +22,7 @@ export const routes: Routes = [
     { path: 'update/:id', component: UpdateComponent },
     { path: 'seguidos', component:ListaSeguidosComponent},
     { path: 'seguidores', component: ListaSeguidoresComponent},
+    { path: 'favoritos', component: ListaPeliculasComponent},
     { path: '**', redirectTo: 'login' }
 
 ];
