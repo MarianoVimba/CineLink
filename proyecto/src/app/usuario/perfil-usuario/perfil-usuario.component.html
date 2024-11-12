@@ -1,3 +1,6 @@
+<app-navbar></app-navbar>
+
+
 <div class="perfil-container" *ngIf="unUsuario">
   <div class="perfil-header">
     <h1>{{ unUsuario.nombreUsuario }}</h1>
@@ -9,6 +12,9 @@
     <p><strong>Descripción:</strong> {{ unUsuario.descripcion }}</p>
   </div>
 
+  <!-- lista de favoritos -->
+  <button class="btn-volver" [routerLink]="['/favoritos/',id]">Lista favoritos</button>
+
   </div>
 
 
@@ -19,4 +25,4 @@
 <div class="volver-container">
   <button class="btn-volver" routerLink="/inicio">Volver</button>
 </div>
-  
+

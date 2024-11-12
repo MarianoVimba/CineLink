@@ -7,7 +7,7 @@
   max-width: 600px;
   margin: 20px auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-top: 7rem;
+  margin-top: 4rem;
 }
 
 .perfil-header {
@@ -71,7 +71,7 @@
     height: 100px; /* Ajusta la altura según sea necesario */
     margin-top: 20px;
   }
-  
+
   .btn-volver {
     background-color: red; /* Rojo */
     border: none;
@@ -85,8 +85,7 @@
     border-radius: 5px;
     transition: background-color 0.3s ease;
   }
-  
+
   .btn-volver:hover {
     background-color: darkred; /* Rojo más oscuro al pasar el cursor */
   }
-  

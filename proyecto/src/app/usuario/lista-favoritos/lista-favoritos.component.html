@@ -1,0 +1,21 @@
+<app-navbar></app-navbar>
+
+<div class="estrenos d-flex flex-column justify-content-center align-items-center ">
+  <div class="linea"></div>
+  <h2 >LISTA DE FAVORITOS</h2>
+
+  @if (favoritos.length > 0 ) {
+
+    <app-poster-favoritos [peliculasPoster]="peliculas"></app-poster-favoritos>
+
+  }@else {
+
+    <h3>La lista de peliculas favoritas del usuario esta vacia</h3>
+  }
+
+</div>
+<div class="volver-container">
+  <button class="btn-volver" [routerLink]="['/perfil/',userId]">Volver</button>
+</div>
+
+

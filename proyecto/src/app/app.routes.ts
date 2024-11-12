@@ -10,6 +10,7 @@ import { PerfilUsuarioPageComponent } from './pages/perfil-usuario-page/perfil-u
 import { ListaSeguidosComponent } from './usuario/lista-seguidos/lista-seguidos.component';
 import { ListaSeguidoresComponent } from './usuario/lista-seguidores/lista-seguidores.component';
 import { ListaPeliculasComponent } from './usuario/lista-peliculas/lista-peliculas.component';
+import { ListaFavoritosComponent } from './usuario/lista-favoritos/lista-favoritos.component';
 
 export const routes: Routes = [
     { path: "login", component: LoginComponent },
@@ -22,7 +23,9 @@ export const routes: Routes = [
     { path: 'update/:id', component: UpdateComponent },
     { path: 'seguidos', component:ListaSeguidosComponent},
     { path: 'seguidores', component: ListaSeguidoresComponent},
-    { path: 'favoritos', component: ListaPeliculasComponent},
+    { path: 'favoritos', component: ListaPeliculasComponent}, // favoritos del usuario logeado
+    {path: 'favoritos/:id', component: ListaFavoritosComponent }, // lista favoritos otros usuarios
+
     { path: '**', redirectTo: 'login' }
 
 ];

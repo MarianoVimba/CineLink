@@ -37,7 +37,11 @@
       "pais": "Estados Unidos",
       "ciudad": "Nueva York",
       "descripcion": "Aventurera y curiosa",
-      "listaFavoritos": [],
+      "listaFavoritos": [
+        978796,
+        1100782,
+        1354627
+      ],
       "seguidores": [
         "2e81",
         "fb9a"
@@ -45,7 +49,8 @@
       "seguidos": [
         "fb9a",
         "2e81",
-        "58a6"
+        "58a6",
+        "f5b1"
       ]
     },
     {
@@ -84,7 +89,8 @@
       "seguidores": [
         "fb9a",
         "1cb6",
-        "2e81"
+        "2e81",
+        "f5b1"
       ],
       "seguidos": [
         "fb9a",
@@ -129,7 +135,8 @@
       "listaFavoritos": [],
       "seguidores": [
         "fb9a",
-        "1a29"
+        "1a29",
+        "51d9"
       ],
       "seguidos": [
         "fb9a",
@@ -201,10 +208,10 @@
     },
     {
       "id": "c4g8",
-      "nombre": "Liam",
-      "apellido": "Brown",
-      "nombreUsuario": "liambrown",
-      "password": "password123",
+      "nombre": "Alan",
+      "apellido": "Rodriguez",
+      "nombreUsuario": "alanr",
+      "password": "12345678",
       "confirmacionPassword": "password123",
       "pais": "Australia",
       "ciudad": "Sídney",
@@ -224,7 +231,8 @@
         "58a6",
         "1a29",
         "d5h9",
-        "fb9a"
+        "fb9a",
+        "51d9"
       ]
     },
     {
@@ -345,19 +353,53 @@
       "ciudad": "mar del plata",
       "descripcion": "",
       "listaFavoritos": [
-        912649,
-        1034541,
         1084736,
         588648,
         1091181,
-        1357459,
         1075676,
-        1142518
+        1142518,
+        1184918,
+        912649,
+        1118031,
+        123025,
+        21683
       ],
-      "seguidores": [],
+      "seguidores": [
+        "f5b1",
+        "c4g8",
+        "7a0e"
+      ],
       "seguidos": [
-        "fb9a"
+        "fb9a",
+        "4f2f"
       ]
+    },
+    {
+      "nombreUsuario": "blasA2002",
+      "pais": "Argentina",
+      "ciudad": "mar del plata",
+      "descripcion": "hola esto es uan descripcion, 1 2 3 4 5 6 7 8 9 10 11",
+      "id": "f5b1",
+      "listaFavoritos": [
+        1159311,
+        933260,
+        912649,
+        1184918,
+        1118031,
+        239523,
+        1075676
+      ],
+      "seguidos": [
+        "58a6",
+        "51d9"
+      ]
+    },
+    {
+      "nombreUsuario": "blas22",
+      "pais": "argentina",
+      "ciudad": "mar del plata",
+      "descripcion": "hola hhh",
+      "id": "7a0e"
     }
   ],
   "resenias": [
@@ -409,6 +451,55 @@
       "puntuacion": 9,
       "descripcion": "cheto",
       "idUsuario": "8eae"
+    },
+    {
+      "id": "d8b1",
+      "idPelicula": 1184918,
+      "puntuacion": 8,
+      "descripcion": "me gusto",
+      "idUsuario": "f5b1"
+    },
+    {
+      "id": "a601",
+      "idPelicula": 1184918,
+      "puntuacion": 4,
+      "descripcion": "",
+      "idUsuario": "f5b1"
+    },
+    {
+      "id": "ed3d",
+      "idPelicula": 268,
+      "puntuacion": 1,
+      "descripcion": "no",
+      "idUsuario": "f5b1"
+    },
+    {
+      "id": "44eb",
+      "idPelicula": 1034541,
+      "puntuacion": 7,
+      "descripcion": "entretenida ",
+      "idUsuario": "c4g8"
+    },
+    {
+      "id": "2580",
+      "idPelicula": 1184918,
+      "puntuacion": 5,
+      "descripcion": "fdsfsdf",
+      "idUsuario": "7a0e"
+    },
+    {
+      "id": "50ec",
+      "idPelicula": 1358947,
+      "puntuacion": 9,
+      "descripcion": "aaaaaaaaaaa",
+      "idUsuario": "51d9"
+    },
+    {
+      "id": "1d50",
+      "idPelicula": 21683,
+      "puntuacion": 4,
+      "descripcion": "",
+      "idUsuario": "51d9"
     }
   ]
 }
