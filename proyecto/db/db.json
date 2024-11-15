@@ -391,7 +391,8 @@
       ],
       "seguidos": [
         "58a6",
-        "51d9"
+        "51d9",
+        "7a0e"
       ]
     },
     {
@@ -399,7 +400,10 @@
       "pais": "argentina",
       "ciudad": "mar del plata",
       "descripcion": "hola hhh",
-      "id": "7a0e"
+      "id": "7a0e",
+      "seguidores": [
+        "f5b1"
+      ]
     }
   ],
   "resenias": [

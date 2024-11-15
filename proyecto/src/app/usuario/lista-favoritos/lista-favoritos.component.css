@@ -18,12 +18,12 @@ h3{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100px; /* Ajusta la altura según sea necesario */
+  height: 100px; 
   margin-top: 20px;
 }
 
 .btn-volver {
-  background-color: red; /* Rojo */
+  background-color: red; 
   border: none;
   color: white;
   padding: 10px 20px;
@@ -37,5 +37,5 @@ h3{
 }
 
 .btn-volver:hover {
-  background-color: darkred; /* Rojo más oscuro al pasar el cursor */
+  background-color: darkred; 
 }

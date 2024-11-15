@@ -47,10 +47,8 @@ cargarListaResenias(){
 
 cargarUsuarios(resenias: reseña[]) {
   resenias.forEach(resenia => {
-    // Asegurarnos de que idUsuario es un string y no null ni undefined
     const idUsuario = resenia.idUsuario;
     if (idUsuario && typeof idUsuario === 'string') {
-      // Llama al servicio para obtener el usuario por su id
       this.servicioUsuario.getUsuarioById(idUsuario).subscribe({
         next: (usuario: Usuario) => {
           this.usuarios.set(idUsuario, usuario.nombreUsuario);  // Almacena el nombre de usuario
@@ -66,9 +64,9 @@ cargarUsuarios(resenias: reseña[]) {
 
 obtenerNombreUsuario(idUsuario: string | null | undefined): string {
   if (!idUsuario) {
-    return '';  // Devuelve una cadena vacía si idUsuario es null o undefined
+    return '';  
   }
-  return this.usuarios.get(idUsuario) || '';  // Devuelve el nombre de usuario o una cadena vacía si no lo encuentra
+  return this.usuarios.get(idUsuario) || '';  
 }
 
 getEstrellas(puntuacion: number) {

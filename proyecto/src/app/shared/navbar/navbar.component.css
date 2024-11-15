@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding: .5rem;
-  background-color: #3a3341;/* #5e5e5e */
+  background-color: #3a3341;
   color: #dcdcdc;
   text-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.5);
   position: sticky;
@@ -11,7 +11,7 @@
   width: 100%;
   z-index: 1000;
   box-sizing: border-box;
-  flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
+  flex-wrap: wrap; 
 }
 
 .navbar-left .navbar-logo {
@@ -22,7 +22,7 @@
 .navbar-center .user-info {
   display: flex;
   align-items: center;
-  margin-left: 10rem; /* Ajustar el margen para evitar superposición */
+  margin-left: 10rem; 
 }
 
 li {
@@ -53,9 +53,6 @@ li {
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.btn-lista{
-  
-}
 
 .edit-profile-btn:hover {
   background-color: #666;
@@ -68,7 +65,7 @@ li {
 .navbar-right {
   display: flex;
   align-items: center;
-  margin-left: auto; /* Asegurar que los enlaces estén alineados a la derecha */
+  margin-left: auto; 
 }
 
 .navbar-right .nav-link {
@@ -84,44 +81,44 @@ li {
 .search-bar {
   padding: 0.5rem;
   border: 1px solid #ccc;
-  border-radius: 5rem; /* Hacer la barra más redondeada */
+  border-radius: 5rem; 
   margin-right: 1rem;
   flex-grow: 1;
-  background-color: #4a4a4a; /* Fondo similar al navbar */
-  color: #dcdcdc; /* Color del texto */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Transiciones suaves */
+  background-color: #4a4a4a; 
+  color: #dcdcdc; 
+  transition: background-color 0.3s ease, color 0.3s ease; 
 }
 
 .search-bar::placeholder {
-  color: #dcdcdc; /* Color del placeholder */
+  color: #dcdcdc; 
 }
 
 .search-bar:focus {
-  background-color: #5e5e5e; /* Fondo al enfocar */
-  outline: none; /* Quitar el borde de enfoque predeterminado */
+  background-color: #5e5e5e; 
+  outline: none; 
 }
 
-/* Resultados de la busqueda */
+
 
 .search-results {
-  max-height: 8rem; /* Ajusta la altura máxima según tus necesidades */
+  max-height: 8rem; 
   overflow-y: auto;
-  align-items: center; /* Alinea verticalmente los elementos */
-  border: .01rem solid #ccc; /* Opcional: para visualizar mejor el contenedor */
-  padding: 10px; /* Opcional: para un mejor espaciado */
+  align-items: center;
+  border: .01rem solid #ccc; 
+  padding: 10px; 
 }
 
 .search-results ul {
   list-style-type: none;
-  justify-content: space-between; /* Asegura que el nombre y el botón estén separados */
+  justify-content: space-between; 
   padding: 0;
   margin: 0;
 }
 
 .search-results li {
-  margin-bottom: 10px; /* Opcional: para separar los elementos */
-  display: block; /* Asegura que cada elemento ocupe una línea completa */
-  width: 100%; /* Asegura que el elemento ocupe todo el ancho del contenedor */
+  margin-bottom: 10px; 
+  display: block; 
+  width: 100%; 
 }
 
 /* boton de ver perfil */
@@ -133,7 +130,7 @@ li {
   cursor: pointer;
   border-radius: 1rem;
   transition: background-color 0.3s ease, transform 0.3s ease;
-  margin-left: 1rem; /* Espacio entre el nombre de usuario y el botón */
+  margin-left: 1rem; 
 }
 
 .view-profile-btn:hover {
@@ -148,7 +145,6 @@ li {
 /* ------------------------------------------------------------- */
 
 
-/* Ajustes para pantallas pequeñas */
 @media (max-width: 600px) {
   .navbar {
       flex-direction: column;

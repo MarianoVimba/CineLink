@@ -15,14 +15,14 @@ h3{
 
 
 .opciones {
-  border-top: 1px solid #ddd; /* Línea superior sutil */
-  border-bottom: 1px solid #ddd; /* Línea inferior sutil */
+  border-top: 1px solid #ddd; 
+  border-bottom: 1px solid #ddd; 
 }
 
 
 .opciones2 {
-  min-height: 80px; /* Ajusta este valor según lo que necesites */
-  padding: 20px 0; /* Espaciado vertical adicional */
-  border-top: 1px solid #ddd; /* Línea superior */
-  border-bottom: 1px solid #ddd; /* Línea inferior */
+  min-height: 80px; 
+  padding: 20px 0; 
+  border-top: 1px solid #ddd; 
+  border-bottom: 1px solid #ddd; 
 }

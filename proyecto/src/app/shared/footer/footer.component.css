@@ -1,66 +1,66 @@
 .footer-container {
     position: relative; 
     width: 100%;
-    background-color: #3a3341; /* Color de fondo */
-    text-align: center; /* Centrar el contenido */
-    padding: 1rem 0; /* Reducir el espaciado interno */
-    height: auto; /* Ajustar la altura automáticamente */
-    box-sizing: border-box; /* Asegurar que el padding no aumente el ancho total */
+    background-color: #3a3341; 
+    text-align: center; 
+    padding: 1rem 0; 
+    height: auto; 
+    box-sizing: border-box; 
 }
 
 .section-linck {
-    display: inline-block; /* Ajustar el ancho al contenido */
-    padding: 0.5rem; /* Reducir el espaciado interno */
-    position: relative; /* Necesario para los pseudo-elementos */
+    display: inline-block; 
+    padding: 0.5rem; 
+    position: relative; 
 }
 
 .linckApi {
-    font-size: 1.5rem; /* Tamaño de la fuente en rem */
-    color: #dcdcdc; /* Color tiza */
-    font-family: "Fredericka the Great", serif; /* Fuente futurista */
-    text-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.5); /* Sombra para efecto futurista */
-    text-decoration: none; /* Quitar el subrayado */
-    cursor: pointer; /* Cambiar el cursor a mano */
-    text-align: center; /* Centrar el texto */
+    font-size: 1.5rem; 
+    color: #dcdcdc; 
+    font-family: "Fredericka the Great", serif; 
+    text-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.5); 
+    text-decoration: none; 
+    cursor: pointer; 
+    text-align: center; 
 }
 
 .line {
-    display: block; /* Asegurar que cada span ocupe una línea completa */
+    display: block; 
 }
 
 .section-linck::before,
 .section-linck::after {
     content: '';
     position: absolute;
-    top: 50%; /* Centrar verticalmente */
-    width: 0.06rem; /* Grosor de las líneas */
-    height: 2rem; /* Longitud de las líneas verticales */
-    background-color: #dcdcdc; /* Color tiza */
-    transform: translateY(-50%); /* Centrar verticalmente */
+    top: 50%; 
+    width: 0.06rem; 
+    height: 2rem; 
+    background-color: #dcdcdc; 
+    transform: translateY(-50%); 
 }
 
 .section-linck::before {
-    left: -2.5rem; /* Posición de la línea izquierda */
+    left: -2.5rem; 
 }
 
 .section-linck::after {
-    right: -2.5rem; /* Posición de la línea derecha */
+    right: -2.5rem; 
 }
 
 .footer-text {
-    margin-top: 1rem; /* Añadir margen superior para evitar superposición */
-    background-color: #5e5e5e; /* Asegurar el color de fondo */
+    margin-top: 1rem; 
+    background-color: #5e5e5e; 
 }
 
 .footer-text span {
-    display: block; /* Asegurar que cada span ocupe una línea completa */
-    margin-top: 0.5rem; /* Ajustar el margen superior entre los textos */
-    color: #dcdcdc; /* Color tiza */
+    display: block; 
+    margin-top: 0.5rem; 
+    color: #dcdcdc; 
 }
 
 .horizontal-line {
-    width: 2rem; /* Ajustar el ancho de la línea */
-    height: 0.1rem; /* Grosor de la línea */
-    background-color: #dcdcdc; /* Color tiza */
-    margin: 1rem auto; /* Centrar la línea y añadir margen */
+    width: 2rem; 
+    height: 0.1rem; 
+    background-color: #dcdcdc; 
+    margin: 1rem auto; 
 }

@@ -39,23 +39,7 @@ export class PaginaPeliculaComponent implements OnInit{
     const {id} = this.activatedroute.snapshot.params; // recupero id de la url
     this.idPelicula = +id;
 
-    // combineLatest([
-
-    //   this.servicioPelicula.getPeliculaById(id),
-    //   this.servicioPelicula.getPeliculaCreditos(id)
-
-    // ]).subscribe(([movie,cast])=>{
-
-    //   if (movie === null || cast === null) {
-
-    //     console.error('Error: La pelicula o el reparto no se encontraron');
-    //     return;
-
-    //   }
-
-    //   this.pelicula= movie;
-    //   this.cast = cast;
-    // })
+    
 
 
     this.cargarPelicula(id);
@@ -103,7 +87,6 @@ export class PaginaPeliculaComponent implements OnInit{
 
   guardarResenia(nuevaResenia: reseña){
 
-    // this.router.navigate([this.router.url]);
 
       this.servicioResenia.postResenia(nuevaResenia).subscribe({
         next:()=>{

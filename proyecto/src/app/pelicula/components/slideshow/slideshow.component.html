@@ -1,6 +1,5 @@
 <!-- Slider main container -->
 <div class="swiper">
-  <!-- Additional required wrapper -->
   <div class="swiper-wrapper">
     <!-- Slides -->
     <div class="swiper-slide" *ngFor="let pelicula of peliculas"
@@ -18,10 +17,8 @@
 
 
 
-  <!-- If we need pagination -->
   <div class="swiper-pagination"></div>
 
-  <!-- If we need navigation buttons -->
   <div (click)="onSlidePrev()" class="swiper-button-prev"></div>
   <div (click)="onSlideNext()"class="swiper-button-next"></div>
 

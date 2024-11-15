@@ -30,19 +30,6 @@ export class BuscarPeliculaComponent implements OnInit{
           this.texto = params['texto']; // recuper el texto de la url
           console.log(this.texto);
 
-
-          // this.servicioPelicula.buscarPeliculas(this.texto).subscribe({
-          //   next: (resPeliculas) =>{
-          //     this.peliculas=resPeliculas;
-
-          //     if(this.peliculas.length == 0){
-          //     this.noEncontro= '😌 No se encontro la pelicula';
-          //     }
-          //   },error:(e:Error) =>{
-          //     console.log(e.message);
-          //   }
-          // })
-
         this.buscarPeliculas();
 
       },error:(e:Error) =>{

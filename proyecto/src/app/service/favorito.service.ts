@@ -10,14 +10,14 @@ export class FavoritosService {
   private http = inject(HttpClient);
   private baseURL = 'http://localhost:3000/usuarios';
 
-  // Obtiene la lista de favoritos de un usuario específico
+  // Obtiene la lista de favoritos de un usuario especifico
   obtenerFavoritos(userId: string | null): Observable<number[]> {
     return this.http.get<Usuario>(`${this.baseURL}/${userId}`).pipe(
       map(usuario => usuario.listaFavoritos || [])
     );
   }
 
-  // Agrega un ID de película a la lista de favoritos del usuario
+  // agrega un ID de pelicula a la lista de favoritos del usuario
   agregarFavorito(userId: string | null, peliculaId: number): Observable<Usuario> {
     return this.obtenerFavoritos(userId).pipe(
       switchMap(favoritos => {
@@ -27,7 +27,7 @@ export class FavoritosService {
     );
   }
 
-  // Elimina un ID de película de la lista de favoritos del usuario
+  // elimina un ID de pelicula de la lista de favoritos del usuario
   eliminarFavorito(userId: string | null, peliculaId: number): Observable<Usuario> {
     return this.obtenerFavoritos(userId).pipe(
       switchMap(favoritos => {

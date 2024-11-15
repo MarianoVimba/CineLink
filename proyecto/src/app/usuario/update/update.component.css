@@ -4,7 +4,7 @@ body {
     color: #fce43a;
     margin: 0;
     padding: 0;
-    font-size: 62.5%; /* 1rem = 10px */
+    font-size: 62.5%; 
   }
   
   .modicacion-section {
@@ -12,14 +12,14 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #2e2e2e; /* Gris más oscuro */
-    overflow: auto; /* Permitir desplazamiento si el contenido es demasiado grande */
-    padding: 2rem; /* Añadir padding para evitar que el contenido se corte */
+    background-color: #2e2e2e; 
+    overflow: auto; 
+    padding: 2rem; 
     box-sizing: border-box;
   }
   
   .modicacion {
-    max-width: 40rem; /* Hacer el fieldset más pequeño */
+    max-width: 40rem; 
     width: 100%;
     padding: 2rem;
     border: 0.5rem solid #e21c1c;
@@ -56,7 +56,7 @@ body {
     background-color: #444;
     color: #fce43a;
     box-sizing: border-box;
-    font-size:x-large; /* Ajusta el tamaño de la fuente aquí */
+    font-size:x-large; 
   }
   
   input[type="text"]::placeholder,

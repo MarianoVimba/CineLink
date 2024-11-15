@@ -12,6 +12,9 @@ import { Usuario } from '../../interfaces/usuario.interface';
   styleUrls: ['./add-seguir-usuario.component.css']
 })
 export class AddSeguirUsuarioComponent implements OnInit {
+
+  idUsuarioActual: string | null  = localStorage.getItem('userId');
+
   @Input() usuarioId!: string;
   @Output() eventoAgregar = new EventEmitter();
 
@@ -43,7 +46,7 @@ export class AddSeguirUsuarioComponent implements OnInit {
         next: () => {
           this.esSeguidor = true;
           this.eventoAgregar.emit();
-          this.verificarSeguidor(); // Verificar el estado después de seguir
+          this.verificarSeguidor(); 
         },
         error: () => {
           console.log("Error al seguir al usuario");
@@ -58,7 +61,7 @@ export class AddSeguirUsuarioComponent implements OnInit {
         next: () => {
           this.esSeguidor = false;
           this.eventoAgregar.emit();
-          this.verificarSeguidor(); // Verificar el estado después de dejar de seguir
+          this.verificarSeguidor(); 
         },
         error: () => {
           console.log("Error al dejar de seguir al usuario");

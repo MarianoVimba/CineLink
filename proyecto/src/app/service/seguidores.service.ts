@@ -23,7 +23,7 @@ export class SeguidoresService {
 
   id : string | null = null;
 
-// Agrega un ID de usuario a la lista de seguidos del usuario
+// agrega un ID de usuario a la lista de seguidos del usuario
 agregarSeguido(userId: string, seguidoId: string): Observable<Usuario> {
   return this.obtenerSeguidos(userId).pipe(
     switchMap(seguidos => {

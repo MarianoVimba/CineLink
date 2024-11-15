@@ -4,23 +4,23 @@ p{
 
 
 .form-inline {
-  max-width: 600px; /* Limita el ancho máximo del formulario */
+  max-width: 600px; 
 }
 
 .form-inline .form-control {
-  flex-grow: 1; /* Permite que el input crezca para ocupar el espacio disponible */
+  flex-grow: 1; 
 }
 
 .volver-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100px; /* Ajusta la altura según sea necesario */
+  height: 100px; 
   margin-top: 20px;
 }
 
 .btn-volver {
-  background-color: red; /* Rojo */
+  background-color: red; 
   border: none;
   color: white;
   padding: 10px 20px;
@@ -34,5 +34,5 @@ p{
 }
 
 .btn-volver:hover {
-  background-color: darkred; /* Rojo más oscuro al pasar el cursor */
+  background-color: darkred; 
 }

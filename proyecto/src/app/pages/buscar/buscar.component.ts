@@ -39,7 +39,6 @@ export class BuscarComponent {
     this.texto = textoBusqueda;
     this.traerPeliculas()
 
-    //this.router.navigate(['/buscar', texto]);
 
   }
 

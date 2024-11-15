@@ -1,5 +1,11 @@
-<section class="boton-seguir">
+@if (idUsuarioActual !== usuarioId) {
+
+  <section class="boton-seguir">
     <button *ngIf="!esSeguidor" (click)="seguir()" class="fav-button">Seguir</button>
     <button *ngIf="esSeguidor" (click)="dejarDeSeguir()" class="fav-button">Dejar de Seguir</button>
   </section>
-  
+
+
+
+}
+

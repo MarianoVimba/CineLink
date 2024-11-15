@@ -1,8 +1,8 @@
 .custom-modal {
-  background-color: #575480; /* Cambia este color por el que prefieras */
-  color: white; /* Cambia el color del texto si es necesario */
-  border-radius: 8px; /* Opcional: para redondear los bordes */
-  padding: 20px; /* Opcional: para darle un poco más de espacio interno */
+  background-color: #575480; 
+  color: white; 
+  border-radius: 8px; 
+  padding: 20px; 
   border: 2px solid white;
 }
 

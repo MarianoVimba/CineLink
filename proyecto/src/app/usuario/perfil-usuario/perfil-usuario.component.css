@@ -35,7 +35,6 @@
 
 
 
-/* Media queries para hacer el diseño responsive */
 @media (max-width: 768px) {
   .perfil-container {
     padding: 15px;
@@ -58,7 +57,7 @@
 .seguir-container {
   display: flex;
   justify-content: center;
-  margin-top: 20px; /* Adjust as needed */
+  margin-top: 20px; 
 }
 
 
@@ -68,12 +67,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px; /* Ajusta la altura según sea necesario */
+    height: 100px; 
     margin-top: 20px;
   }
 
   .btn-volver {
-    background-color: red; /* Rojo */
+    background-color: red; 
     border: none;
     color: white;
     padding: 10px 20px;
@@ -87,5 +86,5 @@
   }
 
   .btn-volver:hover {
-    background-color: darkred; /* Rojo más oscuro al pasar el cursor */
+    background-color: darkred; 
   }

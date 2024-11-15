@@ -2,7 +2,6 @@
 
 .cartelera {
   margin-top: 2rem ;
- /* height: 100vh; /* Hace que el contenedor ocupe toda la altura de la ventana */
 }
 
 .cartelera h1{
@@ -25,9 +24,9 @@ h2 {
 
 
 .linea{
-  width: 50%; /* Asegura que el div ocupe todo el ancho */
-  border-top: 2px solid rgba(255, 255, 255, 0.568); /* Línea blanca sutil */
-  height: 2px; /* Hace que la línea sea más fina */
+  width: 50%; 
+  border-top: 2px solid rgba(255, 255, 255, 0.568); 
+  height: 2px; 
 
 }
 
