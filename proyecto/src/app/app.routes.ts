@@ -11,20 +11,22 @@ import { ListaSeguidosComponent } from './usuario/lista-seguidos/lista-seguidos.
 import { ListaSeguidoresComponent } from './usuario/lista-seguidores/lista-seguidores.component';
 import { ListaPeliculasComponent } from './usuario/lista-peliculas/lista-peliculas.component';
 import { ListaFavoritosComponent } from './usuario/lista-favoritos/lista-favoritos.component';
+import { authGuardFn } from './auth/guard/auth.guard-fn';
+import { authGuardFnLogueado } from './auth/guard/auth.guard-fn-logueado';
 
 export const routes: Routes = [
-    { path: "login", component: LoginComponent },
-    { path: "registro", component: RegistroComponent },
-    { path: "inicio", component: InicioComponent },
-    { path: "perfil/:id", component: PerfilUsuarioPageComponent },
-    { path: 'pelicula/:id', component: PaginaPeliculaComponent },
-    { path: 'buscar/:texto', component: BuscarPeliculaComponent },
-    { path: 'buscar', component: BuscarComponent },
-    { path: 'update/:id', component: UpdateComponent },
-    { path: 'seguidos', component:ListaSeguidosComponent},
-    { path: 'seguidores', component: ListaSeguidoresComponent},
-    { path: 'favoritos', component: ListaPeliculasComponent}, // favoritos del usuario logeado
-    {path: 'favoritos/:id', component: ListaFavoritosComponent }, // lista favoritos otros usuarios
+    { path: "login", component: LoginComponent, canActivate:[authGuardFnLogueado] },
+    { path: "registro", component: RegistroComponent, canActivate:[authGuardFnLogueado] },
+    { path: "inicio", component: InicioComponent, canActivate:[authGuardFn] },
+    { path: "perfil/:id", component: PerfilUsuarioPageComponent, canActivate:[authGuardFn]  },
+    { path: 'pelicula/:id', component: PaginaPeliculaComponent, canActivate:[authGuardFn]  },
+    { path: 'buscar/:texto', component: BuscarPeliculaComponent, canActivate:[authGuardFn]  },
+    { path: 'buscar', component: BuscarComponent, canActivate:[authGuardFn] },
+    { path: 'update/:id', component: UpdateComponent, canActivate:[authGuardFn] },
+    { path: 'seguidos', component:ListaSeguidosComponent, canActivate:[authGuardFn] },
+    { path: 'seguidores', component: ListaSeguidoresComponent, canActivate:[authGuardFn] },
+    { path: 'favoritos', component: ListaPeliculasComponent, canActivate:[authGuardFn] }, // favoritos del usuario logeado
+    {path: 'favoritos/:id', component: ListaFavoritosComponent, canActivate:[authGuardFn]  }, // lista favoritos otros usuarios
 
     { path: '**', redirectTo: 'login' }
 

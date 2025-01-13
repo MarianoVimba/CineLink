@@ -3,6 +3,7 @@ import { Component, inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { UsuarioService } from '../../../service/usuario.service';
 import { Router, RouterLink } from '@angular/router';
+import { AuthService } from '../../../service/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -14,6 +15,7 @@ import { Router, RouterLink } from '@angular/router';
 export class LoginComponent implements OnInit {
   formLogin: FormGroup;
   router = inject(Router);
+  auth = inject(AuthService);
 
   constructor(private fb: FormBuilder, private usuarioService: UsuarioService) {
     this.formLogin = this.fb.group({
@@ -24,6 +26,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {}
 
+
   login() {
     if (this.formLogin.invalid) return;
 
@@ -33,6 +36,7 @@ export class LoginComponent implements OnInit {
         if (usuario) {
           alert('Login exitoso');
           this.router.navigate(['inicio']);
+          this.auth.logIn(); // del servicio para pasarlo a true
         } else {
           alert('Usuario o contraseña incorrectos');
         }
@@ -42,4 +46,6 @@ export class LoginComponent implements OnInit {
       }
     });
   }
+
+
 }

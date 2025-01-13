@@ -362,7 +362,9 @@
         912649,
         1118031,
         123025,
-        21683
+        21683,
+        939243,
+        268
       ],
       "seguidores": [
         "f5b1",
@@ -371,7 +373,8 @@
       ],
       "seguidos": [
         "fb9a",
-        "4f2f"
+        "4f2f",
+        "b3f7"
       ]
     },
     {
@@ -503,6 +506,13 @@
       "idPelicula": 21683,
       "puntuacion": 4,
       "descripcion": "",
+      "idUsuario": "51d9"
+    },
+    {
+      "id": "ff75",
+      "idPelicula": 939243,
+      "puntuacion": 8,
+      "descripcion": "buena",
       "idUsuario": "51d9"
     }
   ]

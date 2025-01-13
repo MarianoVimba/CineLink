@@ -4,6 +4,7 @@ import { UsuarioService } from '../../service/usuario.service';
 import { Usuario } from '../../interfaces/usuario.interface';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { AuthService } from '../../service/auth.service';
 
 @Component({
   selector: 'app-navbar',
@@ -18,6 +19,7 @@ export class NavbarComponent implements OnInit {
 
   ruta = inject(Router);
   servicio = inject(UsuarioService);
+  auth = inject(AuthService);
 
   id: string | null= "";
   nombreUsuario: string = "";
@@ -75,7 +77,10 @@ export class NavbarComponent implements OnInit {
         console.error('Error al obtener usuarios:', err);
       }
     });
-  
-    
+  }
+
+  logOut(){
+    this.auth.logOut();
+    localStorage.clear();
   }
 }
