@@ -1,113 +1,135 @@
 body {
-    background-color: #5e5e5e;
-    font-family: Arial, sans-serif;
-    color: #fce43a;
-    margin: 0;
-    padding: 0;
-    font-size: 62.5%; 
-  }
-  
-  .ingreso-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #2e2e2e; 
-    overflow: auto; 
-    padding: 2rem; 
-    box-sizing: border-box;
-  }
-  
+  background-color: #5e5e5e;
+  font-family: Arial, sans-serif;
+  color: #fce43a;
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%; 
+}
+
+.ingreso-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #2e2e2e; 
+  overflow: auto; 
+  padding: 2rem; 
+  box-sizing: border-box;
+}
+
+.ingreso {
+  max-width: 40rem; 
+  width: 100%;
+  padding: 2rem;
+  border: 0.5rem solid #e21c1c;
+  border-radius: 1rem;
+  background-color: #333;
+  box-sizing: border-box;
+  font-size: x-large;
+}
+
+legend {
+  font-size: 2rem;
+  color: #fce43a;
+  padding: 0 1rem;
+}
+
+div {
+  margin-bottom: 1.5rem;
+  color: aliceblue;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #fce43a;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 1rem;
+  border: 0.5rem solid #e21c1c;
+  border-radius: 0.5rem;
+  background-color: #444;
+  color: #fce43a;
+  box-sizing: border-box;
+  font-size: x-large; 
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+  color: #fce43a;
+}
+
+.error {
+  color: #e21c1c;
+  font-size: 1.2rem;
+  display: none;
+}
+
+.botones {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  width: 48%;
+  padding: 1rem;
+  background-color: #e21c1c;
+  border: none;
+  border-radius: 0.5rem;
+  color: #fce43a;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #b51717;
+}
+
+.recuperacion-container {
+  width: 100%;
+  display: flex;
+  justify-content: center; 
+  margin-top: 1rem; 
+}
+
+.recuperacion {
+  width: 100%; 
+  padding: 1rem;
+  background-color: #e21c1c;
+  border: none;
+  border-radius: 0.5rem;
+  color: #fce43a;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.recuperacion:hover {
+  background-color: #b51717;
+}
+
+@media (max-width: 60rem) {
   .ingreso {
-    max-width: 40rem; 
-    width: 100%;
-    padding: 2rem;
-    border: 0.5rem solid #e21c1c;
-    border-radius: 1rem;
-    background-color: #333;
-    box-sizing: border-box;
+    padding: 1rem;
+  }
+
+  legend {
     font-size: x-large;
   }
-  
-  legend {
-    font-size: 2rem;
-    color: #fce43a;
-    padding: 0 1rem;
-  }
-  
-  div {
-    margin-bottom: 1.5rem;
-    color: aliceblue;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: #fce43a;
-  }
-  
+
   input[type="text"],
   input[type="password"] {
-    width: 100%;
-    padding: 1rem;
-    border: 0.5rem solid #e21c1c;
-    border-radius: 0.5rem;
-    background-color: #444;
-    color: #fce43a;
-    box-sizing: border-box;
-    font-size: x-large; 
+    padding: 0.8rem;
+    border-width: 0.3rem;
   }
-  
-  input[type="text"]::placeholder,
-  input[type="password"]::placeholder {
-    color: #fce43a;
-  }
-  
-  .error {
-    color: #e21c1c;
-    font-size: 1.2rem;
-    display: none;
-  }
-  
-  .botones {
-    display: flex;
-    justify-content: space-between;
-  }
-  
+
   button {
-    width: 48%;
-    padding: 1rem;
-    background-color: #e21c1c;
-    border: none;
-    border-radius: 0.5rem;
-    color: #fce43a;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    padding: 0.8rem;
+    font-size: 1rem;
   }
-  
-  button:hover {
-    background-color: #b51717;
-  }
-  
-  @media (max-width: 60rem) {
-    .ingreso {
-        padding: 1rem;
-    }
-  
-    legend {
-        font-size: x-large;
-    }
-  
-    input[type="text"],
-    input[type="password"] {
-        padding: 0.8rem;
-        border-width: 0.3rem;
-    }
-  
-    button {
-        padding: 0.8rem;
-        font-size: 1rem;
-    }
-  }
-  
+}

@@ -14,7 +14,8 @@
       "seguidores": [
         "1cb6",
         "2e81",
-        "51d9"
+        "51d9",
+        "760f"
       ],
       "seguidos": [
         "58a6",
@@ -407,6 +408,98 @@
       "seguidores": [
         "f5b1"
       ]
+    },
+    {
+      "id": "8725",
+      "nombre": "prueba",
+      "apellido": "prueba",
+      "nombreUsuario": "olfaf",
+      "password": "12345678",
+      "confirmacionPassword": "123456789",
+      "pais": "arg",
+      "ciudad": "arg",
+      "descripcion": "aa",
+      "listaFavoritos": [],
+      "seguidores": [],
+      "seguidos": []
+    },
+    {
+      "id": "c001",
+      "nombre": "aaasd",
+      "apellido": "asdasd",
+      "nombreUsuario": "asdaf",
+      "password": "12345678",
+      "confirmacionPassword": "12345678",
+      "pais": "aaa",
+      "ciudad": "aaa",
+      "palabraClave": "aaa",
+      "descripcion": "",
+      "listaFavoritos": [],
+      "seguidores": [],
+      "seguidos": []
+    },
+    {
+      "id": "760f",
+      "nombre": "bbb",
+      "apellido": "bbb",
+      "nombreUsuario": "bbb",
+      "password": "12345678",
+      "confirmacionPassword": "12345678",
+      "pais": "bbb",
+      "ciudad": "bbb",
+      "palabraClave": "bbb",
+      "descripcion": "",
+      "listaFavoritos": [],
+      "seguidores": [],
+      "seguidos": [
+        "fb9a"
+      ]
+    },
+    {
+      "id": "5db7",
+      "nombre": "hola",
+      "apellido": "hola",
+      "nombreUsuario": "hola",
+      "password": "holiholi",
+      "confirmacionPassword": "holiholi",
+      "pais": "arg",
+      "ciudad": "bbb",
+      "palabraClave": "hola",
+      "descripcion": "nda",
+      "listaFavoritos": [],
+      "seguidores": [],
+      "seguidos": [],
+      "confirmacionPasword": "chauchau"
+    },
+    {
+      "id": "6ce6",
+      "nombre": "ccc",
+      "apellido": "ccc",
+      "nombreUsuario": "ccc",
+      "password": "11111111",
+      "confirmacionPassword": "12345678",
+      "pais": "ccc",
+      "ciudad": "ccc",
+      "palabraClave": "ccc",
+      "descripcion": "",
+      "listaFavoritos": [],
+      "seguidores": [],
+      "seguidos": []
+    },
+    {
+      "id": "21c1",
+      "nombre": "axel",
+      "apellido": "alfredo",
+      "nombreUsuario": "axelf",
+      "password": "12312333",
+      "confirmacionPassword": "12312333",
+      "pais": "angola",
+      "ciudad": "angola",
+      "palabraClave": "axel",
+      "descripcion": "",
+      "listaFavoritos": [],
+      "seguidores": [],
+      "seguidos": []
     }
   ],
   "resenias": [

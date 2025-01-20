@@ -13,10 +13,12 @@ import { ListaPeliculasComponent } from './usuario/lista-peliculas/lista-pelicul
 import { ListaFavoritosComponent } from './usuario/lista-favoritos/lista-favoritos.component';
 import { authGuardFn } from './auth/guard/auth.guard-fn';
 import { authGuardFnLogueado } from './auth/guard/auth.guard-fn-logueado';
+import { RestablecerPasswordComponent } from './usuario/autenticacion/restablecer-password/restablecer-password.component';
 
 export const routes: Routes = [
     { path: "login", component: LoginComponent, canActivate:[authGuardFnLogueado] },
     { path: "registro", component: RegistroComponent, canActivate:[authGuardFnLogueado] },
+    { path: "recuperacionDeContraseña", component: RestablecerPasswordComponent , canActivate:[authGuardFnLogueado] },
     { path: "inicio", component: InicioComponent, canActivate:[authGuardFn] },
     { path: "perfil/:id", component: PerfilUsuarioPageComponent, canActivate:[authGuardFn]  },
     { path: 'pelicula/:id', component: PaginaPeliculaComponent, canActivate:[authGuardFn]  },

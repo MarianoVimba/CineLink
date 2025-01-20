@@ -29,11 +29,43 @@ export class UsuarioService {
 
   // solucion de id una vez ingresado para poder obtenerlo para poder trabajar con ese id
 
-login(nombreUsuario: string, password: string): Observable<Usuario | null> {
-  return this.http.get<Usuario[]>(`${this.urlBase}?nombreUsuario=${nombreUsuario}&password=${password}`).pipe(
+  login(nombreUsuario: string, password: string): Observable<Usuario | null> {
+    return this.http.get<Usuario[]>(`${this.urlBase}?nombreUsuario=${nombreUsuario}&password=${password}`).pipe(
+      map(usuarios => {
+        if (usuarios.length > 0) {
+          const userId = String(usuarios[0].id);
+          localStorage.setItem('userId', userId); // convertir el ID a cadena
+          console.log('ID del usuario almacenado:', userId); // Verifica el ID almacenado
+          return usuarios[0];
+        } else {
+          return null;
+        }
+      })
+    );
+  }
+
+ // Método para verificar si el nombre de usuario ya existe (sin importar mayúsculas/minúsculas)
+ verificarNombreUsuarioExistente(nombreUsuario: string): Observable<boolean> {
+  return this.getUsuarios().pipe(
+    map(usuarios => usuarios.some(usuario => usuario.nombreUsuario.toLowerCase() === nombreUsuario.toLowerCase()))
+  );
+}
+
+
+actualizarContraseña(id: string, nuevaContraseña: string): Observable<Usuario> {
+  return this.http.patch<Usuario>(`${this.urlBase}/${id}`, {
+    password: nuevaContraseña,
+    confirmacionPassword: nuevaContraseña 
+  });
+}
+
+verificarUsuarioPorPalabraClave(nombreUsuario: string, palabraClave: string): Observable<Usuario | null> {
+  return this.http.get<Usuario[]>(`${this.urlBase}?nombreUsuario=${nombreUsuario}&palabraClave=${palabraClave}`).pipe(
     map(usuarios => {
       if (usuarios.length > 0) {
-        localStorage.setItem('userId', String(usuarios[0].id)); // convertir el ID a cadena
+        const userId = String(usuarios[0].id);
+        localStorage.setItem('userId', userId); // convertir el ID a cadena
+        console.log('ID del usuario almacenado:', userId); // Verifica el ID almacenado
         return usuarios[0];
       } else {
         return null;
@@ -43,5 +75,8 @@ login(nombreUsuario: string, password: string): Observable<Usuario | null> {
 }
 
 
-
 }
+
+
+
+

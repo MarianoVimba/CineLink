@@ -34,6 +34,9 @@
         <div *ngIf="formUsuario.controls['nombreUsuario'].touched && formUsuario.controls['nombreUsuario'].hasError('minlength')" class="error">
           Requiere un mínimo de 3 letras
         </div>
+        <div *ngIf="formUsuario.controls['nombreUsuario'].touched && formUsuario.controls['nombreUsuario'].hasError('nombreUsuarioExistente')" class="error">
+          Este nombre de usuario no esta disponible, ingrese otro
+        </div>
       </div>
       
       <div class="contraseña">
@@ -55,8 +58,12 @@
         </div>
         <div *ngIf="formUsuario.controls['confirmacionPassword'].touched && formUsuario.controls['confirmacionPassword'].hasError('minlength')" class="error">
           Contraseña corta, mínimo 8 caracteres
-          </div>
+        </div>
+        <div *ngIf="formUsuario.hasError('contraseñaNoCoinciden') && formUsuario.controls['confirmacionPassword'].touched" class="error">
+          Las contraseñas no coinciden
+        </div>
       </div>
+      
       
       <div class="pais">
         <label for="pais">País:</label>
@@ -73,6 +80,17 @@
           Este campo es requerido
         </div>
       </div>
+
+      <div class="palabraClave">
+        <label for="palabraClave">Palabra clave (restablecer contraseña):</label>
+        <input type="text" id="palabraClave" formControlName="palabraClave" placeholder="Por ejemplo el nombre de tu primera mascota">
+        <div *ngIf="formUsuario.controls['palabraClave'].touched && formUsuario.controls['palabraClave'].hasError('required')" class="error">
+          Este campo es requerido
+        </div>
+        <div *ngIf="formUsuario.controls['palabraClave'].touched && formUsuario.controls['palabraClave'].hasError('minlength')" class="error">
+          Requiere un mínimo de 3 letras
+        </div>
+      </div>
       
       <div class="descripcion">
         <label for="descripcion">Descripción (opcional):</label>
@@ -81,6 +99,10 @@
       
       <div class="boton">
         <button type="submit" [disabled]="formUsuario.invalid">Confirmar</button>
+      </div>
+
+      <div class="boton">
+        <button type="submit" routerLink="/login">Volver</button>
       </div>
     </form>
   </fieldset>

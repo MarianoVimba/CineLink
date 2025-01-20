@@ -7,6 +7,7 @@ export interface Usuario{
     confirmacionPasword?: string,
     pais: string,
     ciudad: string,
+    palabraClave?: string,
     descripcion: string
 
     //listas
