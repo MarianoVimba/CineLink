@@ -71,6 +71,9 @@
         <div *ngIf="formUsuario.controls['pais'].touched && formUsuario.controls['pais'].hasError('required')" class="error">
           Este campo es requerido
         </div>
+        <div *ngIf="formUsuario.controls['pais'].touched && formUsuario.controls['pais'].hasError('minlength')" class="error">
+          Requiere un mínimo de 4 letras
+        </div>
       </div>
       
       <div class="ciudad">
@@ -78,6 +81,9 @@
         <input type="text" id="ciudad" formControlName="ciudad" placeholder="Ingresa tu ciudad">
         <div *ngIf="formUsuario.controls['ciudad'].touched && formUsuario.controls['ciudad'].hasError('required')" class="error">
           Este campo es requerido
+        </div>
+        <div *ngIf="formUsuario.controls['ciudad'].touched && formUsuario.controls['ciudad'].hasError('minlength')" class="error">
+          Requiere un mínimo de 2 letras
         </div>
       </div>
 

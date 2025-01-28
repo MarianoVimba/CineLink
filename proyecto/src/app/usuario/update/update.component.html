@@ -4,32 +4,41 @@
     
     <form [formGroup]="formulario" (ngSubmit)="actualizar()">
 
-        <div class="nombreUsuario">
+      <div class="nombreUsuario">
         <label for="nombreUsuario">Nombre de usuario:</label>
         <input type="text" id="nombreUsuario" formControlName="nombreUsuario" placeholder="Elige un nombre de usuario">
-          <div *ngIf="formulario.controls['nombreUsuario'].touched && formulario.controls['nombreUsuario'].hasError('required')" class="error">
-            Este campo es requerido
+        <div *ngIf="formulario.controls['nombreUsuario'].touched && formulario.controls['nombreUsuario'].hasError('required')" class="error">
+          Este campo es requerido
         </div>
-          <div *ngIf="formulario.controls['nombreUsuario'].touched && formulario.controls['nombreUsuario'].hasError('minlength')" class="error">
-            Requiere un mínimo de 3 letras
+        <div *ngIf="formulario.controls['nombreUsuario'].touched && formulario.controls['nombreUsuario'].hasError('minlength')" class="error">
+          Requiere un mínimo de 3 letras
         </div>
+        <div *ngIf="formulario.controls['nombreUsuario'].touched && formulario.controls['nombreUsuario'].hasError('nombreUsuarioExistente')" class="error">
+          Este nombre de usuario no esta disponible, ingrese otro
         </div>
+      </div>
         
-        <div class="pais">
+      <div class="pais">
         <label for="pais">País:</label>
         <input type="text" id="pais" formControlName="pais" placeholder="Ingresa tu país">
-          <div *ngIf="formulario.controls['pais'].touched && formulario.controls['pais'].hasError('required')" class="error">
-            Este campo es requerido
+        <div *ngIf="formulario.controls['pais'].touched && formulario.controls['pais'].hasError('required')" class="error">
+          Este campo es requerido
         </div>
+        <div *ngIf="formulario.controls['pais'].touched && formulario.controls['pais'].hasError('minlength')" class="error">
+          Requiere un mínimo de 4 letras
         </div>
-        
-        <div class="ciudad">
+      </div>
+      
+      <div class="ciudad">
         <label for="ciudad">Ciudad:</label>
         <input type="text" id="ciudad" formControlName="ciudad" placeholder="Ingresa tu ciudad">
         <div *ngIf="formulario.controls['ciudad'].touched && formulario.controls['ciudad'].hasError('required')" class="error">
-            Este campo es requerido
+          Este campo es requerido
         </div>
+        <div *ngIf="formulario.controls['ciudad'].touched && formulario.controls['ciudad'].hasError('minlength')" class="error">
+          Requiere un mínimo de 2 letras
         </div>
+      </div>
         
         <div class="descripcion">
         <label for="descripcion">Descripción (opcional):</label>

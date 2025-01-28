@@ -26,8 +26,8 @@ export class RegistroComponent {
       nombreUsuario: ['', [Validators.required, Validators.minLength(3)], [this.nombreUsuarioDisponible.bind(this)]],
       password: ['', [Validators.required, Validators.minLength(8)]],
       confirmacionPassword: ['', [Validators.required, Validators.minLength(8)]],
-      pais: ['', [Validators.required]],
-      ciudad: ['', [Validators.required]],
+      pais: ['', [Validators.required, Validators.minLength(4)]],
+      ciudad: ['', [Validators.required, Validators.minLength(2)]],
       palabraClave:['', [Validators.required, Validators.minLength(3)]],
       descripcion: ['']
     }, { validators: this.passwordsMatch });

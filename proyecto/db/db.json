@@ -347,7 +347,7 @@
       "id": "51d9",
       "nombre": "mariano",
       "apellido": "vimba",
-      "nombreUsuario": "marianov",
+      "nombreUsuario": "marianovi",
       "password": "12345678",
       "confirmacionPassword": "12345678",
       "pais": "argentina",
@@ -375,7 +375,8 @@
       "seguidos": [
         "fb9a",
         "4f2f",
-        "b3f7"
+        "b3f7",
+        "f862"
       ]
     },
     {
@@ -435,7 +436,9 @@
       "palabraClave": "aaa",
       "descripcion": "",
       "listaFavoritos": [],
-      "seguidores": [],
+      "seguidores": [
+        "f862"
+      ],
       "seguidos": []
     },
     {
@@ -500,6 +503,29 @@
       "listaFavoritos": [],
       "seguidores": [],
       "seguidos": []
+    },
+    {
+      "id": "f862",
+      "nombre": "yyy",
+      "apellido": "yyy",
+      "nombreUsuario": "kkk",
+      "password": "asdasdasd",
+      "confirmacionPassword": "asdasdasd",
+      "pais": "asaa",
+      "ciudad": "dd",
+      "palabraClave": "asd",
+      "descripcion": "dsaad",
+      "listaFavoritos": [
+        832964,
+        1215185,
+        1405170
+      ],
+      "seguidores": [
+        "51d9"
+      ],
+      "seguidos": [
+        "c001"
+      ]
     }
   ],
   "resenias": [

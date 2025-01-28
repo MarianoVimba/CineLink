@@ -23,9 +23,11 @@ export class UsuarioService {
     return this.http.post<Usuario>(this.urlBase, usuario);
   }
 
-  updateUsuario(id: string | null, usuario: Usuario): Observable<Usuario> {
-    return this.http.put<Usuario>(`${this.urlBase}/${id}`, usuario);
+  updateUsuario(id: string | null, usuario: Partial<Usuario>): Observable<Usuario> {
+    return this.http.patch<Usuario>(`${this.urlBase}/${id}`, usuario);
   }
+//Partial<Usuario> para indicar que no todos los campos del objeto Usuario son requeridos, y que solo se actualizaran los que se pasen en la solicitud.  
+
 
   // solucion de id una vez ingresado para poder obtenerlo para poder trabajar con ese id
 
@@ -44,12 +46,11 @@ export class UsuarioService {
     );
   }
 
- // Método para verificar si el nombre de usuario ya existe (sin importar mayúsculas/minúsculas)
- verificarNombreUsuarioExistente(nombreUsuario: string): Observable<boolean> {
-  return this.getUsuarios().pipe(
-    map(usuarios => usuarios.some(usuario => usuario.nombreUsuario.toLowerCase() === nombreUsuario.toLowerCase()))
-  );
-}
+  verificarNombreUsuarioExistente(nombreUsuario: string): Observable<boolean> {
+    return this.getUsuarios().pipe(
+      map(usuarios => usuarios.some(usuario => usuario.nombreUsuario === nombreUsuario))
+    );
+  }
 
 
 actualizarContraseña(id: string, nuevaContraseña: string): Observable<Usuario> {
