@@ -1,668 +1,359 @@
 {
   "usuarios": [
     {
-      "id": "fb9a",
-      "nombre": "Olaf",
-      "apellido": "Olaf",
-      "nombreUsuario": "olfaf",
-      "password": "12345678",
-      "confirmacionPassword": "12345678",
-      "pais": "Noruega",
-      "ciudad": "Oslo",
-      "descripcion": "Amante del invierno",
-      "listaFavoritos": [],
-      "seguidores": [
-        "1cb6",
-        "2e81",
-        "51d9",
-        "760f"
-      ],
-      "seguidos": [
-        "58a6",
-        "1a29",
-        "4f2f",
-        "a2d5",
-        "60ed",
-        "h9l3",
-        "2e81",
-        "1cb6"
-      ]
-    },
-    {
-      "id": "1cb6",
-      "nombre": "Anna",
-      "apellido": "Smith",
-      "nombreUsuario": "annasmith",
-      "password": "password123",
-      "confirmacionPassword": "password123",
-      "pais": "Estados Unidos",
-      "ciudad": "Nueva York",
-      "descripcion": "Aventurera y curiosa",
-      "listaFavoritos": [
-        978796,
-        1100782,
-        1354627
-      ],
-      "seguidores": [
-        "2e81",
-        "fb9a"
-      ],
-      "seguidos": [
-        "fb9a",
-        "2e81",
-        "58a6",
-        "f5b1"
-      ]
-    },
-    {
-      "id": "2e81",
-      "nombre": "John",
-      "apellido": "Doe",
-      "nombreUsuario": "johndoe",
-      "password": "password123",
-      "confirmacionPassword": "password123",
-      "pais": "Reino Unido",
-      "ciudad": "Londres",
-      "descripcion": "Amante de la tecnología",
-      "listaFavoritos": [],
-      "seguidores": [
-        "1cb6",
-        "fb9a"
-      ],
-      "seguidos": [
-        "fb9a",
-        "1cb6",
-        "58a6",
-        "1a29"
-      ]
-    },
-    {
-      "id": "58a6",
-      "nombre": "Maria",
-      "apellido": "Garcia",
-      "nombreUsuario": "mariagarcia",
-      "password": "password123",
-      "confirmacionPassword": "password123",
-      "pais": "España",
-      "ciudad": "Madrid",
-      "descripcion": "Amante del arte",
-      "listaFavoritos": [],
-      "seguidores": [
-        "fb9a",
-        "1cb6",
-        "2e81",
-        "f5b1"
-      ],
-      "seguidos": [
-        "fb9a",
-        "1cb6",
-        "2e81",
-        "1a29"
-      ]
-    },
-    {
-      "id": "1a29",
-      "nombre": "Carlos",
-      "apellido": "Martinez",
-      "nombreUsuario": "carlosmartinez",
-      "password": "password123",
-      "confirmacionPassword": "password123",
-      "pais": "México",
-      "ciudad": "Ciudad de México",
-      "descripcion": "Amante de la música",
-      "listaFavoritos": [],
-      "seguidores": [
-        "fb9a",
-        "2e81",
-        "58a6"
-      ],
-      "seguidos": [
-        "fb9a",
-        "2e81",
-        "58a6",
-        "4f2f"
-      ]
-    },
-    {
-      "id": "4f2f",
-      "nombre": "Lucia",
-      "apellido": "Lopez",
-      "nombreUsuario": "lucialopez",
-      "password": "password123",
-      "confirmacionPassword": "password123",
+      "id": "o7p8",
+      "nombre": "Tomás",
+      "apellido": "Martínez",
+      "nombreUsuario": "tomas00",
+      "password": "Tomas1234",
+      "confirmacionPassword": "Tomas1234",
       "pais": "Argentina",
       "ciudad": "Buenos Aires",
-      "descripcion": "Amante del cine",
-      "listaFavoritos": [],
+      "palabraClave": "deportes",
+      "descripcion": "Me apasionan los deportes en equipo.",
+      "listaFavoritos": [
+        1223799,
+        11101,
+        1402482,
+        1174128,
+        1020896
+      ],
       "seguidores": [
-        "fb9a",
-        "1a29",
-        "51d9"
+        "d3e4",
+        "q9r0"
       ],
       "seguidos": [
-        "fb9a",
-        "1a29",
-        "a2d5"
+        "q9r0",
+        "x5y6",
+        "c1d2"
       ]
     },
     {
-      "id": "a2d5",
-      "nombre": "Sofia",
-      "apellido": "Fernandez",
-      "nombreUsuario": "sofiafernandez",
-      "password": "password123",
-      "confirmacionPassword": "password123",
+      "id": "q9r0",
+      "nombre": "Agustina",
+      "apellido": "Fernández",
+      "nombreUsuario": "agus22",
+      "password": "Agus9876",
+      "confirmacionPassword": "Agus9876",
+      "pais": "Argentina",
+      "ciudad": "Mendoza",
+      "palabraClave": "cultura",
+      "descripcion": "Interesada en la cultura y la historia.",
+      "listaFavoritos": [
+        777831,
+        1278162,
+        993710,
+        1249289,
+        539972
+      ],
+      "seguidores": [
+        "o7p8",
+        "d3e4",
+        "f5g6"
+      ],
+      "seguidos": [
+        "o7p8",
+        "v3w4"
+      ]
+    },
+    {
+      "id": "t1u2",
+      "nombre": "Andrés",
+      "apellido": "Gómez",
+      "nombreUsuario": "andres55",
+      "password": "Andres1234",
+      "confirmacionPassword": "Andres1234",
       "pais": "Chile",
       "ciudad": "Santiago",
-      "descripcion": "Amante de la literatura",
+      "palabraClave": "mecánica",
+      "descripcion": "Me gusta la ingeniería y la mecánica automotriz.",
       "listaFavoritos": [],
       "seguidores": [
-        "fb9a",
-        "4f2f"
+        "x5y6",
+        "v3w4"
       ],
-      "seguidos": [
-        "fb9a",
-        "4f2f",
-        "60ed"
-      ]
+      "seguidos": []
     },
     {
-      "id": "60ed",
-      "nombre": "Miguel",
-      "apellido": "Rodriguez",
-      "nombreUsuario": "miguelrodriguez",
-      "password": "password123",
-      "confirmacionPassword": "password123",
-      "pais": "Colombia",
-      "ciudad": "Bogotá",
-      "descripcion": "Amante del deporte",
-      "listaFavoritos": [],
-      "seguidores": [
-        "fb9a",
-        "a2d5"
-      ],
-      "seguidos": [
-        "fb9a",
-        "a2d5"
-      ]
-    },
-    {
-      "id": "b3f7",
-      "nombre": "Emma",
-      "apellido": "Johnson",
-      "nombreUsuario": "emmajohnson",
-      "password": "password123",
-      "confirmacionPassword": "password123",
-      "pais": "Canadá",
-      "ciudad": "Toronto",
-      "descripcion": "Amante de la naturaleza",
-      "listaFavoritos": [],
-      "seguidores": [
-        "1cb6",
-        "2e81"
-      ],
-      "seguidos": [
-        "1cb6",
-        "2e81",
-        "58a6"
-      ]
-    },
-    {
-      "id": "c4g8",
-      "nombre": "Alan",
-      "apellido": "Rodriguez",
-      "nombreUsuario": "alanr",
-      "password": "12345678",
-      "confirmacionPassword": "password123",
-      "pais": "Australia",
-      "ciudad": "Sídney",
-      "descripcion": "Amante de los animales",
+      "id": "v3w4",
+      "nombre": "Valeria",
+      "apellido": "Paz",
+      "nombreUsuario": "vale88",
+      "password": "Vale4321",
+      "confirmacionPassword": "Vale4321",
+      "pais": "Uruguay",
+      "ciudad": "Montevideo",
+      "palabraClave": "animales",
+      "descripcion": "Soy amante de los animales y la naturaleza.",
       "listaFavoritos": [
-        1357459,
-        1075676,
-        1354627,
-        1100782
+        1286264,
+        1020896,
+        811944
       ],
       "seguidores": [
-        "1cb6",
-        "58a6"
+        "b9c0",
+        "x5y6",
+        "q9r0"
       ],
       "seguidos": [
-        "1cb6",
-        "58a6",
-        "1a29",
-        "d5h9",
-        "fb9a",
-        "51d9"
+        "x5y6",
+        "d3e4",
+        "t1u2"
       ]
     },
     {
-      "id": "d5h9",
-      "nombre": "Ava",
-      "apellido": "Davis",
-      "nombreUsuario": "avadavis",
-      "password": "password123",
-      "confirmacionPassword": "password123",
-      "pais": "Nueva Zelanda",
-      "ciudad": "Auckland",
-      "descripcion": "Amante de la cocina",
-      "listaFavoritos": [],
-      "seguidores": [
-        "2e81",
-        "1a29",
-        "c4g8"
-      ],
-      "seguidos": [
-        "2e81",
-        "1a29",
-        "4f2f"
-      ]
-    },
-    {
-      "id": "e6i0",
-      "nombre": "Noah",
-      "apellido": "Wilson",
-      "nombreUsuario": "noahwilson",
-      "password": "password123",
-      "confirmacionPassword": "password123",
-      "pais": "Sudáfrica",
-      "ciudad": "Ciudad del Cabo",
-      "descripcion": "Amante de la fotografía",
-      "listaFavoritos": [],
-      "seguidores": [
-        "4f2f",
-        "a2d5"
-      ],
-      "seguidos": [
-        "4f2f",
-        "a2d5",
-        "60ed"
-      ]
-    },
-    {
-      "id": "f7j1",
-      "nombre": "Isabella",
-      "apellido": "Moore",
-      "nombreUsuario": "isabellamoore",
-      "password": "password123",
-      "confirmacionPassword": "password123",
-      "pais": "Italia",
-      "ciudad": "Roma",
-      "descripcion": "Amante de la historia",
-      "listaFavoritos": [],
-      "seguidores": [
-        "60ed",
-        "b3f7"
-      ],
-      "seguidos": [
-        "60ed",
-        "b3f7",
-        "c4g8"
-      ]
-    },
-    {
-      "id": "g8k2",
-      "nombre": "James",
-      "apellido": "Taylor",
-      "nombreUsuario": "jamestaylor",
-      "password": "password123",
-      "confirmacionPassword": "password123",
-      "pais": "Francia",
-      "ciudad": "París",
-      "descripcion": "Amante del vino",
-      "listaFavoritos": [],
-      "seguidores": [
-        "b3f7",
-        "c4g8"
-      ],
-      "seguidos": [
-        "b3f7",
-        "c4g8",
-        "d5h9"
-      ]
-    },
-    {
-      "id": "h9l3",
-      "nombre": "Sophia",
-      "apellido": "Anderson",
-      "nombreUsuario": "sophiaanderson",
-      "password": "password123",
-      "confirmacionPassword": "password123",
-      "pais": "Alemania",
-      "ciudad": "Berlín",
-      "descripcion": "Amante de la moda",
-      "listaFavoritos": [],
-      "seguidores": [
-        "c4g8",
-        "d5h9",
-        "fb9a"
-      ],
-      "seguidos": [
-        "c4g8",
-        "d5h9",
-        "e6i0"
-      ]
-    },
-    {
-      "id": "51d9",
-      "nombre": "mariano",
-      "apellido": "vimba",
-      "nombreUsuario": "marianovi",
-      "password": "12345678",
-      "confirmacionPassword": "12345678",
-      "pais": "argentina",
-      "ciudad": "mar del plata",
-      "descripcion": "",
-      "listaFavoritos": [
-        1084736,
-        588648,
-        1091181,
-        1075676,
-        1142518,
-        1184918,
-        912649,
-        1118031,
-        123025,
-        21683,
-        939243,
-        268
-      ],
-      "seguidores": [
-        "f5b1",
-        "c4g8",
-        "7a0e"
-      ],
-      "seguidos": [
-        "fb9a",
-        "4f2f",
-        "b3f7",
-        "f862"
-      ]
-    },
-    {
-      "nombreUsuario": "blasA2002",
+      "id": "x5y6",
+      "nombre": "Carlos",
+      "apellido": "Rodríguez",
+      "nombreUsuario": "carlos11",
+      "password": "Carlos1234",
+      "confirmacionPassword": "Carlos1234",
       "pais": "Argentina",
-      "ciudad": "mar del plata",
-      "descripcion": "hola esto es uan descripcion, 1 2 3 4 5 6 7 8 9 10 11",
-      "id": "f5b1",
+      "ciudad": "Rosario",
+      "palabraClave": "tecnología",
+      "descripcion": "Estudiante de ingeniería en informática.",
       "listaFavoritos": [
-        1159311,
-        933260,
-        912649,
-        1184918,
-        1118031,
-        239523,
-        1075676
+        539972,
+        993710,
+        1249289,
+        939243,
+        940721,
+        1216191,
+        1404863,
+        661539,
+        940139,
+        1232449
+      ],
+      "seguidores": [
+        "o7p8",
+        "v3w4"
       ],
       "seguidos": [
-        "58a6",
-        "51d9",
-        "7a0e"
+        "t1u2",
+        "d3e4",
+        "c1d2",
+        "v3w4"
       ]
     },
     {
-      "nombreUsuario": "blas22",
-      "pais": "argentina",
-      "ciudad": "mar del plata",
-      "descripcion": "hola hhh",
-      "id": "7a0e",
-      "seguidores": [
-        "f5b1"
-      ]
-    },
-    {
-      "id": "8725",
-      "nombre": "prueba",
-      "apellido": "prueba",
-      "nombreUsuario": "olfaf",
-      "password": "12345678",
-      "confirmacionPassword": "123456789",
-      "pais": "arg",
-      "ciudad": "arg",
-      "descripcion": "aa",
-      "listaFavoritos": [],
-      "seguidores": [],
-      "seguidos": []
-    },
-    {
-      "id": "c001",
-      "nombre": "aaasd",
-      "apellido": "asdasd",
-      "nombreUsuario": "asdaf",
-      "password": "12345678",
-      "confirmacionPassword": "12345678",
-      "pais": "aaa",
-      "ciudad": "aaa",
-      "palabraClave": "aaa",
-      "descripcion": "",
-      "listaFavoritos": [],
-      "seguidores": [
-        "f862"
-      ],
-      "seguidos": []
-    },
-    {
-      "id": "760f",
-      "nombre": "bbb",
-      "apellido": "bbb",
-      "nombreUsuario": "bbb",
-      "password": "12345678",
-      "confirmacionPassword": "12345678",
-      "pais": "bbb",
-      "ciudad": "bbb",
-      "palabraClave": "bbb",
-      "descripcion": "",
-      "listaFavoritos": [],
-      "seguidores": [],
-      "seguidos": [
-        "fb9a"
-      ]
-    },
-    {
-      "id": "5db7",
-      "nombre": "hola",
-      "apellido": "hola",
-      "nombreUsuario": "hola",
-      "password": "holiholi",
-      "confirmacionPassword": "holiholi",
-      "pais": "arg",
-      "ciudad": "bbb",
-      "palabraClave": "hola",
-      "descripcion": "nda",
-      "listaFavoritos": [],
-      "seguidores": [],
-      "seguidos": [],
-      "confirmacionPasword": "chauchau"
-    },
-    {
-      "id": "6ce6",
-      "nombre": "ccc",
-      "apellido": "ccc",
-      "nombreUsuario": "ccc",
-      "password": "11111111",
-      "confirmacionPassword": "12345678",
-      "pais": "ccc",
-      "ciudad": "ccc",
-      "palabraClave": "ccc",
-      "descripcion": "",
-      "listaFavoritos": [],
-      "seguidores": [],
-      "seguidos": []
-    },
-    {
-      "id": "21c1",
-      "nombre": "axel",
-      "apellido": "alfredo",
-      "nombreUsuario": "axelf",
-      "password": "12312333",
-      "confirmacionPassword": "12312333",
-      "pais": "angola",
-      "ciudad": "angola",
-      "palabraClave": "axel",
-      "descripcion": "",
-      "listaFavoritos": [],
-      "seguidores": [],
-      "seguidos": []
-    },
-    {
-      "id": "f862",
-      "nombre": "yyy",
-      "apellido": "yyy",
-      "nombreUsuario": "kkk",
-      "password": "asdasdasd",
-      "confirmacionPassword": "asdasdasd",
-      "pais": "asaa",
-      "ciudad": "dd",
-      "palabraClave": "asd",
-      "descripcion": "dsaad",
+      "id": "z7a8",
+      "nombre": "Emilia",
+      "apellido": "Morales",
+      "nombreUsuario": "emilia99",
+      "password": "Emilia9876",
+      "confirmacionPassword": "Emilia9876",
+      "pais": "Chile",
+      "ciudad": "Valparaíso",
+      "palabraClave": "ciencias",
+      "descripcion": "Estudiante de ciencias de la salud.",
       "listaFavoritos": [
-        832964,
-        1215185,
-        1405170
+        1176848,
+        844386,
+        1032642,
+        974663
       ],
       "seguidores": [
-        "51d9"
+        "b9c0"
       ],
       "seguidos": [
-        "c001"
+        "b9c0",
+        "c1d2"
       ]
     },
     {
-      "id": "df6d",
-      "nombre": "mariano",
-      "apellido": "vimba",
-      "nombreUsuario": "marianov",
-      "password": "asdasdasd",
-      "confirmacionPassword": "asdasdasd",
-      "pais": "argentina",
-      "ciudad": "mdp",
-      "palabraClave": "perro",
-      "descripcion": "nada",
-      "listaFavoritos": [],
-      "seguidores": [],
-      "seguidos": []
+      "id": "b9c0",
+      "nombre": "Pedro",
+      "apellido": "Ramírez",
+      "nombreUsuario": "pedro33",
+      "password": "Pedro1234",
+      "confirmacionPassword": "Pedro1234",
+      "pais": "Argentina",
+      "ciudad": "Córdoba",
+      "palabraClave": "fotos",
+      "descripcion": "Me encanta la fotografía de paisajes.",
+      "listaFavoritos": [
+        980996,
+        834562,
+        1290954,
+        1250629
+      ],
+      "seguidores": [
+        "z7a8"
+      ],
+      "seguidos": [
+        "v3w4",
+        "c1d2",
+        "z7a8"
+      ]
     },
     {
-      "id": "3354",
-      "nombre": "prueba",
-      "apellido": "prueba",
-      "nombreUsuario": "prueba123",
-      "password": "123123123",
-      "confirmacionPassword": "123123123",
-      "pais": "aaaass",
-      "ciudad": "aas",
-      "palabraClave": "asd",
-      "descripcion": "holass",
-      "listaFavoritos": [],
-      "seguidores": [],
-      "seguidos": []
+      "id": "c1d2",
+      "nombre": "Luciano",
+      "apellido": "Suárez",
+      "nombreUsuario": "luciano22",
+      "password": "Luciano4321",
+      "confirmacionPassword": "Luciano4321",
+      "pais": "Uruguay",
+      "ciudad": "Salto",
+      "palabraClave": "videojuegos",
+      "descripcion": "Fanático de los videojuegos de aventura.",
+      "listaFavoritos": [
+        20043,
+        1303162
+      ],
+      "seguidores": [
+        "o7p8",
+        "b9c0",
+        "z7a8",
+        "x5y6"
+      ],
+      "seguidos": [
+        "f5g6"
+      ]
+    },
+    {
+      "id": "d3e4",
+      "nombre": "Beatriz",
+      "apellido": "González",
+      "nombreUsuario": "bea77",
+      "password": "Bea5678",
+      "confirmacionPassword": "Bea5678",
+      "pais": "Chile",
+      "ciudad": "Concepción",
+      "palabraClave": "cocina",
+      "descripcion": "Me apasiona cocinar y probar nuevas recetas.",
+      "listaFavoritos": [
+        955496,
+        881415,
+        9003,
+        927547,
+        1094319,
+        1269732,
+        1140535,
+        1093995
+      ],
+      "seguidores": [
+        "f5g6",
+        "x5y6",
+        "v3w4"
+      ],
+      "seguidos": [
+        "q9r0",
+        "o7p8"
+      ]
+    },
+    {
+      "id": "f5g6",
+      "nombre": "Martín",
+      "apellido": "Sánchez",
+      "nombreUsuario": "martin6",
+      "password": "Martin1234",
+      "confirmacionPassword": "Martin1234",
+      "pais": "Argentina",
+      "ciudad": "Tucumán",
+      "palabraClave": "literatura",
+      "descripcion": "Amante de la literatura y los libros clásicos.",
+      "listaFavoritos": [
+        1032472,
+        884184,
+        753091,
+        1418203,
+        1303517,
+        1064205
+      ],
+      "seguidores": [
+        "c1d2"
+      ],
+      "seguidos": [
+        "d3e4",
+        "q9r0"
+      ]
     }
   ],
   "resenias": [
     {
-      "id": "ac71",
-      "idPelicula": 912649,
-      "puntuacion": 1,
-      "descripcion": "me gusto\n",
-      "idUsuario": "372f"
-    },
-    {
-      "id": "1946",
-      "idPelicula": 912649,
-      "puntuacion": 1,
-      "descripcion": "no me gusto",
-      "idUsuario": "372f"
-    },
-    {
-      "id": "8e41",
-      "idPelicula": 912649,
-      "puntuacion": 1,
-      "descripcion": "dsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-      "idUsuario": "372f"
-    },
-    {
-      "id": "e77f",
-      "idPelicula": 912649,
-      "puntuacion": 1,
-      "descripcion": "  hola reseña larga  hola reseña larga  hola reseña larga  hola reseña larga  hola reseña larga  hola reseña larga  hola reseña larga  hola reseña larga  hola reseña larga  hola reseña larga  hola reseña larga  hola reseña larga  hola reseña larga  hola reseña larga  hola reseña larga  hola reseña larga  hola reseña larga  hola reseña larga  hola reseña larga  hola reseña larga  ",
-      "idUsuario": "372f"
-    },
-    {
-      "id": "b75b",
-      "idPelicula": 912649,
-      "puntuacion": 10,
-      "descripcion": "sdadsada",
-      "idUsuario": "372f"
-    },
-    {
-      "id": "04a6",
-      "idPelicula": 912649,
-      "puntuacion": 5,
-      "descripcion": "n",
-      "idUsuario": "372f"
-    },
-    {
-      "id": "e811",
-      "idPelicula": 912649,
-      "puntuacion": 9,
-      "descripcion": "cheto",
-      "idUsuario": "8eae"
-    },
-    {
-      "id": "d8b1",
-      "idPelicula": 1184918,
-      "puntuacion": 8,
-      "descripcion": "me gusto",
-      "idUsuario": "f5b1"
-    },
-    {
-      "id": "a601",
-      "idPelicula": 1184918,
-      "puntuacion": 4,
-      "descripcion": "",
-      "idUsuario": "f5b1"
-    },
-    {
-      "id": "ed3d",
-      "idPelicula": 268,
-      "puntuacion": 1,
-      "descripcion": "no",
-      "idUsuario": "f5b1"
-    },
-    {
-      "id": "44eb",
-      "idPelicula": 1034541,
+      "id": "b758",
+      "idPelicula": 959604,
       "puntuacion": 7,
-      "descripcion": "entretenida ",
-      "idUsuario": "c4g8"
+      "descripcion": "entretenida",
+      "idUsuario": "o7p8"
     },
     {
-      "id": "2580",
-      "idPelicula": 1184918,
-      "puntuacion": 5,
-      "descripcion": "fdsfsdf",
-      "idUsuario": "7a0e"
-    },
-    {
-      "id": "50ec",
-      "idPelicula": 1358947,
-      "puntuacion": 9,
-      "descripcion": "aaaaaaaaaaa",
-      "idUsuario": "51d9"
-    },
-    {
-      "id": "1d50",
-      "idPelicula": 21683,
+      "id": "3844",
+      "idPelicula": 1020896,
       "puntuacion": 4,
-      "descripcion": "",
-      "idUsuario": "51d9"
+      "descripcion": "no me gusto",
+      "idUsuario": "o7p8"
     },
     {
-      "id": "ff75",
-      "idPelicula": 939243,
+      "id": "aaf6",
+      "idPelicula": 508642,
+      "puntuacion": 6,
+      "descripcion": "",
+      "idUsuario": "o7p8"
+    },
+    {
+      "id": "2513",
+      "idPelicula": 1420416,
+      "puntuacion": 5,
+      "descripcion": "",
+      "idUsuario": "d3e4"
+    },
+    {
+      "id": "28d5",
+      "idPelicula": 1214684,
+      "puntuacion": 10,
+      "descripcion": "muy buena",
+      "idUsuario": "d3e4"
+    },
+    {
+      "id": "83d0",
+      "idPelicula": 1418203,
       "puntuacion": 8,
-      "descripcion": "buena",
-      "idUsuario": "51d9"
+      "descripcion": "",
+      "idUsuario": "f5g6"
+    },
+    {
+      "id": "f747",
+      "idPelicula": 11101,
+      "puntuacion": 3,
+      "descripcion": "",
+      "idUsuario": "f5g6"
+    },
+    {
+      "id": "cde0",
+      "idPelicula": 993710,
+      "puntuacion": 7,
+      "descripcion": "",
+      "idUsuario": "c1d2"
+    },
+    {
+      "id": "89a1",
+      "idPelicula": 1398839,
+      "puntuacion": 10,
+      "descripcion": "",
+      "idUsuario": "v3w4"
+    },
+    {
+      "id": "2c6b",
+      "idPelicula": 1179051,
+      "puntuacion": 8,
+      "descripcion": "entretenida",
+      "idUsuario": "q9r0"
+    },
+    {
+      "id": "6ec0",
+      "idPelicula": 268,
+      "puntuacion": 9,
+      "descripcion": "",
+      "idUsuario": "f5g6"
+    },
+    {
+      "id": "6eab",
+      "idPelicula": 268,
+      "puntuacion": 6,
+      "descripcion": "",
+      "idUsuario": "d3e4"
     }
   ]
 }
