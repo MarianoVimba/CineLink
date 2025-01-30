@@ -526,6 +526,36 @@
       "seguidos": [
         "c001"
       ]
+    },
+    {
+      "id": "df6d",
+      "nombre": "mariano",
+      "apellido": "vimba",
+      "nombreUsuario": "marianov",
+      "password": "asdasdasd",
+      "confirmacionPassword": "asdasdasd",
+      "pais": "argentina",
+      "ciudad": "mdp",
+      "palabraClave": "perro",
+      "descripcion": "nada",
+      "listaFavoritos": [],
+      "seguidores": [],
+      "seguidos": []
+    },
+    {
+      "id": "3354",
+      "nombre": "prueba",
+      "apellido": "prueba",
+      "nombreUsuario": "prueba123",
+      "password": "123123123",
+      "confirmacionPassword": "123123123",
+      "pais": "aaaass",
+      "ciudad": "aas",
+      "palabraClave": "asd",
+      "descripcion": "holass",
+      "listaFavoritos": [],
+      "seguidores": [],
+      "seguidos": []
     }
   ],
   "resenias": [
