@@ -20,7 +20,8 @@
       ],
       "seguidores": [
         "d3e4",
-        "q9r0"
+        "q9r0",
+        "71bb"
       ],
       "seguidos": [
         "q9r0",
@@ -49,7 +50,8 @@
       "seguidores": [
         "o7p8",
         "d3e4",
-        "f5g6"
+        "f5g6",
+        "71bb"
       ],
       "seguidos": [
         "o7p8",
@@ -153,7 +155,8 @@
         974663
       ],
       "seguidores": [
-        "b9c0"
+        "b9c0",
+        "71bb"
       ],
       "seguidos": [
         "b9c0",
@@ -235,7 +238,8 @@
       "seguidores": [
         "f5g6",
         "x5y6",
-        "v3w4"
+        "v3w4",
+        "71bb"
       ],
       "seguidos": [
         "q9r0",
@@ -267,6 +271,33 @@
       "seguidos": [
         "d3e4",
         "q9r0"
+      ]
+    },
+    {
+      "id": "71bb",
+      "nombre": "mariano",
+      "apellido": "vimba",
+      "nombreUsuario": "marianov",
+      "password": "123123123",
+      "confirmacionPassword": "123123123",
+      "pais": "argentina",
+      "ciudad": "mar del plata",
+      "palabraClave": "felipe",
+      "descripcion": "",
+      "listaFavoritos": [
+        1140535,
+        1182047,
+        1401905,
+        989662,
+        1160956,
+        1093995
+      ],
+      "seguidores": [],
+      "seguidos": [
+        "d3e4",
+        "q9r0",
+        "z7a8",
+        "o7p8"
       ]
     }
   ],

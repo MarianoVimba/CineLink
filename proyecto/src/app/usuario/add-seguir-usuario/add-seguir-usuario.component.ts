@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, inject, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, inject, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { SeguidoresService } from '../../service/seguidores.service';
 import { UsuarioService } from '../../service/usuario.service';
 import { Usuario } from '../../interfaces/usuario.interface';
@@ -11,7 +11,7 @@ import { Usuario } from '../../interfaces/usuario.interface';
   templateUrl: './add-seguir-usuario.component.html',
   styleUrls: ['./add-seguir-usuario.component.css']
 })
-export class AddSeguirUsuarioComponent implements OnInit {
+export class AddSeguirUsuarioComponent implements OnInit,OnChanges {
 
   idUsuarioActual: string | null  = localStorage.getItem('userId');
 
@@ -69,4 +69,10 @@ export class AddSeguirUsuarioComponent implements OnInit {
       });
     }
   }
+
+  ngOnChanges(changes: SimpleChanges): void { 
+    if (changes['usuarioId']) {               
+      this.verificarSeguidor();
+    }
+  }
 }
