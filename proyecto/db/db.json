@@ -386,5 +386,77 @@
       "descripcion": "",
       "idUsuario": "d3e4"
     }
+  ],
+  "preguntas": [
+    {
+      "id": 1,
+      "pregunta": "¿En qué película aparece el personaje Jack Dawson?",
+      "opciones": ["Titanic", "El Gran Gatsby", "Romeo + Julieta", "Inception"],
+      "respuesta": "Titanic",
+      "foto": "img/P1.jpg"
+    },
+    {
+      "id": 2,
+      "pregunta": "¿Cómo se llama el planeta donde viven los Na'vi en Avatar?",
+      "opciones": ["Endor", "Pandora", "Krypton", "Asgard"],
+      "respuesta": "Pandora",
+      "foto": "img/P2.jpg"
+    },
+    {
+      "id": 3,
+      "pregunta": "¿Quién es el director de la película 'Jurassic Park'?",
+      "opciones": ["George Lucas", "Steven Spielberg", "James Cameron", "Ridley Scott"],
+      "respuesta": "Steven Spielberg",
+      "foto": "img/P3.jpg"
+    },
+    {
+      "id": 4,
+      "pregunta": "¿Qué actor interpretó a Jack Sparrow en 'Piratas del Caribe'?",
+      "opciones": ["Johnny Depp", "Orlando Bloom", "Harrison Ford", "Tom Hanks"],
+      "respuesta": "Johnny Depp",
+      "foto": "img/P4.jpg"
+    },
+    {
+      "id": 5,
+      "pregunta": "¿Cuál es el nombre del personaje principal en la película 'Gladiator'?",
+      "opciones": ["Maximus", "Commodus", "Julius Caesar", "Spartacus"],
+      "respuesta": "Maximus",
+      "foto": "img/P5.jpg"
+    },
+    {
+      "id": 6,
+      "pregunta": "¿Cuál es el nombre del robot en la película 'Wall-E'?",
+      "opciones": ["R2-D2", "C-3PO", "Wall-E", "Eva"],
+      "respuesta": "Wall-E",
+      "foto": "img/P6.jpg"
+    },
+    {
+      "id": 7,
+      "pregunta": "¿En qué año se estrenó la película 'Avatar' de James Cameron?",
+      "opciones": ["2008", "2009", "2010", "2012"],
+      "respuesta": "2009",
+      "foto": "img/P7.jpg"
+    },
+    {
+      "id": 8,
+      "pregunta": "¿Cuál es la película más taquillera de todos los tiempos?",
+      "opciones": ["Titanic", "Avatar", "Avengers: Endgame", "Star Wars: The Force Awakens"],
+      "respuesta": "Avatar",
+      "foto": "img/P8.jpg"
+    },
+    {
+      "id": 9,
+      "pregunta": "¿Quién interpretó a 'Vito Corleone' en 'El Padrino'?",
+      "opciones": ["Al Pacino", "Marlon Brando", "Robert De Niro", "Jack Nicholson"],
+      "respuesta": "Marlon Brando",
+      "foto": "img/P9.jpeg"
+    },
+    {
+      "id": 10,
+      "pregunta": "¿Quién dirigió 'La guerra de los mundos'?",
+      "opciones": ["Steven Spielberg", "Michael Bay", "Roland Emmerich", "James Cameron"],
+      "respuesta": "Steven Spielberg",
+      "foto": "img/P10.jpg"
+    }
   ]
 }

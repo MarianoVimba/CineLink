@@ -14,6 +14,7 @@ import { ListaFavoritosComponent } from './usuario/lista-favoritos/lista-favorit
 import { authGuardFn } from './auth/guard/auth.guard-fn';
 import { authGuardFnLogueado } from './auth/guard/auth.guard-fn-logueado';
 import { RestablecerPasswordComponent } from './usuario/autenticacion/restablecer-password/restablecer-password.component';
+import { TriviaComponent } from './juego/trivia/trivia.component';
 
 export const routes: Routes = [
     { path: "login", component: LoginComponent, canActivate:[authGuardFnLogueado] },
@@ -29,6 +30,7 @@ export const routes: Routes = [
     { path: 'seguidores', component: ListaSeguidoresComponent, canActivate:[authGuardFn] },
     { path: 'favoritos', component: ListaPeliculasComponent, canActivate:[authGuardFn] }, // favoritos del usuario logeado
     {path: 'favoritos/:id', component: ListaFavoritosComponent, canActivate:[authGuardFn]  }, // lista favoritos otros usuarios
+    {path: 'trivia', component: TriviaComponent  }, // trivia
 
     { path: '**', redirectTo: 'login' }
 
