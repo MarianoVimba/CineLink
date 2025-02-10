@@ -41,7 +41,9 @@ export class TriviaComponent implements OnInit {
   }
 
   seleccionarRespuesta(opcion: string) {
-    this.respuestaSeleccionada = opcion;
+    if (!this.respuestaSeleccionada) { // Solo permite seleccionar una vez
+      this.respuestaSeleccionada = opcion;
+    }
   }
 
 

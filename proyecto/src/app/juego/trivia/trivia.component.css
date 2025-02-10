@@ -1,22 +1,63 @@
-.pregunta-container {
+
+
+/* Contenedor principal */
+.trivia-container {
+  background-color:  rgb(101, 97, 155);
+  color: white;
+  padding: 40px;
+  border-radius: 10px;
+  width: 100%; /* Para que no quede muy estrecho en pantallas pequeñas */
   text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
+/* Pregunta (Fila 1) */
+.pregunta {
+  font-size: 28px; /* Texto más grande */
+  font-weight: bold;
+  margin-bottom: 5%; /* Más espacio */
+}
+
+.pregunta h2{
+  font-size: 3rem;
+}
+
+/* Contenedor de la imagen y opciones (Fila 2) */
+.contenido {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+
+
+}
+
+/* Imagen */
 .pregunta-img {
-  width: 300px;
-  height: 200px;
-  object-fit: cover;
-  margin-bottom: 20px;
+  width: 50%; /* Ocupar más espacio */
+  max-width: 700px; /* Aumentar tamaño */
+  height: auto;
+  border-radius: 10px;
+
 }
 
+/* Opciones de respuesta */
 .opciones {
-  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 40%;
 }
 
-.opcion button {
-  padding: 10px 20px;
-  margin: 5px;
-  font-size: 16px;
+.opciones button {
+  padding: 15px 25px; /* Botones más grandes */
+  font-size: 20px; /* Texto más grande */
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s;
 }
 
 .correcta {
@@ -29,7 +70,33 @@
   color: white;
 }
 
-button {
+/* Botón de siguiente pregunta (Fila 3) */
+.navegacion {
+  margin-top: 5%;
+}
+
+.navegacion button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #007bff;
+  color: white;
   border: none;
   cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.navegacion button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive: En pantallas pequeñas, la imagen y las opciones se apilan */
+@media (max-width: 600px) {
+  .contenido {
+    flex-direction: column;
+  }
+
+  .pregunta-img {
+    max-width: 100%;
+  }
 }
