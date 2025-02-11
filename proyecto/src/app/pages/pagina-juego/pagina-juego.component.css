@@ -1,0 +1,13 @@
+.contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh; /* Altura mínima antes de jugar */
+  text-align: center;
+}
+
+/* Cuando el juego no ha comenzado, ocupar más espacio */
+.expandido {
+  min-height: 80vh;
+}

@@ -1,13 +1,11 @@
-
-<div class="container d-flex justify-content-center my-5     ">
+<div class="container d-flex justify-content-center my-5">
   <div *ngIf="preguntaActual" class="trivia-container">
-    <div class="pregunta">
+    <div class="pregunta" *ngIf="!terminado">
       <h2>{{ preguntaActual.pregunta }}</h2>
     </div>
 
-    <div class="contenido">
+    <div class="contenido" *ngIf="!terminado">
       <img [src]="preguntaActual.foto" alt="Pregunta" class="pregunta-img">
-
       <div class="opciones">
         <button *ngFor="let opcion of preguntaActual.opciones"
           [ngClass]="{
@@ -20,15 +18,22 @@
       </div>
     </div>
 
-    <div class="navegacion">
-      <button (click)="siguientePregunta()" [disabled]="!respuestaSeleccionada" *ngIf="!terminado">
+    <div class="navegacion" *ngIf="!terminado">
+      <button (click)="siguientePregunta()" [disabled]="!respuestaSeleccionada">
         Siguiente Pregunta
       </button>
-      <h3 *ngIf="terminado">¡Has terminado el juego!</h3>
+    </div>
+
+    <!-- Mensaje final cuando se termina la trivia -->
+    <div *ngIf="terminado">
+      <h3>¡Has terminado el juego!</h3>
+      <p>Puntos obtenidos: {{ puntos }}</p>
+      <p>Tiempo total: {{ convertirTiempo(tiempoTranscurrido) }}</p>
+
+      <div class="botones-finales">
+        <button class="reintentar" (click)="reiniciarTrivia()">Reintentar</button>
+        <button class="volver" (click)="volverInicio()">Finalizar intento</button>
+      </div>
     </div>
   </div>
-
 </div>
-
-
-

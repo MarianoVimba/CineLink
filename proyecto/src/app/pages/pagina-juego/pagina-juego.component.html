@@ -1,0 +1,13 @@
+
+<app-navbar></app-navbar>
+
+<div class="contenido" [ngClass]="{ 'expandido': !mostrarJuego }">
+  <h1 *ngIf="!mostrarJuego">Bienvenido al Juego de Trivia</h1>
+  <button (click)="iniciarJuego()" *ngIf="!mostrarJuego">Jugar</button>
+
+  <!-- Se muestra el juego solo si mostrarJuego es true -->
+  <app-trivia *ngIf="mostrarJuego" (ocultarTrivia)="mostrarJuego = false"></app-trivia>
+
+</div>
+
+<app-footer></app-footer>
