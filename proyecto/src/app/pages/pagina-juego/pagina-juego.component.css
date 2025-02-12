@@ -2,12 +2,144 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  min-height: 50vh; /* Altura mínima antes de jugar */
+  justify-content: flex-start;
+  min-height: 80vh;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Título principal */
+.bienvenido {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  background-color: #007bff;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* Contenedor principal de ranking y descripción */
+.ranking-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 1200px;
+  margin-top: 20px;
+}
+
+/* Ranking */
+.ranking {
+  background-color: rgb(134, 130, 190);
+  border-radius: 12px;
+  padding: 20px;
+  width: 40%; /* Más estrecho */
+  height: 410px; /* Más alto */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: solid white;
+  overflow-y: auto;
   text-align: center;
 }
 
-/* Cuando el juego no ha comenzado, ocupar más espacio */
-.expandido {
-  min-height: 80vh;
+/* Título del ranking */
+.ranking-titulo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 15px;
+}
+
+/* Encabezado del ranking */
+.ranking-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  border-bottom: 2px solid white;
+  padding-bottom: 8px;
+  color: white;
+  background-color: rgba(152, 148, 204, 0.699);
+
+}
+
+.ranking-header span {
+  flex: 1;
+  text-align: center;
+  border-right: 2px solid white;
+  padding: 5px;
+}
+
+.ranking-header span:last-child {
+  border-right: none;
+}
+
+/* Lista de puntajes */
+.ranking-list {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.ranking-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  font-size: 1.1rem;
+  border-bottom: 1px solid white;
+  color: white;
+  background-color: rgba(152, 148, 204, 0.699);
+
+}
+
+.ranking-item div {
+  flex: 1;
+  text-align: center;
+  border-right: 2px solid white;
+  padding: 5px;
+}
+
+.ranking-item div:last-child {
+  border-right: none;
+}
+
+/* Contenedor de la descripción y botón */
+.info-juego {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  padding-left: 40px;
+}
+
+/* Descripción del juego */
+.descripcion-juego {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  background-color: rgb(134, 130, 190);
+  padding: 15px;
+  border-radius: 10px;
+  text-align: left;
+  border: solid white;
+}
+
+/* Botón de jugar */
+.boton-jugar {
+  margin-top: 20px;
+  padding: 15px 25px;
+  background-color: #007bff;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.boton-jugar:hover {
+  background-color: #0056b3;
 }

@@ -1,9 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { Trivia } from '../../interfaces/trivia.interface';
 import { TriviaService } from '../../service/trivia.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Output, EventEmitter } from '@angular/core';
+import { UsuarioService } from '../../service/usuario.service';
+import { Puntaje } from '../../interfaces/puntaje.interface';
+import { PuntajeService } from '../../service/puntaje.service';
+
+
 
 @Component({
   selector: 'app-trivia',
@@ -13,16 +18,27 @@ import { Output, EventEmitter } from '@angular/core';
   styleUrl: './trivia.component.css'
 })
 export class TriviaComponent implements OnInit {
+
   preguntas: Trivia[] = [];
   preguntaActual: Trivia | null = null;
   preguntaIndex = 0;
   respuestaSeleccionada: string | null = null;
   respuestaCorrecta: string | null = null;
   terminado = false;
+
   puntos = 0;
   tiempoInicio: number = 0;
   tiempoFinal: number = 0;
   tiempoTranscurrido: number = 0;
+
+  servicioUsuario = inject(UsuarioService);
+  servicioPuntaje = inject(PuntajeService);
+
+  usuarioId: string | null  = localStorage.getItem('userId');
+  nombreUsuario: string | null = null;
+
+
+
   @Output() ocultarTrivia = new EventEmitter<void>();
 
   constructor(private triviaService: TriviaService) { }
@@ -33,6 +49,18 @@ export class TriviaComponent implements OnInit {
       this.cargarPregunta();
     });
     this.tiempoInicio = Date.now(); // Empezamos a contar el tiempo al iniciar el juego
+
+    this.obtnerNombreUsuario();
+
+  }
+
+  obtnerNombreUsuario() {
+    if (this.usuarioId) {
+      this.servicioUsuario.getUsuarioById(this.usuarioId).subscribe(usuario => {
+        this.nombreUsuario = usuario.nombreUsuario ?? null; // Si 'nombre' es undefined, asigna null
+        console.log("Nombre del usuario:", this.nombreUsuario);
+      });
+    }
   }
 
   cargarPregunta() {
@@ -58,12 +86,8 @@ export class TriviaComponent implements OnInit {
       this.preguntaIndex++;
       this.cargarPregunta();
     } else {
-      this.tiempoFinal = Date.now(); // Cuando termina el juego, se guarda el tiempo final
-      this.tiempoTranscurrido = this.tiempoFinal - this.tiempoInicio;
-      this.terminado = true;
-      setTimeout(() => {
-        // Al terminar el juego, ocultar la pregunta, imagen y opciones, y mostrar los resultados
-      }, 3000); // Espera 3 segundos
+      this.finalizarJuego();
+      setTimeout(() => {}, 3000); // Espera 3 segundos antes de mostrar los resultados
     }
   }
 
@@ -86,6 +110,54 @@ export class TriviaComponent implements OnInit {
     const segundos = Math.floor((tiempoEnMilisegundos % 60000) / 1000);
     return `${minutos}:${segundos < 10 ? '0' : ''}${segundos}`; // Formato 'm:ss'
   }
+
+
+  actualizarPuntaje(puntaje: Puntaje) {
+    this.servicioPuntaje.actualizarPuntaje(puntaje).subscribe(() => {
+      console.log('Puntaje actualizado con éxito:', puntaje);
+    });
+  }
+
+  guardarNuevoPuntaje(puntaje: Puntaje) {
+    this.servicioPuntaje.guardarPuntaje(puntaje).subscribe(() => {
+      console.log('Nuevo puntaje guardado con éxito:', puntaje);
+    });
+  }
+
+  private verificarYGuardarPuntaje(nombreUsuario: string, puntos: number, tiempo: number) {
+    this.servicioPuntaje.obtenerPuntajePorUsuario(nombreUsuario).subscribe((puntajes) => {
+      const puntajePrevio = puntajes.length > 0 ? puntajes[0] : null;
+
+      if (!puntajePrevio || puntos > puntajePrevio.puntos) {
+        const nuevoPuntaje = {
+          id: puntajePrevio?.id, // Si existe un ID previo, se usa para actualizar
+          nombreUsuario,
+          puntos,
+          tiempo
+        };
+
+        puntajePrevio
+          ? this.actualizarPuntaje(nuevoPuntaje)
+          : this.guardarNuevoPuntaje(nuevoPuntaje);
+      } else {
+        console.log('No se guardó el puntaje porque no es mayor al existente.');
+      }
+    });
+  }
+
+
+
+  finalizarJuego() {
+    this.tiempoFinal = Date.now();
+    this.tiempoTranscurrido = this.tiempoFinal - this.tiempoInicio;
+    this.terminado = true;
+
+    const nombreUsuario = this.nombreUsuario || 'Invitado';
+
+    this.verificarYGuardarPuntaje(nombreUsuario, this.puntos, this.tiempoTranscurrido);
+  }
+
+
 
 
 }

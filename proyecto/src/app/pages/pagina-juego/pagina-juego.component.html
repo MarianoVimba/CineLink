@@ -1,13 +1,41 @@
-
 <app-navbar></app-navbar>
 
-<div class="contenido" [ngClass]="{ 'expandido': !mostrarJuego }">
-  <h1 *ngIf="!mostrarJuego">Bienvenido al Juego de Trivia</h1>
-  <button (click)="iniciarJuego()" *ngIf="!mostrarJuego">Jugar</button>
+<div  class="contenido" *ngIf="!mostrarJuego" >
+  <h1 class="bienvenido">Bienvenido al Juego de la Trivia</h1>
 
-  <!-- Se muestra el juego solo si mostrarJuego es true -->
-  <app-trivia *ngIf="mostrarJuego" (ocultarTrivia)="mostrarJuego = false"></app-trivia>
+  <div class="ranking-container">
+    <!-- Contenedor flex para ranking y descripción -->
+    <div class="ranking-wrapper">
+      <!-- Ranking de puntos -->
+      <div class="ranking">
+        <h2 class="ranking-titulo">Ranking de Puntos</h2>
+        <div class="ranking-header">
+          <span>Usuario</span>
+          <span>Puntaje</span>
+          <span>Tiempo</span>
+        </div>
+        <div class="ranking-list">
+          <div class="ranking-item" *ngFor="let puntaje of topPuntajes">
+            <div>{{ puntaje.nombreUsuario }}</div>
+            <div>{{ puntaje.puntos }}</div>
+            <div>{{ convertirTiempo(puntaje.tiempo) }}</div>
+          </div>
+        </div>
+      </div>
 
+      <!-- Descripción del juego y botón -->
+      <div class="info-juego">
+        <p class="descripcion-juego">
+          El juego de trivia consiste en una serie de preguntas acerca de cine, donde cada vez que se acierte correctamente se ganan puntos. ¡Quien obtenga más puntos podrá aparecer en la tabla del ranking!
+        </p>
+        <button class="boton-jugar" (click)="iniciarJuego()" *ngIf="!mostrarJuego" >Jugar</button>
+
+
+      </div>
+    </div>
+  </div>
 </div>
+
+<app-trivia *ngIf="mostrarJuego" (ocultarTrivia)="mostrarJuego = false"></app-trivia>
 
 <app-footer></app-footer>
