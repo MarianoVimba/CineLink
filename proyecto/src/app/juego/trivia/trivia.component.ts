@@ -7,13 +7,14 @@ import { Output, EventEmitter } from '@angular/core';
 import { UsuarioService } from '../../service/usuario.service';
 import { Puntaje } from '../../interfaces/puntaje.interface';
 import { PuntajeService } from '../../service/puntaje.service';
+import { Router, RouterLink } from '@angular/router';
 
 
 
 @Component({
   selector: 'app-trivia',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule,RouterLink],
   templateUrl: './trivia.component.html',
   styleUrl: './trivia.component.css'
 })

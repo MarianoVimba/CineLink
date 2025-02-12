@@ -5,11 +5,12 @@ import { FooterComponent } from '../../shared/footer/footer.component';
 import { TriviaComponent } from '../../juego/trivia/trivia.component';
 import { Puntaje } from '../../interfaces/puntaje.interface';
 import { PuntajeService } from '../../service/puntaje.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-pagina-juego',
   standalone: true,
-  imports: [CommonModule, NavbarComponent, FooterComponent, TriviaComponent],
+  imports: [CommonModule, NavbarComponent, FooterComponent, TriviaComponent,RouterLink],
   templateUrl: './pagina-juego.component.html',
   styleUrl: './pagina-juego.component.css'
 })

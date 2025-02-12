@@ -1,3 +1,29 @@
+.volver-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.volver-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px; 
+  margin-top: 20px;
+}
+.btn-volver {
+  background-color: #007bff; 
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
 .contenido {
   display: flex;
   flex-direction: column;
@@ -8,7 +34,7 @@
   padding: 20px;
 }
 
-/* Título principal */
+
 .bienvenido {
   font-size: 2rem;
   font-weight: bold;
@@ -21,7 +47,6 @@
   border-radius: 8px;
 }
 
-/* Contenedor principal de ranking y descripción */
 .ranking-wrapper {
   display: flex;
   align-items: center;
@@ -31,20 +56,19 @@
   margin-top: 20px;
 }
 
-/* Ranking */
 .ranking {
   background-color: rgb(134, 130, 190);
   border-radius: 12px;
   padding: 20px;
-  width: 40%; /* Más estrecho */
-  height: 410px; /* Más alto */
+  width: 40%; 
+  height: 410px; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border: solid white;
   overflow-y: auto;
   text-align: center;
 }
 
-/* Título del ranking */
+
 .ranking-titulo {
   font-size: 1.5rem;
   font-weight: bold;
@@ -52,7 +76,6 @@
   margin-bottom: 15px;
 }
 
-/* Encabezado del ranking */
 .ranking-header {
   display: flex;
   justify-content: space-between;
@@ -61,7 +84,6 @@
   padding-bottom: 8px;
   color: white;
   background-color: rgba(152, 148, 204, 0.699);
-
 }
 
 .ranking-header span {
@@ -75,7 +97,6 @@
   border-right: none;
 }
 
-/* Lista de puntajes */
 .ranking-list {
   display: flex;
   flex-direction: column;
@@ -90,7 +111,6 @@
   border-bottom: 1px solid white;
   color: white;
   background-color: rgba(152, 148, 204, 0.699);
-
 }
 
 .ranking-item div {
@@ -104,7 +124,6 @@
   border-right: none;
 }
 
-/* Contenedor de la descripción y botón */
 .info-juego {
   display: flex;
   flex-direction: column;
@@ -114,7 +133,7 @@
   padding-left: 40px;
 }
 
-/* Descripción del juego */
+
 .descripcion-juego {
   font-size: 1.2rem;
   font-weight: bold;
@@ -126,7 +145,7 @@
   border: solid white;
 }
 
-/* Botón de jugar */
+
 .boton-jugar {
   margin-top: 20px;
   padding: 15px 25px;
@@ -142,4 +161,50 @@
 
 .boton-jugar:hover {
   background-color: #0056b3;
+}
+
+
+@media (max-width: 768px) {
+  .ranking-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ranking {
+    width: 90%;       
+    height: auto;    
+    margin-bottom: 20px;
+  }
+
+  .info-juego {
+    width: 90%;
+    padding-left: 0; 
+    margin-top: 20px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .bienvenido {
+    font-size: 1.5rem;  
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .descripcion-juego {
+    font-size: 1rem;    
+    padding: 10px;     
+  }
+
+  .ranking-header span,
+  .ranking-item div {
+    font-size: 0.9rem; 
+    padding: 3px;       
+  }
+
+  .boton-jugar {
+    padding: 10px 20px; 
+    font-size: 0.9rem;
+  }
+
 }
