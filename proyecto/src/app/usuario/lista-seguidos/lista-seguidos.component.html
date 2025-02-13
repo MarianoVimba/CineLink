@@ -1,20 +1,19 @@
+<app-navbar></app-navbar>
+
 <div *ngIf="seguidos.length > 0; else noSeguidos">
-    <h2 class="titulo-seguidos">Usuarios Seguidos</h2>
-    <div class="seguido-lista">
-      <div *ngFor="let usuario of seguidos" class="seguido-item">
-        <p>Nombre de Usuario: {{ usuario.nombreUsuario }}</p>
-        <p>Nombre: {{ usuario.nombre }}</p>
-        <p>Apellido: {{ usuario.apellido }}</p>
-        <p>País: {{ usuario.pais }}</p>
-        <p>Ciudad: {{ usuario.ciudad }}</p>
-        <p>Descripción: {{ usuario.descripcion }}</p>
-      </div>
+  <h2 class="titulo-seguidos">Usuarios Seguidos</h2>
+  <div class="seguido-lista">
+    <div *ngFor="let usuario of seguidos" class="seguido-item">
+      <span>{{ usuario.nombreUsuario }}</span>
+      <button (click)="guardarEstadoYRedirigir(usuario.id!)" class="view-profile-btn">Ver Perfil</button>
     </div>
   </div>
-  <ng-template #noSeguidos>
-    <p class="sin-seguidos">No sigues a ningún usuario.</p>
-  </ng-template>
-  <div class="volver-container">
-    <button class="btn-volver" routerLink="/inicio">Volver</button>
-  </div>
-  
+</div>
+<ng-template #noSeguidos>
+  <p class="sin-seguidos">No sigues a ningún usuario.</p>
+</ng-template>
+<div class="volver-container">
+  <button class="btn-volver" routerLink="/inicio">Volver</button>
+</div>
+
+<app-footer></app-footer>
