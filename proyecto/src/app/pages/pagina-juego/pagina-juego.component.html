@@ -37,8 +37,10 @@
   <div class="volver-container">
     <button class="btn-volver" routerLink="/inicio">Volver</button>
   </div>
+
+
 </div>
 
-<app-trivia *ngIf="mostrarJuego" (ocultarTrivia)="mostrarJuego = false"></app-trivia>
+<app-trivia *ngIf="mostrarJuego" (ocultarTrivia)="cerrarTrivia()"></app-trivia>
 
 <app-footer></app-footer>

@@ -125,23 +125,27 @@ export class TriviaComponent implements OnInit {
     });
   }
 
-  private verificarYGuardarPuntaje(nombreUsuario: string, puntos: number, tiempo: number) {
+  verificarYGuardarPuntaje(nombreUsuario: string, puntos: number, tiempo: number) {
     this.servicioPuntaje.obtenerPuntajePorUsuario(nombreUsuario).subscribe((puntajes) => {
       const puntajePrevio = puntajes.length > 0 ? puntajes[0] : null;
 
-      if (!puntajePrevio || puntos > puntajePrevio.puntos) {
-        const nuevoPuntaje = {
-          id: puntajePrevio?.id, // Si existe un ID previo, se usa para actualizar
+      if (
+        !puntajePrevio || // Si el usuario no tiene puntaje registrado
+        puntos > puntajePrevio.puntos || // Si el nuevo puntaje es mayor
+        (puntos === puntajePrevio.puntos && tiempo < puntajePrevio.tiempo) // Si tiene el mismo puntaje pero mejor tiempo
+      ) {
+        const nuevoPuntaje: Puntaje = {
+          id: puntajePrevio?.id, // Si ya tenía un ID, lo mantiene para actualizar
           nombreUsuario,
           puntos,
           tiempo
         };
 
         puntajePrevio
-          ? this.actualizarPuntaje(nuevoPuntaje)
-          : this.guardarNuevoPuntaje(nuevoPuntaje);
+          ? this.actualizarPuntaje(nuevoPuntaje) // Si ya existía, actualiza
+          : this.guardarNuevoPuntaje(nuevoPuntaje); // Si no existía, lo guarda
       } else {
-        console.log('No se guardó el puntaje porque no es mayor al existente.');
+        console.log('No se guardó el puntaje porque no es mejor que el existente.');
       }
     });
   }

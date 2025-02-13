@@ -28,6 +28,7 @@ export class PaginaJuegoComponent implements OnInit {
 
   iniciarJuego() {
     this.mostrarJuego = true; // Cuando se presiona el botón, se muestra el juego
+    console.log('Estado de mostrarJuego:', this.mostrarJuego);
   }
 
   obtenerTopPuntajes(): void {
@@ -56,6 +57,11 @@ export class PaginaJuegoComponent implements OnInit {
     const minutos = Math.floor(tiempoEnMilisegundos / 60000);
     const segundos = Math.floor((tiempoEnMilisegundos % 60000) / 1000);
     return `${minutos}:${segundos < 10 ? '0' : ''}${segundos}`; // Formato 'm:ss'
+  }
+
+  cerrarTrivia() {
+    this.mostrarJuego = false;
+    this.obtenerTopPuntajes(); // Vuelve a cargar el ranking
   }
 
 }
