@@ -8,11 +8,13 @@ import { forkJoin } from 'rxjs';
 import { PosterfavoritoComponent } from '../../pelicula/components/poster-favoritos/poster-favoritos.component';
 import { AddFavoritosComponent } from "../add-favoritos/add-favoritos.component";
 import { RouterLink } from '@angular/router';
+import { NavbarComponent } from '../../shared/navbar/navbar.component';
+import { FooterComponent } from '../../shared/footer/footer.component';
 
 @Component({
   selector: 'app-lista-peliculas',
   standalone: true,
-  imports: [CommonModule, PosterComponent, PosterfavoritoComponent, AddFavoritosComponent,RouterLink],
+  imports: [CommonModule, PosterfavoritoComponent, RouterLink, NavbarComponent, FooterComponent],
   templateUrl: './lista-peliculas.component.html',
   styleUrls: ['./lista-peliculas.component.css']
 })

@@ -1,3 +1,4 @@
+import { FooterComponent} from '../../../shared/footer/footer.component' ;
 import { CommonModule } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
 import { PosterComponent } from '../poster/poster.component';
@@ -9,9 +10,9 @@ import { NavbarComponent } from '../../../shared/navbar/navbar.component';
 @Component({
   selector: 'app-buscar-pelicula',
   standalone: true,
-  imports: [CommonModule, PosterComponent,NavbarComponent],
+  imports: [CommonModule, PosterComponent,NavbarComponent,FooterComponent],
   templateUrl: './buscar-pelicula.component.html',
-  styleUrl: './buscar-pelicula.component.css'
+  styleUrls: ['./buscar-pelicula.component.css']
 })
 export class BuscarPeliculaComponent implements OnInit{
 

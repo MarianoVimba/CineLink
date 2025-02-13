@@ -288,12 +288,15 @@
       "palabraClave": "felipe",
       "descripcion": "",
       "listaFavoritos": [
-        1140535,
-        1182047,
-        1401905,
-        989662,
+        939243,
         1160956,
-        1093995
+        539972,
+        710295,
+        1249289,
+        993710,
+        822119,
+        1410082,
+        1114894
       ],
       "seguidores": [
         "d3e4"
@@ -552,8 +555,32 @@
     {
       "id": "a9c6",
       "nombreUsuario": "vale88",
-      "puntos": 20,
-      "tiempo": 11984
+      "puntos": 25,
+      "tiempo": 20453
+    },
+    {
+      "id": "5bb3",
+      "nombreUsuario": "bea77",
+      "puntos": 45,
+      "tiempo": 33764
+    },
+    {
+      "id": "d6ee",
+      "nombreUsuario": "marianov",
+      "puntos": 50,
+      "tiempo": 21702
+    },
+    {
+      "id": "a46d",
+      "nombreUsuario": "luciano22",
+      "puntos": 45,
+      "tiempo": 22806
+    },
+    {
+      "id": "70b6",
+      "nombreUsuario": "andres55",
+      "puntos": 45,
+      "tiempo": 22918
     }
   ]
 }

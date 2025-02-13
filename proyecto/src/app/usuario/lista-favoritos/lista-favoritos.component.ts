@@ -2,20 +2,19 @@ import { CommonModule } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
 import { PosterComponent } from '../../pelicula/components/poster/poster.component';
 import { PosterfavoritoComponent } from '../../pelicula/components/poster-favoritos/poster-favoritos.component';
-import { AddFavoritosComponent } from '../add-favoritos/add-favoritos.component';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { MovieDetails } from '../../interfaces/details.interface';
 import { forkJoin } from 'rxjs';
 import { PeliculaService } from '../../service/pelicula.service';
 import { FavoritosService } from '../../service/favorito.service';
-import { NavbarComponent } from '../../shared/navbar/navbar.component';
+
 
 @Component({
   selector: 'app-lista-favoritos',
   standalone: true,
-  imports: [CommonModule, PosterComponent, PosterfavoritoComponent, AddFavoritosComponent, RouterLink, NavbarComponent],
+  imports: [CommonModule, PosterfavoritoComponent, RouterLink],
   templateUrl: './lista-favoritos.component.html',
-  styleUrl: './lista-favoritos.component.css'
+  styleUrls: ['./lista-favoritos.component.css']
 })
 export class ListaFavoritosComponent implements OnInit {
 

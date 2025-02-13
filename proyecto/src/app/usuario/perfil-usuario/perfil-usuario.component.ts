@@ -6,11 +6,12 @@ import { AddSeguirUsuarioComponent } from '../add-seguir-usuario/add-seguir-usua
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from '../../shared/navbar/navbar.component';
 import { Router } from '@angular/router';
+import { FooterComponent } from "../../shared/footer/footer.component";
 
 @Component({
   selector: 'app-perfil-usuario',
   standalone: true,
-  imports: [AddSeguirUsuarioComponent, RouterLink, CommonModule, NavbarComponent],
+  imports: [AddSeguirUsuarioComponent, RouterLink, CommonModule, NavbarComponent, FooterComponent],
   templateUrl: './perfil-usuario.component.html',
   styleUrl: './perfil-usuario.component.css'
 })
