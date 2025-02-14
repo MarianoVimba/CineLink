@@ -2,8 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Puntaje } from '../interfaces/puntaje.interface';
-
-
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -33,7 +32,18 @@ export class PuntajeService {
 
   // Obtiene los 5 puntajes más altos, ordenados de mayor a menor
   obtenerTopPuntajes(): Observable<Puntaje[]> {
-    return this.http.get<Puntaje[]>(`${this.urlBase}?_sort=puntos&_order=desc&_limit=5`);
+    return this.http.get<Puntaje[]>(this.urlBase).pipe(
+      map((puntajes: Puntaje[]) =>
+        puntajes
+          .sort((a: Puntaje, b: Puntaje) => {
+            if (b.puntos === a.puntos) {
+              return a.tiempo - b.tiempo; // Menor tiempo primero si hay empate
+            }
+            return b.puntos - a.puntos; // Mayor puntaje primero
+          })
+          .slice(0, 5) // Tomar solo los 5 primeros
+      )
+    );
   }
 
 

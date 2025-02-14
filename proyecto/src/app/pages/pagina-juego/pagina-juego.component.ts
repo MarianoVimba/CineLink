@@ -34,17 +34,7 @@ export class PaginaJuegoComponent implements OnInit {
   obtenerTopPuntajes(): void {
     this.puntajeService.obtenerTopPuntajes().subscribe({
       next: (puntajes) => {
-        // Ordenar primero por puntaje (descendente) y luego por tiempo (ascendente) si hay empate
-        this.topPuntajes = puntajes.sort((a, b) => {
-          if (b.puntos === a.puntos) {
-            // Si los puntajes son iguales, ordenamos por tiempo (ascendente)
-            return a.tiempo - b.tiempo;
-          } else {
-            // Si los puntajes son diferentes, ordenamos por puntaje (descendente)
-            return b.puntos - a.puntos;
-          }
-        });
-
+        this.topPuntajes = puntajes; // Los puntajes ya vienen ordenados desde el servicio
         console.log('Top 5 Puntajes:', this.topPuntajes);
       },
       error: (e) => {
@@ -61,7 +51,9 @@ export class PaginaJuegoComponent implements OnInit {
 
   cerrarTrivia() {
     this.mostrarJuego = false;
-    this.obtenerTopPuntajes(); // Vuelve a cargar el ranking
+    setTimeout(() => {
+      this.obtenerTopPuntajes();
+    }, 500);
   }
 
 }
