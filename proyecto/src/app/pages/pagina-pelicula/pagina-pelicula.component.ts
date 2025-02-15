@@ -13,6 +13,8 @@ import { ListaPeliculasComponent } from '../../usuario/lista-peliculas/lista-pel
 import { ListaReseniasComponent } from '../../pelicula/components/lista-resenias/lista-resenias.component';
 import { reseña } from '../../interfaces/reseña.interface';
 import { ReseniaService } from '../../service/resenia.service';
+import { TrailerService } from '../../service/trailer.service';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-pagina-pelicula',
@@ -26,11 +28,15 @@ export class PaginaPeliculaComponent implements OnInit{
   pelicula?: MovieDetails;
   cast : Cast[] =[];
   idPelicula!: number;
+  trailerUrl?: SafeResourceUrl;;
+
 
   servicioPelicula = inject(PeliculaService);
   servicioResenia = inject(ReseniaService);
+  servicioTrailer = inject(TrailerService)
   activatedroute = inject(ActivatedRoute);
   router = inject(Router);
+  sanitizer = inject(DomSanitizer);
 
   @ViewChild(ListaReseniasComponent) lista!: ListaReseniasComponent;
 
@@ -39,8 +45,8 @@ export class PaginaPeliculaComponent implements OnInit{
     const {id} = this.activatedroute.snapshot.params; // recupero id de la url
     this.idPelicula = +id;
 
-    
 
+    console.log("ID ES", this.idPelicula);
 
     this.cargarPelicula(id);
   }
@@ -66,10 +72,27 @@ export class PaginaPeliculaComponent implements OnInit{
       this.pelicula= movie;
       this.cast = cast;
 
+      this.cargarTrailer(Number(id));
+
       },error:(e:Error) =>{
         console.log(e.message);
       }
     })
+  }
+
+  cargarTrailer(id: number) {
+    this.servicioTrailer.getMovieTrailer(id).subscribe({
+      next: (url) => {
+        if (url) {
+          this.trailerUrl = this.sanitizer.bypassSecurityTrustResourceUrl(url); // Sanitiza la URL
+        } else {
+          console.log("No se encontró tráiler.");
+        }
+      },
+      error: (e: Error) => {
+        console.log(e.message);
+      }
+    });
   }
 
 

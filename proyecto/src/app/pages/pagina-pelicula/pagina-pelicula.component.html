@@ -1,6 +1,8 @@
 
 <app-navbar></app-navbar>
 
+
+
 <div class="container d-flex justify-content-center my-5">
   <div class="row" *ngIf="pelicula">
     <div class="col-5 mr-5">
@@ -38,6 +40,9 @@
         </div>
       </div>
     </div>
+    <iframe *ngIf="trailerUrl" [src]="trailerUrl" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+    
+
     <!-- ---------------------------------- x ---------------------------------- -->
     <div class="opciones d-flex justify-content-around align-items-center py-5  mt-5  w-100">
       <app-add-favoritos [peliculaId]="pelicula.id"></app-add-favoritos>

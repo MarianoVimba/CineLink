@@ -16,7 +16,8 @@
         11101,
         1402482,
         1174128,
-        1020896
+        1020896,
+        1051896
       ],
       "seguidores": [
         "d3e4",
@@ -413,6 +414,13 @@
       "id": "d404",
       "idPelicula": 939243,
       "puntuacion": 3,
+      "descripcion": "",
+      "idUsuario": "o7p8"
+    },
+    {
+      "id": "fcae",
+      "idPelicula": 539972,
+      "puntuacion": 1,
       "descripcion": "",
       "idUsuario": "o7p8"
     }
