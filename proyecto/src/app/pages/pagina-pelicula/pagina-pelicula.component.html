@@ -34,19 +34,21 @@
         </div>
       </div>
 
+      <iframe *ngIf="trailerUrl" [src]="trailerUrl" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+
+
       <div class="row mt-3">
         <div class="col mb-2">
           <button class="btn btn-outline-info float-right" (click)="regresar()">Regresar</button>
         </div>
       </div>
     </div>
-    <iframe *ngIf="trailerUrl" [src]="trailerUrl" width="560" height="315" frameborder="0" allowfullscreen></iframe>
-    
+
 
     <!-- ---------------------------------- x ---------------------------------- -->
     <div class="opciones d-flex justify-content-around align-items-center py-5  mt-5  w-100">
       <app-add-favoritos [peliculaId]="pelicula.id"></app-add-favoritos>
- 
+
       <app-agregar-resenia (eventCrearResenia)="guardarResenia($event)" [peliculaId]="idPelicula" ></app-agregar-resenia>
     </div>
 
