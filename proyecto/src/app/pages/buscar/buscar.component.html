@@ -1,6 +1,5 @@
 <app-navbar></app-navbar>
 
-
 <div class="d-flex justify-content-center my-4">
   <div class="form-inline w-50 m-5">
     <input
@@ -18,19 +17,30 @@
   </div>
 </div>
 
+<!-- Botones de géneros -->
+<div class="text-center my-3 mb-5">
+  <div class="d-flex flex-wrap justify-content-center">
+    <button *ngFor="let genero of generos; let i = index"
+            class="btn genero-btn m-1"
+            [ngStyle]="{ 'background-color': obtenerColorGenero(i) }"
+            (click)="buscarPorGenero(genero.id)">
+      {{ genero.name }}
+    </button>
+  </div>
+</div>
 
 <hr>
-<div class="row w-100">
-    <div class="col">
-        <app-poster [peliculas]="peliculas" *ngIf="peliculas.length > 0"></app-poster>
 
-        <h3 class="text-warning" *ngIf="noEncontro"><strong>{{noEncontro}}</strong></h3>
-    </div>
+<div class="row w-100">
+  <div class="col">
+    <app-poster [peliculas]="peliculas" *ngIf="peliculas.length > 0"></app-poster>
+
+    <h3 class="text-warning" *ngIf="noEncontro"><strong>{{ noEncontro }}</strong></h3>
+  </div>
 </div>
+
 <div class="volver-container">
   <button class="btn-volver" routerLink="/inicio">Volver</button>
 </div>
+
 <app-footer></app-footer>
-
-
-
