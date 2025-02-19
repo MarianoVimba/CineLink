@@ -283,47 +283,57 @@
       "nombre": "mariano",
       "apellido": "vimba",
       "nombreUsuario": "marianov",
-      "password": "123123123",
-      "confirmacionPassword": "123123123",
+      "password": "12341234",
+      "confirmacionPassword": "12341234",
       "pais": "argentina",
       "ciudad": "mar del plata",
       "palabraClave": "felipe",
-      "descripcion": "",
+      "descripcion": "interesado en las peliculas de accion",
       "listaFavoritos": [
-        939243,
-        1160956,
-        539972,
-        710295,
-        1249289,
-        993710,
-        822119,
-        1410082,
-        1114894
+        832964,
+        744857,
+        1261543,
+        1093995,
+        1207830,
+        1333100,
+        1357305
       ],
       "seguidores": [
         "d3e4"
       ],
       "seguidos": [
-        "d3e4",
         "q9r0",
         "z7a8",
-        "o7p8"
+        "o7p8",
+        "d3e4"
       ]
     },
+
     {
-      "id": "0844",
-      "nombre": "prueba",
-      "apellido": "prueba",
-      "nombreUsuario": "prueba123",
-      "password": "123123123",
-      "confirmacionPassword": "123123123",
+      "id": "9755",
+      "nombre": "maicol",
+      "apellido": "jackson",
+      "nombreUsuario": "maicolj",
+      "password": "holahola",
+      "confirmacionPassword": "holahola",
       "pais": "argentina",
       "ciudad": "mar del plata",
       "palabraClave": "hola",
       "descripcion": "",
-      "listaFavoritos": [],
+      "listaFavoritos": [
+        839033,
+        980477,
+        1203329,
+        1352774,
+        822119,
+        1160956,
+        268,
+        2661
+      ],
       "seguidores": [],
-      "seguidos": []
+      "seguidos": [
+        "71bb"
+      ]
     }
   ],
   "resenias": [
@@ -424,6 +434,27 @@
       "puntuacion": 1,
       "descripcion": "",
       "idUsuario": "o7p8"
+    },
+    {
+      "id": "d3f9",
+      "idPelicula": 1300607,
+      "puntuacion": 7,
+      "descripcion": "",
+      "idUsuario": "71bb"
+    },
+    {
+      "id": "0528",
+      "idPelicula": 1300607,
+      "puntuacion": 5,
+      "descripcion": "aceptable\n",
+      "idUsuario": "71bb"
+    },
+    {
+      "id": "d583",
+      "idPelicula": 1352774,
+      "puntuacion": 7,
+      "descripcion": "",
+      "idUsuario": "9755"
     }
   ],
   "preguntas": [
@@ -552,13 +583,13 @@
     {
       "id": "4a57",
       "nombreUsuario": "prueba123",
-      "puntos": 40,
+      "puntos": 10,
       "tiempo": 30502
     },
     {
       "id": "8748",
       "nombreUsuario": "tomas00",
-      "puntos": 50,
+      "puntos": 15,
       "tiempo": 15251
     },
     {
@@ -570,32 +601,38 @@
     {
       "id": "5bb3",
       "nombreUsuario": "bea77",
-      "puntos": 45,
+      "puntos": 35,
       "tiempo": 33764
-    },
-    {
-      "id": "d6ee",
-      "nombreUsuario": "marianov",
-      "puntos": 50,
-      "tiempo": 21702
     },
     {
       "id": "a46d",
       "nombreUsuario": "luciano22",
-      "puntos": 45,
+      "puntos": 5,
       "tiempo": 22806
     },
     {
       "id": "70b6",
       "nombreUsuario": "andres55",
-      "puntos": 45,
+      "puntos": 10,
       "tiempo": 22918
     },
     {
       "id": "d7b0",
       "nombreUsuario": "emilia99",
-      "puntos": 50,
+      "puntos": 5,
       "tiempo": 12069
+    },
+    {
+      "id": "91b5",
+      "nombreUsuario": "marianov",
+      "puntos": 50,
+      "tiempo": 20670
+    },
+    {
+      "id": "7368",
+      "nombreUsuario": "maicolj",
+      "puntos": 40,
+      "tiempo": 102758
     }
   ]
 }

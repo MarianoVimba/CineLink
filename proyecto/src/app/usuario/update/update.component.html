@@ -11,7 +11,7 @@
           Este campo es requerido
         </div>
         <div *ngIf="formulario.controls['nombreUsuario'].touched && formulario.controls['nombreUsuario'].hasError('minlength')" class="error">
-          Requiere un mínimo de 3 letras
+          Requiere un mínimo de 3 caracteres
         </div>
         <div *ngIf="formulario.controls['nombreUsuario'].touched && formulario.controls['nombreUsuario'].hasError('nombreUsuarioExistente')" class="error">
           Este nombre de usuario no esta disponible, ingrese otro
@@ -25,7 +25,7 @@
           Este campo es requerido
         </div>
         <div *ngIf="formulario.controls['pais'].touched && formulario.controls['pais'].hasError('minlength')" class="error">
-          Requiere un mínimo de 4 letras
+          Requiere un mínimo de 4 caracteres
         </div>
       </div>
       
@@ -36,7 +36,7 @@
           Este campo es requerido
         </div>
         <div *ngIf="formulario.controls['ciudad'].touched && formulario.controls['ciudad'].hasError('minlength')" class="error">
-          Requiere un mínimo de 2 letras
+          Requiere un mínimo de 2 caracteres
         </div>
       </div>
         
