@@ -15,14 +15,110 @@ h3{
 
 
 .opciones {
-  border-top: 1px solid #ddd; 
-  border-bottom: 1px solid #ddd; 
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
 }
 
 
 .opciones2 {
-  min-height: 80px; 
-  padding: 20px 0; 
-  border-top: 1px solid #ddd; 
-  border-bottom: 1px solid #ddd; 
+  min-height: 80px;
+  padding: 20px 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+
+/* Estilos generales */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Ajustes para pantallas grandes */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Estilos para el póster de la película */
+.col-5 img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+/* Estilos para la sección de detalles */
+.col-6 {
+  color: white;
+  text-align: left;
+}
+
+/* Estilos para el contenedor de estrellas */
+.stars-container {
+  display: flex;
+  align-items: center;
+}
+
+.fa-star {
+  margin-right: 2px;
+  color: yellow;
+}
+
+/* Estilos para las opciones de favoritos y reseñas */
+.opciones {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+/* ------- BREAKPOINTS ------- */
+
+/* Tablets (Pantallas medianas, <=1024px) */
+@media (max-width: 1024px) {
+  .col-5,
+  .col-6 {
+    flex: 1 1 100%; /* Apilan los elementos en una sola columna */
+    text-align: center;
+  }
+
+  .col-5 img {
+    max-width: 300px;
+    margin: auto;
+  }
+
+  .opciones {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* celulares (Pantallas pequeñas, <=768px) */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .col-5 img {
+    max-width: 250px;
+  }
+
+  .stars-container {
+    justify-content: center;
+  }
+
+  .opciones {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
 }

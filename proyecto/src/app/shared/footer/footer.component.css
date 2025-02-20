@@ -1,66 +1,66 @@
 .footer-container {
-    position: relative; 
+    position: relative;
     width: 100%;
-    background-color: #3a3341; 
-    text-align: center; 
-    padding: 1rem 0; 
-    height: auto; 
-    box-sizing: border-box; 
+    background-color: #3a3341;
+    text-align: center;
+    padding: 1rem 0;
+    height: auto;
+    box-sizing: border-box;
 }
 
 .section-linck {
-    display: inline-block; 
-    padding: 0.5rem; 
-    position: relative; 
+    display: inline-block;
+    padding: 0.5rem;
+    position: relative;
 }
 
 .linckApi {
-    font-size: 1.5rem; 
-    color: #dcdcdc; 
-    font-family: "Fredericka the Great", serif; 
-    text-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.5); 
-    text-decoration: none; 
-    cursor: pointer; 
-    text-align: center; 
+    font-size: 1.5rem;
+    color: #dcdcdc;
+    font-family: "Fredericka the Great", serif;
+    text-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
 }
 
 .line {
-    display: block; 
+    display: block;
 }
 
 .section-linck::before,
 .section-linck::after {
     content: '';
     position: absolute;
-    top: 50%; 
-    width: 0.06rem; 
-    height: 2rem; 
-    background-color: #dcdcdc; 
-    transform: translateY(-50%); 
+    top: 50%;
+    width: 0.06rem;
+    height: 2rem;
+    background-color: #dcdcdc;
+    transform: translateY(-50%);
 }
 
 .section-linck::before {
-    left: -2.5rem; 
+    left: -2.5rem;
 }
 
 .section-linck::after {
-    right: -2.5rem; 
+    right: -2.5rem;
 }
 
 .footer-text {
-    margin-top: 1rem; 
-    background-color: #5e5e5e; 
+    margin-top: 1rem;
+    background-color: #5e5e5e;
 }
 
 .footer-text span {
-    display: block; 
-    margin-top: 0.5rem; 
-    color: #dcdcdc; 
+    display: block;
+    margin-top: 0.5rem;
+    color: #dcdcdc;
 }
 
 .horizontal-line {
-    width: 2rem; 
-    height: 0.1rem; 
-    background-color: #dcdcdc; 
-    margin: 1rem auto; 
+    width: 2rem;
+    height: 0.1rem;
+    background-color: #dcdcdc;
+    margin: 1rem auto;
 }

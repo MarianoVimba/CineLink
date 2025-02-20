@@ -27,9 +27,9 @@ export class AgregarReseniaComponent implements OnChanges {
 
     if (changes['peliculaId'] && this.peliculaId) {
       this.formulario.patchValue({
-        idPelicula: this.peliculaId,  
-        idUsuario: this.usuarioId,     
-        puntuacion: 1,                 
+        idPelicula: this.peliculaId,
+        idUsuario: this.usuarioId,
+        puntuacion: 1,
         descripcion: ''
       });
     }
@@ -50,8 +50,8 @@ export class AgregarReseniaComponent implements OnChanges {
     const modal = document.getElementById('reseniaModal');
     if (modal) {
       modal.classList.add('show');
-      modal.style.display = 'block';  
-      document.body.style.overflow = 'hidden';  
+      modal.style.display = 'block';
+      document.body.style.overflow = 'hidden';
     }
   }
 
@@ -77,7 +77,7 @@ export class AgregarReseniaComponent implements OnChanges {
       puntuacion: 1,
       descripcion: '',
       idUsuario: this.usuarioId,
-      idPelicula: this.peliculaId  
+      idPelicula: this.peliculaId
     });
   }
 

@@ -110,5 +110,11 @@ export class BuscarComponent implements OnInit {
     return this.coloresGeneros[index % this.coloresGeneros.length];
   }
 
+  onGeneroChange(event: Event) {
+    const selectElement = event.target as HTMLSelectElement;
+    const generoId = Number(selectElement.value);
+    this.buscarPorGenero(generoId);
+  }
+
 
 }

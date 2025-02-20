@@ -1,14 +1,17 @@
+
+
+
 .titulo-seguidos {
   color: white;
   text-align: center;
-  font-size: 36px; 
+  font-size: 36px;
   margin-bottom: 20px;
-  transition: color 0.3s ease; 
+  transition: color 0.3s ease;
   margin: 3rem;
 }
 
 .titulo-seguidos:hover {
-  color: red; 
+  color: red;
 }
 
 .seguido-lista {
@@ -53,21 +56,21 @@
   border: 2px solid red;
   border-radius: 5px;
   margin: 20px;
-  font-size: 24px; 
-  font-weight: bold; 
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); 
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .volver-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100px; 
+  height: 100px;
   margin-top: 20px;
 }
 
 .btn-volver {
-  background-color: red; 
+  background-color: red;
   border: none;
   color: white;
   padding: 10px 20px;
@@ -81,7 +84,7 @@
 }
 
 .btn-volver:hover {
-  background-color: darkred; 
+  background-color: darkred;
 }
 
 .perfil-flotante {

@@ -12,13 +12,14 @@
       "palabraClave": "deportes",
       "descripcion": "Me apasionan los deportes en equipo.",
       "listaFavoritos": [
-        1223799,
-        11101,
         1402482,
         1174128,
         1020896,
         1051896,
-        359724
+        359724,
+        857,
+        652,
+        27205
       ],
       "seguidores": [
         "d3e4",
@@ -308,7 +309,6 @@
         "d3e4"
       ]
     },
-
     {
       "id": "9755",
       "nombre": "maicol",
@@ -455,6 +455,27 @@
       "puntuacion": 7,
       "descripcion": "",
       "idUsuario": "9755"
+    },
+    {
+      "id": "bc7f",
+      "idPelicula": 359724,
+      "puntuacion": 10,
+      "descripcion": "",
+      "idUsuario": "o7p8"
+    },
+    {
+      "id": "3fd3",
+      "idPelicula": 27205,
+      "puntuacion": 8,
+      "descripcion": " texo texto texto texo texto textotexo texto texto texo texto textotexo texto texto texo texto textotexo texto texto texo texto textotexo texto texto texo texto textotexo texto texto texo texto textotexo texto texto texo texto texto",
+      "idUsuario": "o7p8"
+    },
+    {
+      "id": "4f42",
+      "idPelicula": 1203329,
+      "puntuacion": 1,
+      "descripcion": "",
+      "idUsuario": "o7p8"
     }
   ],
   "preguntas": [

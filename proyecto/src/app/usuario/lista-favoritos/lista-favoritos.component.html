@@ -1,4 +1,4 @@
-
+<app-navbar></app-navbar>
 <div class="estrenos d-flex flex-column justify-content-center align-items-center">
   <div class="linea"></div>
   <h2>LISTA DE FAVORITOS</h2>
@@ -9,9 +9,11 @@
   <ng-template #noFavorites>
     <h3>La lista de peliculas favoritas del usuario está vacía</h3>
   </ng-template>
-  
+
 </div>
 
 <div class="volver-container">
   <button class="btn-volver" [routerLink]="['/perfil/', userId]">Volver</button>
 </div>
+
+<app-footer></app-footer>

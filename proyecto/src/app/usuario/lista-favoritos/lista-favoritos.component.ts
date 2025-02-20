@@ -7,12 +7,14 @@ import { MovieDetails } from '../../interfaces/details.interface';
 import { forkJoin } from 'rxjs';
 import { PeliculaService } from '../../service/pelicula.service';
 import { FavoritosService } from '../../service/favorito.service';
+import { NavbarComponent } from '../../shared/navbar/navbar.component';
+import { FooterComponent } from '../../shared/footer/footer.component';
 
 
 @Component({
   selector: 'app-lista-favoritos',
   standalone: true,
-  imports: [CommonModule, PosterfavoritoComponent, RouterLink],
+  imports: [CommonModule, PosterfavoritoComponent, RouterLink,NavbarComponent,FooterComponent],
   templateUrl: './lista-favoritos.component.html',
   styleUrls: ['./lista-favoritos.component.css']
 })

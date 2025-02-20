@@ -17,8 +17,8 @@
   </div>
 </div>
 
-<!-- Botones de géneros -->
-<div class="text-center my-3 mb-5">
+<!-- Botones de géneros en pantallas grandes -->
+<div class="text-center my-3 mb-5 d-none d-md-block">
   <div class="d-flex flex-wrap justify-content-center">
     <button *ngFor="let genero of generos; let i = index"
             class="btn genero-btn m-1"
@@ -27,6 +27,14 @@
       {{ genero.name }}
     </button>
   </div>
+</div>
+
+<!-- Dropdown de géneros en pantallas pequeñas -->
+<div class="text-center my-3 mb-5 d-md-none">
+  <select class="form-control genero-select" (change)="onGeneroChange($event)">
+    <option value="" disabled selected>🔽 Selecciona un género</option>
+    <option *ngFor="let genero of generos" [value]="genero.id">{{ genero.name }}</option>
+  </select>
 </div>
 
 <hr>
