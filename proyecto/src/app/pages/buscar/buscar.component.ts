@@ -8,7 +8,6 @@ import { PosterComponent } from '../../pelicula/components/poster/poster.compone
 import { FooterComponent } from '../../shared/footer/footer.component';
 import { Genero } from '../../interfaces/genero.interface';
 import { GeneroService } from '../../service/genero.service';
-import { GeneroPeliculaService } from '../../service/GeneroPeliculaService.service';
 
 @Component({
   selector: 'app-buscar',
@@ -23,7 +22,6 @@ export class BuscarComponent implements OnInit {
   servicioPelicula = inject(PeliculaService);
 
   servicioGenero = inject(GeneroService);
-  servicioGeneroPelicula = inject(GeneroPeliculaService);
   generos: Genero[] = [];
 
 
@@ -76,7 +74,7 @@ export class BuscarComponent implements OnInit {
         this.noEncontro= '😌 No se encontro la pelicula';
         }
       },error:(e:Error) =>{
-        console.log(e.message);
+        console.error(e.message);
       }
     })
   }
@@ -94,7 +92,7 @@ export class BuscarComponent implements OnInit {
 
   buscarPorGenero(generoId: number) {
     this.noEncontro = ''; // Limpiar mensaje anterior
-    this.servicioGeneroPelicula.buscarPeliculasPorGenero(generoId).subscribe({
+    this.servicioGenero.buscarPeliculasPorGenero(generoId).subscribe({
       next: (resPeliculas) => {
         this.peliculas = resPeliculas;
         this.noEncontro = this.peliculas.length === 0 ? '😌 No se encontraron películas para este género' : '';

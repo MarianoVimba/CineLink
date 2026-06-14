@@ -46,7 +46,6 @@ export class PaginaPeliculaComponent implements OnInit{
     this.idPelicula = +id;
 
 
-    console.log("ID ES", this.idPelicula);
 
     this.cargarPelicula(id);
   }
@@ -75,7 +74,7 @@ export class PaginaPeliculaComponent implements OnInit{
       this.cargarTrailer(Number(id));
 
       },error:(e:Error) =>{
-        console.log(e.message);
+        console.error(e.message);
       }
     })
   }
@@ -86,11 +85,10 @@ export class PaginaPeliculaComponent implements OnInit{
         if (url) {
           this.trailerUrl = this.sanitizer.bypassSecurityTrustResourceUrl(url); // Sanitiza la URL
         } else {
-          console.log("No se encontró tráiler.");
         }
       },
       error: (e: Error) => {
-        console.log(e.message);
+        console.error(e.message);
       }
     });
   }
@@ -117,7 +115,7 @@ export class PaginaPeliculaComponent implements OnInit{
           this.lista.cargarListaResenias();
 
         },error:(e:Error) =>{
-          console.log(e.message);
+          console.error(e.message);
         }
       })}
 

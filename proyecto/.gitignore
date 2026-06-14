@@ -11,6 +11,10 @@
 npm-debug.log
 yarn-error.log
 
+# Base de datos local de json-server: contiene datos/credenciales de usuarios.
+# NO versionar. Copiar db/db.example.json a db/db.json para arrancar.
+/db/db.json
+
 # IDEs and editors
 .idea/
 .project

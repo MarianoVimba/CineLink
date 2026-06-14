@@ -44,33 +44,22 @@ export class RestablecerPasswordComponent {
   
     const { nombreUsuario, palabraClave, password } = this.formUsuario.value;
   
-    this.servicio.verificarUsuarioPorPalabraClave(nombreUsuario, palabraClave).subscribe(
-      (usuario: Usuario | null) => {
-        if (usuario) {
-          const userId = localStorage.getItem('userId'); // Obtén el ID del usuario
-          console.log('ID del usuario recuperado:', userId); // Verifica el ID recuperado
-          if (userId) {
-            this.servicio.actualizarContraseña(userId, password).subscribe(
-              () => {
-                alert('Contraseña actualizada correctamente');
-                this.router.navigate(['/login']);
-              },
-              (err) => {
-                console.error('Error al actualizar la contraseña:', err);
-                alert('Error al actualizar la contraseña');
-              }
-            );
-          } else {
-            alert('No se encontró el ID del usuario');
-          }
-        } else {
+    this.servicio.verificarUsuarioPorPalabraClave(nombreUsuario, palabraClave).subscribe({
+      next: (usuario: Usuario | null) => {
+        if (!usuario || !usuario.id) {
           alert('Nombre de usuario o palabra clave incorrectos');
+          return;
         }
+        // Usamos el id del usuario que coincidió, no un valor frágil de localStorage.
+        this.servicio.actualizarContraseña(usuario.id, password).subscribe({
+          next: () => {
+            alert('Contraseña actualizada correctamente');
+            this.router.navigate(['/login']);
+          },
+          error: () => alert('Error al actualizar la contraseña')
+        });
       },
-      (err) => {
-        console.error('Error al verificar la palabra clave:', err);
-        alert('Hubo un error al verificar la palabra clave');
-      }
-    );
+      error: () => alert('Hubo un error al verificar la palabra clave')
+    });
   }
 }

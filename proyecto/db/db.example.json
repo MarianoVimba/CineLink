@@ -1,0 +1,67 @@
+{
+  "usuarios": [
+    {
+      "id": "u001",
+      "nombre": "Usuario",
+      "apellido": "Demo",
+      "nombreUsuario": "demo",
+      "password": "CAMBIAR_ESTA_CLAVE",
+      "confirmacionPassword": "CAMBIAR_ESTA_CLAVE",
+      "pais": "Argentina",
+      "ciudad": "Mar del Plata",
+      "palabraClave": "demo",
+      "descripcion": "Usuario de ejemplo para desarrollo.",
+      "listaFavoritos": [27205, 857],
+      "seguidores": [],
+      "seguidos": ["u002"]
+    },
+    {
+      "id": "u002",
+      "nombre": "Otro",
+      "apellido": "Ejemplo",
+      "nombreUsuario": "ejemplo",
+      "password": "CAMBIAR_ESTA_CLAVE",
+      "confirmacionPassword": "CAMBIAR_ESTA_CLAVE",
+      "pais": "Argentina",
+      "ciudad": "Buenos Aires",
+      "palabraClave": "ejemplo",
+      "descripcion": "Segundo usuario de ejemplo.",
+      "listaFavoritos": [],
+      "seguidores": ["u001"],
+      "seguidos": []
+    }
+  ],
+  "resenias": [
+    {
+      "id": "r001",
+      "idPelicula": 27205,
+      "puntuacion": 9,
+      "descripcion": "Reseña de ejemplo.",
+      "idUsuario": "u001"
+    }
+  ],
+  "preguntas": [
+    {
+      "id": "1",
+      "pregunta": "¿En qué película aparece el personaje Jack Dawson?",
+      "opciones": ["Titanic", "El Gran Gatsby", "Romeo + Julieta", "Inception"],
+      "respuesta": "Titanic",
+      "foto": "img/P1.jpg"
+    },
+    {
+      "id": "2",
+      "pregunta": "¿Cómo se llama el planeta donde viven los Na'vi en Avatar?",
+      "opciones": ["Endor", "Pandora", "Krypton", "Asgard"],
+      "respuesta": "Pandora",
+      "foto": "img/P2.jpg"
+    }
+  ],
+  "puntajes": [
+    {
+      "id": "p001",
+      "nombreUsuario": "demo",
+      "puntos": 10,
+      "tiempo": 20000
+    }
+  ]
+}

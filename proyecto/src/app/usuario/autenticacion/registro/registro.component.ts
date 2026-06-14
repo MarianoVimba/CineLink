@@ -73,7 +73,7 @@ export class RegistroComponent {
         this.router.navigate(['login']);
       },
       error: (err: Error) => {
-        console.log(err.message);
+        console.error(err.message);
       }
     });
   }

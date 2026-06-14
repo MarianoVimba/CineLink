@@ -28,14 +28,12 @@ export class PaginaJuegoComponent implements OnInit {
 
   iniciarJuego() {
     this.mostrarJuego = true; // Cuando se presiona el botón, se muestra el juego
-    console.log('Estado de mostrarJuego:', this.mostrarJuego);
   }
 
   obtenerTopPuntajes(): void {
     this.puntajeService.obtenerTopPuntajes().subscribe({
       next: (puntajes) => {
         this.topPuntajes = puntajes; // Los puntajes ya vienen ordenados desde el servicio
-        console.log('Top 5 Puntajes:', this.topPuntajes);
       },
       error: (e) => {
         console.error('Error al obtener los puntajes', e);

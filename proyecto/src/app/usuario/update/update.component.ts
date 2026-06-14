@@ -55,11 +55,10 @@ export class UpdateComponent implements OnInit {
   getUsuario(id: string) {
     this.servicio.getUsuarioById(id).subscribe({
       next: (usuario: Usuario) => {
-        console.log('Usuario obtenido:', usuario);  // Verifica los datos completos aquí
         this.setPersonaje(usuario);  // Cargar los datos en el formulario
       },
       error: () => {
-        console.log('Error al obtener el usuario');
+        console.error('Error al obtener el usuario');
       }
     });
   }
@@ -102,7 +101,7 @@ export class UpdateComponent implements OnInit {
         this.volverAlinicio();
       },
       error: () => {
-        console.log('Error al actualizar el usuario');
+        console.error('Error al actualizar el usuario');
       }
     });
   }

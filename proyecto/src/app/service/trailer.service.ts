@@ -2,14 +2,15 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TrailerService {
 
-  private apiUrl = 'https://api.themoviedb.org/3/movie';
-  private apiKey = '43599da22af9abeb763c46dae25030b9' ;
+  private apiUrl = `${environment.tmdb.baseUrl}/movie`;
+  private apiKey = environment.tmdb.apiKey;
 
   constructor(private http: HttpClient) {}
 

@@ -47,7 +47,7 @@ export class NavbarComponent implements OnInit {
         this.nombreUsuario = usuario.nombreUsuario;
       },
       error: () => {
-        console.log("error");
+        console.error("error");
       }
     });
   }
@@ -67,11 +67,9 @@ export class NavbarComponent implements OnInit {
   
     this.servicio.getUsuarios().subscribe({
       next: (usuarios) => {
-        console.log('Usuarios recibidos:', usuarios); // Verificar los datos recibidos
         this.resultadoBusqueda = usuarios.filter(usuario =>
           usuario.nombreUsuario.toLowerCase().includes(this.buscarUsuario.toLowerCase())
         );
-        console.log('Resultados de búsqueda:', this.resultadoBusqueda); // Verificar los resultados
       },
       error: (err) => {
         console.error('Error al obtener usuarios:', err);

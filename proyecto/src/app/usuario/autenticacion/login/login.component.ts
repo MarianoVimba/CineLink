@@ -34,9 +34,8 @@ export class LoginComponent implements OnInit {
     this.usuarioService.login(nombreUsuario, password).subscribe({
       next: (usuario) => {
         if (usuario) {
-          alert('Login exitoso');
+          this.auth.logIn(String(usuario.id)); // inicia sesión ANTES de navegar
           this.router.navigate(['inicio']);
-          this.auth.logIn(); // del servicio para pasarlo a true
         } else {
           alert('Usuario o contraseña incorrectos');
         }

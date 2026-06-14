@@ -1,18 +1,16 @@
-import { inject } from "@angular/core"
-import { AuthService } from "../../service/auth.service"
-import { Router } from "@angular/router"
+import { inject } from "@angular/core";
+import { AuthService } from "../../service/auth.service";
+import { Router } from "@angular/router";
 
+// Protege las rutas privadas: solo entra quien tiene sesión iniciada.
 export const authGuardFn = () => {
 
-    const authService = inject(AuthService)
-    const router = inject(Router)
+    const authService = inject(AuthService);
+    const router = inject(Router);
 
-    if(authService.estoyLogueado || localStorage.getItem('token') ){
-        localStorage.setItem('token', '123.123.123');
+    if (authService.isLoggedIn()) {
         return true;
     }
-    else{
-        router.navigateByUrl('login');
-        return false;
-    }
-}
+
+    return router.createUrlTree(['login']);
+};

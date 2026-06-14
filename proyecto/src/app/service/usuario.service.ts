@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { map, Observable } from 'rxjs';
 import { Usuario } from '../interfaces/usuario.interface';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UsuarioService {
-  private urlBase = 'http://localhost:3000/usuarios'; // URL base del servidor JSON
+  private urlBase = `${environment.apiBaseUrl}/usuarios`;
 
   constructor(private http: HttpClient) { }
 
@@ -24,60 +25,38 @@ export class UsuarioService {
   }
 
   updateUsuario(id: string | null, usuario: Partial<Usuario>): Observable<Usuario> {
+    // Partial<Usuario>: solo se actualizan los campos que se pasen en la solicitud.
     return this.http.patch<Usuario>(`${this.urlBase}/${id}`, usuario);
   }
-//Partial<Usuario> para indicar que no todos los campos del objeto Usuario son requeridos, y que solo se actualizaran los que se pasen en la solicitud.  
 
-
-  // solucion de id una vez ingresado para poder obtenerlo para poder trabajar con ese id
-
+  // NOTA: con json-server no hay forma realmente segura de autenticar. Como mínimo
+  // evitamos mandar la contraseña en la URL: filtramos por nombre de usuario y
+  // comparamos la contraseña en memoria. La identidad de sesión la maneja AuthService.
   login(nombreUsuario: string, password: string): Observable<Usuario | null> {
-    return this.http.get<Usuario[]>(`${this.urlBase}?nombreUsuario=${nombreUsuario}&password=${password}`).pipe(
-      map(usuarios => {
-        if (usuarios.length > 0) {
-          const userId = String(usuarios[0].id);
-          localStorage.setItem('userId', userId); // convertir el ID a cadena
-          console.log('ID del usuario almacenado:', userId); // Verifica el ID almacenado
-          return usuarios[0];
-        } else {
-          return null;
-        }
-      })
+    const params = `?nombreUsuario=${encodeURIComponent(nombreUsuario)}`;
+    return this.http.get<Usuario[]>(`${this.urlBase}${params}`).pipe(
+      map(usuarios => usuarios.find(u => u.password === password) ?? null)
     );
   }
 
   verificarNombreUsuarioExistente(nombreUsuario: string): Observable<boolean> {
-    return this.getUsuarios().pipe(
-      map(usuarios => usuarios.some(usuario => usuario.nombreUsuario === nombreUsuario))
+    const params = `?nombreUsuario=${encodeURIComponent(nombreUsuario)}`;
+    return this.http.get<Usuario[]>(`${this.urlBase}${params}`).pipe(
+      map(usuarios => usuarios.length > 0)
     );
   }
 
+  actualizarContraseña(id: string, nuevaContraseña: string): Observable<Usuario> {
+    return this.http.patch<Usuario>(`${this.urlBase}/${id}`, {
+      password: nuevaContraseña,
+      confirmacionPassword: nuevaContraseña
+    });
+  }
 
-actualizarContraseña(id: string, nuevaContraseña: string): Observable<Usuario> {
-  return this.http.patch<Usuario>(`${this.urlBase}/${id}`, {
-    password: nuevaContraseña,
-    confirmacionPassword: nuevaContraseña 
-  });
+  verificarUsuarioPorPalabraClave(nombreUsuario: string, palabraClave: string): Observable<Usuario | null> {
+    const params = `?nombreUsuario=${encodeURIComponent(nombreUsuario)}`;
+    return this.http.get<Usuario[]>(`${this.urlBase}${params}`).pipe(
+      map(usuarios => usuarios.find(u => u.palabraClave === palabraClave) ?? null)
+    );
+  }
 }
-
-verificarUsuarioPorPalabraClave(nombreUsuario: string, palabraClave: string): Observable<Usuario | null> {
-  return this.http.get<Usuario[]>(`${this.urlBase}?nombreUsuario=${nombreUsuario}&palabraClave=${palabraClave}`).pipe(
-    map(usuarios => {
-      if (usuarios.length > 0) {
-        const userId = String(usuarios[0].id);
-        localStorage.setItem('userId', userId); // convertir el ID a cadena
-        console.log('ID del usuario almacenado:', userId); // Verifica el ID almacenado
-        return usuarios[0];
-      } else {
-        return null;
-      }
-    })
-  );
-}
-
-
-}
-
-
-
-

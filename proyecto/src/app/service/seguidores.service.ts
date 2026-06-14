@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { forkJoin, Observable, of } from 'rxjs';
 import { map, switchMap } from 'rxjs/operators';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,7 @@ export class SeguidoresService {
 
   private http = inject(HttpClient);
   private usuarioService = inject(UsuarioService);
-  private baseURL = 'http://localhost:3000/usuarios';
+  private baseURL = `${environment.apiBaseUrl}/usuarios`;
 
   // Obtiene la lista de seguidos de un usuario específico
   obtenerSeguidos(userId: string | null): Observable<string[]> {
@@ -38,7 +39,7 @@ agregarSeguido(userId: string, seguidoId: string): Observable<Usuario> {
             }
           },
           error: () => {
-            console.log("Error al actualizar el seguido");
+            console.error('Error al actualizar el seguido');
           }
         });
         //
@@ -65,7 +66,7 @@ eliminarSeguido(userId: string, seguidoId: string): Observable<Usuario> {
             }
           },
           error: () => {
-            console.log("Error al actualizar el seguido");
+            console.error('Error al actualizar el seguido');
           }
         });
         //

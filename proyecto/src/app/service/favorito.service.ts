@@ -2,13 +2,14 @@ import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map, Observable, switchMap } from 'rxjs';
 import { Usuario } from '../interfaces/usuario.interface';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FavoritosService {
   private http = inject(HttpClient);
-  private baseURL = 'http://localhost:3000/usuarios';
+  private baseURL = `${environment.apiBaseUrl}/usuarios`;
 
   // Obtiene la lista de favoritos de un usuario especifico
   obtenerFavoritos(userId: string | null): Observable<number[]> {

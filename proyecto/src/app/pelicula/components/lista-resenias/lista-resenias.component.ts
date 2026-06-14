@@ -39,7 +39,7 @@ cargarListaResenias(){
       this.listaResenias = res;
       this.cargarUsuarios(res);
     },error:(e:Error) => {
-      console.log(e.message);
+      console.error(e.message);
     }
   })
 }
@@ -54,7 +54,7 @@ cargarUsuarios(resenias: reseña[]) {
           this.usuarios.set(idUsuario, usuario.nombreUsuario);  // Almacena el nombre de usuario
         },
         error: (e: Error) => {
-          console.log(e.message);
+          console.error(e.message);
         }
       });
     }

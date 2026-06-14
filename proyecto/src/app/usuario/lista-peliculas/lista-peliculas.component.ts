@@ -37,14 +37,13 @@ export class ListaPeliculasComponent implements OnInit {
           this.cargarPeliculasFavoritas();
         },
         error: () => {
-          console.log("Error al cargar la lista de favoritos");
+          console.error("Error al cargar la lista de favoritos");
         }
       });
     }
   }
   castear(): void {
     this.favoritosIdsString = this.favoritos.map(id => id.toString());
-    console.log(this.favoritosIdsString);
   }
 
     cargarPeliculasFavoritas(): void {
@@ -54,7 +53,7 @@ export class ListaPeliculasComponent implements OnInit {
           this.peliculas = peliculas.filter(pelicula => pelicula !== null) as MovieDetails[];
         },
         error: () => {
-          console.log("Error al cargar las películas favoritas");
+          console.error("Error al cargar las películas favoritas");
         }
       });
     }

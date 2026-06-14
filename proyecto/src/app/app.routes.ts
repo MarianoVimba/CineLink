@@ -19,7 +19,7 @@ import { PaginaJuegoComponent } from './pages/pagina-juego/pagina-juego.componen
 export const routes: Routes = [
     { path: "login", component: LoginComponent, canActivate:[authGuardFnLogueado] },
     { path: "registro", component: RegistroComponent, canActivate:[authGuardFnLogueado] },
-    { path: "recuperacionDeContraseña", component: RestablecerPasswordComponent , canActivate:[authGuardFnLogueado] },
+    { path: "recuperacion-password", component: RestablecerPasswordComponent , canActivate:[authGuardFnLogueado] },
     { path: "inicio", component: InicioComponent, canActivate:[authGuardFn] },
     { path: "perfil/:id", component: PerfilUsuarioPageComponent, canActivate:[authGuardFn]  },
     { path: 'pelicula/:id', component: PaginaPeliculaComponent, canActivate:[authGuardFn]  },

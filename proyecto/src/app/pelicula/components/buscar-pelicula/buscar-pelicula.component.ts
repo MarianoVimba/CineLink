@@ -29,12 +29,11 @@ export class BuscarPeliculaComponent implements OnInit{
       next: (params) =>{
 
           this.texto = params['texto']; // recuper el texto de la url
-          console.log(this.texto);
 
         this.buscarPeliculas();
 
       },error:(e:Error) =>{
-        console.log(e.message);
+        console.error(e.message);
       }
     })
   }
@@ -50,7 +49,7 @@ export class BuscarPeliculaComponent implements OnInit{
         this.noEncontro= '😌 No se encontro la pelicula';
         }
       },error:(e:Error) =>{
-        console.log(e.message);
+        console.error(e.message);
       }
     })
   }

@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { reseña } from '../interfaces/reseña.interface';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,7 @@ export class ReseniaService {
 
   constructor() { }
 
-  private urlBase = 'http://localhost:3000/resenias';
+  private urlBase = `${environment.apiBaseUrl}/resenias`;
   private http = inject(HttpClient);
 
 

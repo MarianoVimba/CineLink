@@ -59,7 +59,6 @@ export class TriviaComponent implements OnInit {
     if (this.usuarioId) {
       this.servicioUsuario.getUsuarioById(this.usuarioId).subscribe(usuario => {
         this.nombreUsuario = usuario.nombreUsuario ?? null; // Si 'nombre' es undefined, asigna null
-        console.log("Nombre del usuario:", this.nombreUsuario);
       });
     }
   }
@@ -115,13 +114,11 @@ export class TriviaComponent implements OnInit {
 
   actualizarPuntaje(puntaje: Puntaje) {
     this.servicioPuntaje.actualizarPuntaje(puntaje).subscribe(() => {
-      console.log('Puntaje actualizado con éxito:', puntaje);
     });
   }
 
   guardarNuevoPuntaje(puntaje: Puntaje) {
     this.servicioPuntaje.guardarPuntaje(puntaje).subscribe(() => {
-      console.log('Nuevo puntaje guardado con éxito:', puntaje);
     });
   }
 
@@ -145,7 +142,6 @@ export class TriviaComponent implements OnInit {
           ? this.actualizarPuntaje(nuevoPuntaje) // Si ya existía, actualiza
           : this.guardarNuevoPuntaje(nuevoPuntaje); // Si no existía, lo guarda
       } else {
-        console.log('No se guardó el puntaje porque no es mejor que el existente.');
       }
     });
   }

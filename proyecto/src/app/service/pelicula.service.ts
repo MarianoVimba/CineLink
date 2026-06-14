@@ -5,6 +5,7 @@ import { Pelicula } from '../interfaces/pelicula.interface';
 import { Cartelera } from '../interfaces/cartelera.interface';
 import { MovieDetails } from '../interfaces/details.interface';
 import { Cast, Credits } from '../interfaces/credits.interface';
+import { environment } from '../../environments/environment';
 
 
 @Injectable({
@@ -12,9 +13,8 @@ import { Cast, Credits } from '../interfaces/credits.interface';
 })
 export class PeliculaService {
 
-  private URL='https://api.themoviedb.org/3';
-  private apiKey = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0MzU5OWRhMjJhZjlhYmViNzYzYzQ2ZGFlMjUwMzBiOSIsIm5iZiI6MTczMTAzOTUwMi4xMzc4MDc2LCJzdWIiOiI2NzFiMjE0ODQyN2M1YzE5ZjAyNWUwMzQiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.7BgIP38YGpVReuZJO6j8sREDQ0YCcUDXxTZ_oifDtTQ';
-  private headers={Authorization:`Bearer ${this.apiKey}`};
+  private URL = environment.tmdb.baseUrl;
+  private headers = { Authorization: `Bearer ${environment.tmdb.accessToken}` };
   private cartelePage = 1;
   public cargando = false;
 

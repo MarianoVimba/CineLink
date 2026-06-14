@@ -34,7 +34,7 @@ export class AddSeguirUsuarioComponent implements OnInit,OnChanges {
           this.esSeguidor = seguidos.includes(this.usuarioId);
         },
         error: () => {
-          console.log("Error al verificar si el usuario es seguido");
+          console.error("Error al verificar si el usuario es seguido");
         }
       });
     }
@@ -49,7 +49,7 @@ export class AddSeguirUsuarioComponent implements OnInit,OnChanges {
           this.verificarSeguidor(); 
         },
         error: () => {
-          console.log("Error al seguir al usuario");
+          console.error("Error al seguir al usuario");
         }
       });
     }
@@ -64,7 +64,7 @@ export class AddSeguirUsuarioComponent implements OnInit,OnChanges {
           this.verificarSeguidor(); 
         },
         error: () => {
-          console.log("Error al dejar de seguir al usuario");
+          console.error("Error al dejar de seguir al usuario");
         }
       });
     }

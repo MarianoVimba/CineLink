@@ -35,11 +35,11 @@ throw new Error('Method not implemented.');
               next:(descarga)=>{
                 this.unUsuario = descarga
               },
-              error:console.log
+              error: (e) => console.error(e)
             }
           )
         },
-        error:console.log
+        error: (e) => console.error(e)
       }
     )
   }

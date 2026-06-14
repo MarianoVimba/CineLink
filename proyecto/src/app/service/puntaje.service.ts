@@ -3,13 +3,14 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Puntaje } from '../interfaces/puntaje.interface';
 import { map } from 'rxjs/operators';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class PuntajeService {
-  private urlBase = 'http://localhost:3000/puntajes';
+  private urlBase = `${environment.apiBaseUrl}/puntajes`;
 
   constructor(private http: HttpClient) { }
 
